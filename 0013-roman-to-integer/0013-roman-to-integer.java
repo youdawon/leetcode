@@ -1,7 +1,6 @@
 class Solution {  
 	public static int romanToInt(String s) {
 
-		String[] substractedNum = {"IV", "IX", "XL", "XC", "CD", "CM"};
 		HashMap<String, Integer> romanMap = new HashMap<String, Integer>();
 		romanMap.put("I", 1);
 		romanMap.put("V", 5);
@@ -17,7 +16,7 @@ class Solution {
 
 		for(int i=0; i<sArr.length; i++){            
 			if(i < sArr.length-1 &&
-				Arrays.asList(substractedNum).contains((sArr[i] + sArr[i+1]))){
+                romanMap.get(sArr[i+1]) > romanMap.get(sArr[i])){
 				number += romanMap.get(sArr[i+1]) - romanMap.get(sArr[i]);
 				i++;
 				continue;
