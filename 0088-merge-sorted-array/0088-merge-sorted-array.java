@@ -10,7 +10,7 @@ class Solution {
           break;
         }
       }
-      Arrays.sort(nums1);
     }
+    Arrays.sort(nums1);
   }
 }
