@@ -6,7 +6,6 @@ class Solution {
 
     int i=nums.length - 1;
     int count = nums.length;
-    int temp = 0;
 
       while(i >= 0){
           if(nums[i] == val){
@@ -14,7 +13,7 @@ class Solution {
           } else {
             for(int j=0; j<i; j++){
               if(nums[j] == val){
-                temp = nums[j];
+                int temp = nums[j];
                 nums[j] = nums[i];
                 nums[i] = temp;
                 count--;
