@@ -1,8 +1,8 @@
 class Solution {
     public int majorityElement(int[] nums) {
     
-		if(nums.length == 1)            
-			return nums[0];
+		// if(nums.length == 1)            
+		// 	return nums[0];
 
 		//linear time : O(N)
 		//Space : O(1)
