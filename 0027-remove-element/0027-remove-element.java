@@ -4,26 +4,18 @@ class Solution {
       if(nums.length == 0)
           return 0;
 
-    int i=nums.length - 1;
-    int count = nums.length;
-
-      while(i >= 0){
-          if(nums[i] == val){
-            count--;
-          } else {
-            for(int j=0; j<i; j++){
-              if(nums[j] == val){
-                int temp = nums[j];
-                nums[j] = nums[i];
-                nums[i] = temp;
-                count--;
-                break;
-              }              
-            }            
-          }
-        i--;
-      }
+        int i=0;
         
-        return count;
+        for(int j=0; j<nums.length; j++){
+
+            if(nums[j] != val){
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                i++;
+            }
+        }
+        
+        return i;
     }
 }
