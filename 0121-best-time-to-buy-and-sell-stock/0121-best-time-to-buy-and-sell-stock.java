@@ -9,8 +9,13 @@ class Solution {
         int profit = 0;
                 
         for(int i=0; i<prices.length; i++){
-            buy = Math.min(buy, prices[i]);
-            profit = Math.max(profit, prices[i] - buy);
+            if(buy > prices[i]){
+                buy = prices[i];
+            }
+            
+            if(profit < prices[i] - buy){
+                profit = prices[i] - buy;                
+            }
         }
         
         return profit;
