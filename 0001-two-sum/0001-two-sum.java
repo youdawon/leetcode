@@ -1,7 +1,6 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
                 
-        int sum = 0;
         int i=0;
         int j=0;
         
@@ -14,8 +13,7 @@ class Solution {
                 j = j+1;
             }
             
-            sum = nums[i] + nums[j];
-            if(sum == target){
+            if(nums[i] + nums[j] == target){
                 return new int[] {i, j};
             }                         
         }        
