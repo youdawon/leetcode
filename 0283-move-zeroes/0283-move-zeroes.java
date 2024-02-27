@@ -8,14 +8,14 @@ class Solution {
             if(nums[j] == 0)
                 continue;
             
-            if(nums[i] == 0){
-                nums[i] = nums[j];
-                nums[j] = 0;
-            }
+            nums[i] = nums[j];
             
-            if(nums[i] != 0){
-                i++;
-            }
+            i++;
+        }
+        
+        
+        for(int n=nums.length-1; n>=i; n--){
+            nums[n] = 0;
         }
     }    
 }
