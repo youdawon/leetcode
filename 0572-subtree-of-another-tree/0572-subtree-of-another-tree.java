@@ -20,11 +20,13 @@ class Solution {
             return false;
                 
         if(subRoot.val == root.val){
-            if(isTreeSame(root.left, subRoot.left) && isTreeSame(root.right, subRoot.right))            
+            if(isTreeSame(root.left, subRoot.left) && 
+               isTreeSame(root.right, subRoot.right))            
                 return true;
         }
                 
-        return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+        return isSubtree(root.left, subRoot) || 
+            isSubtree(root.right, subRoot);
     }
     
     public boolean isTreeSame(TreeNode root, TreeNode subRoot){
