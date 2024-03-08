@@ -20,13 +20,9 @@ class Solution {
         if(root == null)
             return list;       
         
-        if(root.left != null)
-            list.addAll(inorderTraversal(root.left));                
-
+        list.addAll(inorderTraversal(root.left));                
         list.add(root.val);
-        
-        if(root.right != null)
-            list.addAll(inorderTraversal(root.right));
+        list.addAll(inorderTraversal(root.right));
         
         return list;
     }
