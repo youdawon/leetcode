@@ -1,13 +1,14 @@
 class Solution {
     public List<List<Integer>> generate(int numRows) {
 
-        List<List<Integer>> prevRows = new ArrayList<List<Integer>>();        
-        prevRows.add(Arrays.asList(1));
+        List<List<Integer>> result = new ArrayList<List<Integer>>();        
+        result.add(Arrays.asList(1));
         
         if(numRows == 1)
-            return prevRows;
+            return result;
 
-        prevRows = generate(numRows - 1);
+        result = generate(numRows - 1);        
+        List<Integer> prevRows = result.get(numRows-2);
 
         
         List<Integer> row = new ArrayList<>();
@@ -16,13 +17,13 @@ class Solution {
             if(i == 0 || i == numRows - 1){
                 row.add(1);                                
             }else{
-                row.add(prevRows.get(numRows-2).get(i-1) + prevRows.get(numRows-2).get(i));
+                row.add(prevRows.get(i-1) + prevRows.get(i));
             }            
         }
         
-        prevRows.add(row);
+        result.add(row);
         
         
-        return prevRows;
+        return result;
     }
 }
