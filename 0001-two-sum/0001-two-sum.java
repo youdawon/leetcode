@@ -4,13 +4,17 @@ class Solution {
         //Time Complexity : O(N)
         //Space Complexity : O(N)
         
-        for(int i=1; i<nums.length; i++){
-            for(int j=i; j<nums.length; j++){                
-                if(nums[j-i] + nums[j] == target)
-                    return new int[]{j-i, j};
+        HashMap<Integer, Integer> map = new HashMap<>();
+                
+        for(int i=0; i<nums.length; i++){
+            if(map.containsKey(target - nums[i]) &&
+               map.get(target - nums[i]) != i){
+                return new int[]{i, map.get(target - nums[i])};
             }
+            if(map.get(nums[i]) == null){
+                map.put(nums[i], i);
+            }                       
         }
-        
         return null;
     }
 }
