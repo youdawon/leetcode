@@ -11,10 +11,9 @@ class Solution {
                map.get(target - nums[i]) != i){
                 return new int[]{i, map.get(target - nums[i])};
             }
-            if(map.get(nums[i]) == null){
-                map.put(nums[i], i);
-            }                       
+
+            map.put(nums[i], i);
         }
-        return null;
+        return new int[]{};
     }
 }
