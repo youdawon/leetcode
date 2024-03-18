@@ -14,8 +14,6 @@ class Solution {
                 buy = prices[i];
             }
             
-            System.out.println("buy : " + buy);
-            
             if(profit < prices[i] - buy){
                 profit = prices[i] - buy;
             }            
