@@ -4,6 +4,9 @@ class Solution {
         //Time Complexity : O(N)
         //Space Complexity : O(N)
         
+        if(nums.length == 1)
+            return false;
+            
         Set<Integer> set = new HashSet<>();
         
         for(int i=0; i<nums.length; i++){            
