@@ -24,7 +24,7 @@ class MyQueue {
             }
         }
         
-        while(tempStack.size() > 0){
+        while(!tempStack.isEmpty()){
             stack.push(tempStack.pop());
         }        
         
@@ -44,7 +44,7 @@ class MyQueue {
             }
         }
         
-        while(tempStack.size() > 0){
+        while(!tempStack.isEmpty()){
             stack.push(tempStack.pop());
         }        
         return n;        
