@@ -9,6 +9,12 @@
  *     }
  * }
  */
+
+/**
+* Floyd's slow and fast algorithm
+**/
+
+
 public class Solution {
     public boolean hasCycle(ListNode head) {
         
