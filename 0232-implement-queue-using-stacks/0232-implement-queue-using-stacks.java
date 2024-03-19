@@ -16,7 +16,7 @@ class MyQueue {
         
         int n = 0;
 
-        while(stack.size() > 0){
+        while(!stack.isEmpty()){
             if(n < stack.size() - 1){
                 tempStack.push(stack.pop());            
             } else {
@@ -35,7 +35,7 @@ class MyQueue {
         
         int n = 0;
         
-        while(stack.size() > 0){
+        while(!stack.isEmpty()){
             if(n < stack.size() - 1){
                 tempStack.push(stack.pop());            
             } else {
