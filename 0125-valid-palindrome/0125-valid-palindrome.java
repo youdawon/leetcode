@@ -1,25 +1,25 @@
 class Solution {
     public boolean isPalindrome(String s) {
         
-        if(s.length() == 1 && Character.isLetter(s.toCharArray()[0]))
-            return true;
+        char[] arr = s.toLowerCase().replace(" ", "").toCharArray();
+        int i = 0; 
+        int j = arr.length - 1;
         
-        s = s.toLowerCase().replace(" ", "");
-        
-        List<Character> list = new ArrayList<>();
-                
-        for(char c : s.toCharArray()){
-            byte by = (byte) c;
-            if((by >= 48 && by <= 57)|| (by >= 97 && by <= 122)){
-                list.add(c);
+        while(i <= j){                    
+            if(!Character.isLetterOrDigit(arr[i])){
+                i++;
+                continue;
             }
-        }
-        
-        int end = list.size() - 1;        
-        
-        for(int i=0; i<end; i++){
-            if(list.get(i) != list.get(end-i)){
+            if(!Character.isLetterOrDigit(arr[j])){
+                j--;
+                continue;
+            }            
+            
+            if(arr[i] != arr[j]){
                 return false;
+            } else {
+                i++;
+                j--;
             }
         }
         
