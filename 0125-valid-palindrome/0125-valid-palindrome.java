@@ -15,10 +15,7 @@ class Solution {
             }
         }
         
-        int end = list.size() - 1;
-        
-        // if(end == 0)
-        //     return false;
+        int end = list.size() - 1;        
         
         for(int i=0; i<end; i++){
             if(list.get(i) != list.get(end-i)){
