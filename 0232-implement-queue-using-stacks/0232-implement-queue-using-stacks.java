@@ -1,4 +1,8 @@
 class MyQueue {
+    /** Time Complexity : O(N)
+    ** Space Complexity : O(N)
+    **/ 
+    
     
     Stack<Integer> stack;
     Stack<Integer> tempStack;
