@@ -6,22 +6,26 @@ class Solution {
     **/
     public boolean canConstruct(String ransomNote, String magazine) {
         
-        if(ransomNote.length() > magazine.length())
-            return false;
- 
-        int[] arr = new int[26];
-        
-        for(char c : magazine.toCharArray()){
-            arr[c-'a']++;
-        }
+        HashMap<Character, Integer> map = new HashMap<>();
         
         for(char c : ransomNote.toCharArray()){
-            if(arr[c-'a'] == 0)
-                return false;
-            
-            arr[c-'a']--;
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }        
- 
-        return true;
+        
+        for(char c : magazine.toCharArray()){          
+            if(map.containsKey(c)){
+                if(map.get(c) == 1){
+                    map.remove(c);
+                } else {
+                    map.put(c, map.get(c) - 1);                    
+                }
+            } 
+        }
+        
+        if(map.size() > 0){
+            return false;
+        } else {
+            return true;
+        }
     }
 }
