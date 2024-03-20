@@ -11,29 +11,15 @@
 class Solution {
     public ListNode middleNode(ListNode head) {
         
-        ListNode currentNode = head;
-        int count = 0;
         
-        while(currentNode != null){
-            if(currentNode != null)
-                count++;
-            
-            currentNode = currentNode.next;
+        ListNode fast = head;
+        ListNode slow = head;
+        
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
         }
         
-        int centreIndex = count / 2 + 1;
-                
-        int i = 1;
-        currentNode = head;
-        
-        while(currentNode != null){       
-            if(centreIndex == i){
-                return currentNode;
-            }
-            
-            currentNode = currentNode.next;
-            i++;
-        }        
-        return currentNode;
+        return slow;
     }
 }
