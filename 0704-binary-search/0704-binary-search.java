@@ -8,8 +8,6 @@ class Solution {
         while(low <= high){            
             mid = low + (high-low)/2;        
             
-            System.out.println(mid);
-            
             if(target == nums[mid]){
                 return mid;
             } else if(target < nums[mid]){
