@@ -9,6 +9,12 @@
  * }
  */
 class Solution {
+    
+    /**
+    * when the fast pointer has no more nodes, the slow pointer is in the centre.
+    * Slow and fast algorithm
+    **/
+        
     public ListNode middleNode(ListNode head) {
         
         
