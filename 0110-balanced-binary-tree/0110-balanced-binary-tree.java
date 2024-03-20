@@ -27,9 +27,6 @@ class Solution {
         int leftDepth = getDepth(root.left);
         int rightDepth = getDepth(root.right);       
         
-        System.out.println(leftDepth);
-        System.out.println(rightDepth);        
-
         return leftBalanced && rightBalanced && Math.abs(leftDepth-rightDepth) <= 1;
     }
     
