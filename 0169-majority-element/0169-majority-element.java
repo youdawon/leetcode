@@ -1,4 +1,8 @@
 class Solution {
+    
+    /**
+    * Boyer Moore's majority voting algorithm
+    **/    
     public int majorityElement(int[] nums) {
         
         if(nums.length == 1)
