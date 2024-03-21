@@ -13,13 +13,7 @@ class Solution {
                 set.add(c);
             }
         }
-        
-        int count = s.length() - set.size();
-        
-        if(set.size() > 0){
-            count += 1;
-        }
-        
-        return count;
+                
+        return set.size() > 0 ? s.length() - set.size() + 1 : s.length() - set.size(); 
     }
 }
