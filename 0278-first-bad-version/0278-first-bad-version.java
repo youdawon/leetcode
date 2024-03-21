@@ -17,19 +17,23 @@ public class Solution extends VersionControl {
 
         int centre = low + (high - low)/2;
         
-        if(high - low == 1){
-            if(isBadVersion(low)){
-                return low;
-            } else {
-                return high;
-            }
+        // if(high - low == 1){
+        //     if(isBadVersion(low)){
+        //         return low;
+        //     } else {
+        //         return high;
+        //     }
+        // }
+        
+        if(high <= low){
+            return low;
         }
         
         if(isBadVersion(centre)){
             high = centre;
             return getBadVersion(high, low);
         } else {
-            low = centre;
+            low = centre + 1;
             return getBadVersion(high, low);                        
         }
     }
