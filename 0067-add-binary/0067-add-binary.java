@@ -68,7 +68,6 @@ class Solution {
         if(remain != '0')
             result += '1';
         
-            System.out.println(result);                
         return new StringBuffer(result).reverse().toString();
     }
 }
