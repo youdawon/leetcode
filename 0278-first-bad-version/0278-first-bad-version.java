@@ -16,15 +16,7 @@ public class Solution extends VersionControl {
     public int getBadVersion(int high, int low){
 
         int centre = low + (high - low)/2;
-        
-        // if(high - low == 1){
-        //     if(isBadVersion(low)){
-        //         return low;
-        //     } else {
-        //         return high;
-        //     }
-        // }
-        
+                
         if(high <= low){
             return low;
         }
