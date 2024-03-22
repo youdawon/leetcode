@@ -3,71 +3,40 @@ class Solution {
                 
         int i = a.length()-1;
         int j = b.length()-1;
-        
-        char remain = '0';                
-        String result = "";
+        int carry = 0;
+        StringBuilder result = new StringBuilder();
 
         
         while(i >= 0 || j >= 0){
-
-            if(i >= 0 && j < 0){
-                if(remain == '1'){
-                    if(remain == a.charAt(i)){
-                        result += '0';
-                        remain = '1';
-                    } else {
-                        result += '1';
-                        remain = '0';
-                    }
-                } else {
-                    result += a.charAt(i);
-                }
-            } else if (j >= 0 && i < 0){
-                if(remain == '1'){
-                    if(remain == b.charAt(j)){
-                        result += '0';
-                        remain = '1';
-                    } else {
-                        result += '1';
-                        remain = '0';
-                    }
-                } else {
-                    result += b.charAt(j);
-                }            
-            }else{
-                if(a.charAt(i) + b.charAt(j) == 98){
-
-                    if(remain == '1'){
-                        result += '1';                    
-                    } else {
-                        result += '0';
-                    }
-                    remain = '1';                                
-                } else if(a.charAt(i) + b.charAt(j) == 97){
-                    if(remain == '1'){
-                        result += '0';
-                        remain = '1';
-                    } else {
-                        result += '1';                    
-                        remain = '0';
-                    }
-                } else {                
-                    if(remain == '1'){
-                        result += '1';
-                    } else {
-                        result += '0';
-                    }
-                    remain = '0';
-                }                
+            int sum = carry;
+            
+            if(i >= 0){
+                sum += a.charAt(i) - '0';    
             }
+            
+            if(j >= 0){
+                sum += b.charAt(j) - '0';
+            }
+            
+            if(sum == 0 || sum == 1){
+                result.append(sum);
+                carry = 0;
+            } else if (sum == 2){
+                result.append("0");
+                carry = 1;
+            } else {
+                result.append("1");
+                carry = 1;
+            }            
             i--;
             j--;
         }
 
         
-        if(remain != '0')
-            result += '1';
+        if(carry == 1)
+            result.append("1");
         
-        return new StringBuffer(result).reverse().toString();
+        
+        return result.reverse().toString();
     }
 }
