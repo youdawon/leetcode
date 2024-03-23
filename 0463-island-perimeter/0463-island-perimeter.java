@@ -1,34 +1,24 @@
 class Solution {
     public int islandPerimeter(int[][] grid) {
         
-        int rowLength = grid.length;
-        int colLength = grid[0].length;
+        if(grid.length == 1 && grid[0].length == 1)
+            return 4;
         
-        int total = 0;
+        int land = 0;
+        int neighbours = 0;
         
-        for(int i=0; i< rowLength; i++){
-            for(int j=0; j< colLength; j++){
+        for(int i=0; i<grid.length; i++){
+            for(int j=0; j<grid[0].length; j++){
                 if(grid[i][j] == 1){
-                    total += 4;
-                    
-                    if(i>0 && grid[i-1][j] == 1){
-                            total -= 1;
-                    }
-                    
-                    if(i+1 < rowLength && grid[i+1][j] == 1){
-                            total -= 1;
-                    }                    
-                    
-                    if(j > 0 && grid[i][j-1] == 1){
-                            total -= 1;
-                    }                    
-                    
-                    if(j+1 < colLength && grid[i][j+1] == 1){
-                            total -= 1;
-                    }                                    
-                }                
+                    land++;
+                    if(i+1 < grid.length && grid[i+1][j] == 1)
+                        neighbours++;
+                    if(j+1 < grid[0].length && grid[i][j+1] == 1)
+                        neighbours++;                
+                }                    
             }
-        }        
-        return total;
+        }
+        
+        return land*4 - neighbours * 2;
     }
 }
