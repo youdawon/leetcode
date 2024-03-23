@@ -3,30 +3,27 @@
 
 public class Solution extends VersionControl {
     public int firstBadVersion(int n) {
-       
-        if(n == 1)
-            return 1;
-                    
-        int high = n;
-        int min = 1;
-        
-        return getBadVersion(high, min);
+
+        return getBadVersion(1, n);
     }
     
-    public int getBadVersion(int high, int low){
+    public int getBadVersion(int low, int high){
 
-        int centre = low + (high - low)/2;
-                
-        if(high <= low){
-            return low;
+        int centre = low + (high-low) / 2;
+        
+        System.out.println(low);
+        System.out.println(high);        
+        System.out.println(centre);                
+        
+        if(high == centre)
+            return high;
+            
+        if(isBadVersion(centre) == true){
+            high = centre;
+        } else {
+            low =  centre+1;  
         }
         
-        if(isBadVersion(centre)){
-            high = centre;
-            return getBadVersion(high, low);
-        } else {
-            low = centre + 1;
-            return getBadVersion(high, low);                        
-        }
+        return getBadVersion(low, high);
     }
 }
