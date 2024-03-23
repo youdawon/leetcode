@@ -8,10 +8,6 @@ class Solution {
     
     public int[][] fill(int[][] image, int sr, int sc, int color, int compareValue) {
                
-            System.out.println(sr);
-            System.out.println(sc);            
-            System.out.println("=====");                        
-        
         if(sr < 0 || sc < 0 || sr >= image.length || sc >= image[0].length)
             return image;
         
