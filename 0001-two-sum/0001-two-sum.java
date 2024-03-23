@@ -1,19 +1,16 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        
-        //Time Complexity : O(N)
-        //Space Complexity : O(N)
-        
+       
         HashMap<Integer, Integer> map = new HashMap<>();
-                
+        
         for(int i=0; i<nums.length; i++){
-            if(map.containsKey(target - nums[i]) &&
-               map.get(target - nums[i]) != i){
-                return new int[]{i, map.get(target - nums[i])};
-            }
-
-            map.put(nums[i], i);
+            System.out.println(map.get(target - nums[i]));
+            if(map.get(target - nums[i]) != null && i != map.get(target - nums[i])){            
+                return new int[]{i, map.get(target-nums[i])};
+            }            
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + i);
         }
+        
         return new int[]{};
     }
 }
