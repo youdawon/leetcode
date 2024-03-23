@@ -9,7 +9,9 @@ class Solution {
         
         while(i >= 0 || j >= 0){
 
-            int sum = remain;
+            int sum = 0;
+            
+            sum += remain;
             
             if(i >= 0){
                 sum += a.charAt(i) - '0';                
