@@ -1,62 +1,49 @@
 class MyQueue {
-    /** Time Complexity : O(N)
-    ** Space Complexity : O(N)
-    **/ 
     
-    
-    Stack<Integer> stack;
-    Stack<Integer> tempStack;
+    Stack<Integer> originalStack;
+    Stack<Integer> reverseStack;
 
     public MyQueue() {
-        stack = new Stack<>();
-        tempStack = new Stack<>();
+        originalStack = new Stack<>();
+        reverseStack = new Stack<>();        
     }
     
-    public void push(int x) {
-        stack.push(x);
+    public void push(int x) {    
+        originalStack.push(x);        
     }
     
     public int pop() {
-        
-        int n = 0;
 
-        while(!stack.isEmpty()){
-            if(stack.size() > 1){
-                tempStack.push(stack.pop());            
-            } else {
-                n = stack.pop();
-            }
+        while(!originalStack.isEmpty()){
+            reverseStack.push(originalStack.pop());
         }
         
-        while(!tempStack.isEmpty()){
-            stack.push(tempStack.pop());
-        }        
+        int value = reverseStack.pop();
         
-        return n;
+        while(!reverseStack.isEmpty()){
+            originalStack.push(reverseStack.pop());
+        }
+         
+        return value;        
     }
     
     public int peek() {
-        
-        int n = 0;
-        
-        while(!stack.isEmpty()){
-            if(stack.size() > 1){
-                tempStack.push(stack.pop());            
-            } else {
-                n = stack.pop();
-                tempStack.push(n);                            
-            }
+                
+        while(!originalStack.isEmpty()){
+            reverseStack.push(originalStack.pop());
         }
         
-        while(!tempStack.isEmpty()){
-            stack.push(tempStack.pop());
-        }        
-        return n;        
+        int value = reverseStack.peek();
+        
+        while(!reverseStack.isEmpty()){
+            originalStack.push(reverseStack.pop());
+        }
+        
+        return value;
     }
     
     public boolean empty() {
-     
-        return stack.isEmpty();
+        return originalStack.isEmpty();    
     }
 }
 
