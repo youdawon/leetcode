@@ -1,31 +1,19 @@
 class Solution {
-    
-    /**
-    * Time Complexity : O(n)
-    * Space Comlexity : O(n)
-    **/
     public boolean canConstruct(String ransomNote, String magazine) {
         
-        HashMap<Character, Integer> map = new HashMap<>();
+        int[] arr = new int[26];        
+        
+        for(char c : magazine.toCharArray()){
+            arr[c-'a']++;
+        }
         
         for(char c : ransomNote.toCharArray()){
-            map.put(c, map.getOrDefault(c, 0) + 1);
+            if(arr[c-'a'] == 0)
+                return false;
+            
+            arr[c-'a']--;
         }        
         
-        for(char c : magazine.toCharArray()){          
-            if(map.containsKey(c)){
-                if(map.get(c) == 1){
-                    map.remove(c);
-                } else {
-                    map.put(c, map.get(c) - 1);                    
-                }
-            } 
-        }
-        
-        if(map.size() > 0){
-            return false;
-        } else {
-            return true;
-        }
+        return true;
     }
 }
