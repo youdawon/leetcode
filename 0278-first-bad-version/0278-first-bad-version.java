@@ -11,10 +11,6 @@ public class Solution extends VersionControl {
 
         int centre = low + (high-low) / 2;
         
-        System.out.println(low);
-        System.out.println(high);        
-        System.out.println(centre);                
-        
         if(high == centre)
             return high;
             
