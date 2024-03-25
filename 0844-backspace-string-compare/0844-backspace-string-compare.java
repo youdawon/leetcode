@@ -27,10 +27,6 @@ class Solution {
             j++;
         }  
 
-        System.out.println(sResult);
-        System.out.println(tResult);        
-        System.out.println(sResult.equals(tResult));
-        
         if(sResult.equals(tResult))
             return true;
         
