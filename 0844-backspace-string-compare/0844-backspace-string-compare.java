@@ -4,42 +4,36 @@ class Solution {
         int i=0; 
         int j=0;
         
-        Stack<Character> sStack = new Stack<>();
-        Stack<Character> tStack = new Stack<>();        
+        String sResult = "";
+        String tResult = "";
         
         while(i < s.length() || j < t.length()){            
+            if(i < s.length()){
+                if(sResult.length() > 0 && s.charAt(i) == '#'){
+                    sResult = sResult.substring(0, sResult.length()-1);
+                } else if(s.charAt(i) != '#'){
+                    sResult += s.charAt(i);                    
+                }
+            } 
             
-            if(i< s.length()){            
-                if(s.charAt(i) != '#'){
-                    sStack.push(s.charAt(i));
-                } else {
-                    if(!sStack.isEmpty())
-                        sStack.pop();
-                }                
-            }
-            
-            if(j< t.length()){            
-                if(t.charAt(j) != '#'){
-                    tStack.push(t.charAt(j));
-                } else {
-                    if(!tStack.isEmpty())
-                        tStack.pop();
-                }                
-            }            
+            if(j < t.length()){
+                if(tResult.length() > 0 && t.charAt(j) == '#'){                
+                    tResult = tResult.substring(0, tResult.length()-1);
+                } else if(t.charAt(j) != '#'){
+                    tResult += t.charAt(j);
+                }
+            }          
             i++;
             j++;
-        }            
+        }  
+
+        System.out.println(sResult);
+        System.out.println(tResult);        
+        System.out.println(sResult.equals(tResult));
         
-        if(sStack.size() != tStack.size())
-            return false;
+        if(sResult.equals(tResult))
+            return true;
         
-        int k=0;
-        
-        while(k < sStack.size()){
-           if(sStack.pop() != tStack.pop())
-               return false;
-        }
-        
-        return true;
+        return false;
     }
 }
