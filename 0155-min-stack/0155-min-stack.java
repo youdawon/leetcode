@@ -30,11 +30,11 @@ class MinStack {
     }
     
     public int getMin() {        
-        if(minStack.isEmpty()){
-            return stack.peek();
-        } else {
+        // if(minStack.isEmpty()){
+        //     return stack.peek();
+        // } else {
             return minStack.peek();
-        }
+        // }
     }
 }
 
