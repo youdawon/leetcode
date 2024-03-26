@@ -9,8 +9,8 @@ class Solution:
 
             if sumValue < 0:
                 sumValue = 0
-                                
-            maxValue = max(maxValue, sumValue)
+            elif sumValue > maxValue:
+                maxValue = sumValue;
                     
         return maxValue if maxValue > 0 else max(nums)
         
