@@ -15,28 +15,19 @@
  */
 class Solution {
     public boolean isValidBST(TreeNode root) {        
-        
-        Stack<Integer> stack = new Stack<Integer>();
-        
-        setTreeNodeValues(root, stack);
-        
-        while(!stack.isEmpty() && stack.size() > 1){
-            int curValue = stack.pop();
-            if(curValue <= stack.peek()){
-                return false;
-            }
-        }
-        
-        return true;
+        return isValidTree(root, null, null);
     }
     
-    public void setTreeNodeValues(TreeNode root, Stack<Integer> stack){
+    public boolean isValidTree(TreeNode root, TreeNode minNode, TreeNode maxNode){
         
         if(root == null)
-            return;
+            return true;
+        if(minNode != null && minNode.val >= root.val)
+            return false;
+        if(maxNode != null && maxNode.val <= root.val)
+            return false;        
         
-        setTreeNodeValues(root.left, stack);
-        stack.add(root.val);
-        setTreeNodeValues(root.right, stack);
+        
+        return isValidTree(root.left, minNode, root) && isValidTree(root.right, root, maxNode);
     }
 }
