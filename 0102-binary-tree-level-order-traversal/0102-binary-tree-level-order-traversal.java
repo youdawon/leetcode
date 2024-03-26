@@ -30,22 +30,12 @@ class Solution {
         if(root == null)
             return;
         
-        if(list.size() > i){
-            integerList = list.get(i);
-        } else {
-            integerList = new ArrayList<>();            
+        if(list.size() == i){
+            list.add(new ArrayList<Integer>());
         }
         
-        integerList.add(root.val);
+        list.get(i).add(root.val);
                 
-        if(!integerList.isEmpty()){
-            if(list.size() > i){
-                list.set(i, integerList);
-            } else {
-                list.add(integerList);
-            }
-        }
-        
         addInteger(root.left, list, i+1);
         addInteger(root.right, list, i+1);
     }
