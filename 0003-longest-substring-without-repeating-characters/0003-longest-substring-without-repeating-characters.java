@@ -8,7 +8,7 @@ class Solution {
         int i=0; 
         
         while(i < s.length()){
-            if(map.get(s.charAt(i)) != null){
+            if(map.containsKey(s.charAt(i))){
                 result = Math.max(current, result);     
                 i = map.get(s.charAt(i)) + 1;
                 map.clear();
