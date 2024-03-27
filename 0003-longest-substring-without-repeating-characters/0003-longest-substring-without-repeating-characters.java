@@ -3,20 +3,19 @@ class Solution {
 
         int current = 0;
         int result = 0;
-        Set<Character> set = new HashSet<>();
+        Map<Character, Integer> map = new HashMap<>();
         
         int i=0; 
         
         while(i < s.length()){
-            if(!set.add(s.charAt(i))){
+            if(map.get(s.charAt(i)) != null){
                 result = Math.max(current, result);     
-                int index = s.substring(0, i).lastIndexOf(s.charAt(i)); 
-                s = s.substring(index+1, s.length());
-                i = 0;
-                set.removeAll(set);
-                set.add(s.charAt(i));
+                i = map.get(s.charAt(i)) + 1;
+                map.clear();
+                map.put(s.charAt(i), i);
                 current = 1;
             } else {
+                map.put(s.charAt(i), i);                
                 current += 1;
             }
             i++;
