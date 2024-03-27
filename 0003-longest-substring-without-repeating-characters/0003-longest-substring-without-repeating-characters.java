@@ -5,19 +5,14 @@ class Solution {
         int result = 0;
         Map<Character, Integer> map = new HashMap<>();
         
-        int i=0; 
+        int j=0; 
         
-        while(i < s.length()){
+        for(int i=0; i<s.length(); i++){
             if(map.containsKey(s.charAt(i))){
-                result = Math.max(current, result);     
-                i = map.get(s.charAt(i)) + 1;
-                map.clear();
-                current = 1;
-            } else {
-                current += 1;
-            }
-            map.put(s.charAt(i), i);                            
-            i++;
+                j = Math.max(j, map.get(s.charAt(i)) + 1);
+            } 
+            result = Math.max(i-j+1, result);                             
+            map.put(s.charAt(i), i);
         }
         
         result = Math.max(current, result);
