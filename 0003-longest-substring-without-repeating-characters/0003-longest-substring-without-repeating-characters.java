@@ -12,12 +12,12 @@ class Solution {
                 result = Math.max(current, result);     
                 i = map.get(s.charAt(i)) + 1;
                 map.clear();
-                map.put(s.charAt(i), i);
                 current = 1;
             } else {
-                map.put(s.charAt(i), i);                
+
                 current += 1;
             }
+            map.put(s.charAt(i), i);                            
             i++;
         }
         
