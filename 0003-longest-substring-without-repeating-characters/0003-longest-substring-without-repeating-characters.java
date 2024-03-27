@@ -14,7 +14,6 @@ class Solution {
                 map.clear();
                 current = 1;
             } else {
-
                 current += 1;
             }
             map.put(s.charAt(i), i);                            
