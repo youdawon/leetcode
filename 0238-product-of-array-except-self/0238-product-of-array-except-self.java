@@ -10,8 +10,6 @@ class Solution {
         
         for(int i=1; i<nums.length; i++){
             sum[i] = sum[i-1] * nums[i-1];
-            
-            System.out.println(sum[i]);
         }        
         
         int prev = 1;
@@ -19,8 +17,6 @@ class Solution {
             
             sum[j] = prev * nums[j+1] * sum[j];
             prev = nums[j+1] * prev;
-            
-            
         }                
         
         return sum;
