@@ -4,9 +4,6 @@ class Solution {
         int left = 0;
         int right = 0;        
         
-        Stack<Integer> leftStack = new Stack<>();
-        Stack<Integer> rightStack = new Stack<>();        
-        
         for(String token : tokens){   
             if(token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/")){
             right = stack.pop();            
