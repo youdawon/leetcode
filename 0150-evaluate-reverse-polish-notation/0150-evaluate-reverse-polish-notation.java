@@ -4,22 +4,22 @@ class Solution {
         int left = 0;
         int right = 0;        
         
-        for(String token : tokens){   
-            if(token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/")){
-            right = stack.pop();            
-            left = stack.pop();
+        for(int i=0; i<tokens.length; i++){
+            if(tokens[i].equals("+") || tokens[i].equals("-") || tokens[i].equals("*") || tokens[i].equals("/")){
+                right = stack.pop();            
+                left = stack.pop();
             }
             
-            if(token.equals("+")){
+            if(tokens[i].equals("+")){
                 stack.push(left + right);
-            } else if(token.equals("-")){
+            } else if(tokens[i].equals("-")){
                 stack.push(left - right);
-            } else if(token.equals("*")){
+            } else if(tokens[i].equals("*")){
                 stack.push(left * right);
-            } else if(token.equals("/")){
+            } else if(tokens[i].equals("/")){
                 stack.push(left / right);
             } else {
-                stack.push(Integer.parseInt(token));
+                stack.push(Integer.parseInt(tokens[i]));
             }
         }
         
