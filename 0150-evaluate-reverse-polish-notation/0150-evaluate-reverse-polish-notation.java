@@ -29,6 +29,6 @@ class Solution {
             }
         }
         
-        return stack.pop();
+        return stack.peek();
     }
 }
