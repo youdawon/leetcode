@@ -1,8 +1,8 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         
-        if(nums.length == 2)
-            return new int[]{nums[1], nums[0]};
+        // if(nums.length == 2)
+        //     return new int[]{nums[1], nums[0]};
         
         int[] sum = new int[nums.length];        
         sum[0] = 1;
