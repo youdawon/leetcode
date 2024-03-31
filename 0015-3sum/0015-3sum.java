@@ -15,8 +15,6 @@ class Solution {
             if(i > 0 && nums[i] == nums[i-1])
                 continue;
             
-            System.out.println(i + " " + left + " " + right);
-                            
             while(left < right){
                 if(nums[i] + nums[left] + nums[right] > 0){
                     right--;
