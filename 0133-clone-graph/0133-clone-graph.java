@@ -27,24 +27,23 @@ class Solution {
         if(node == null)
             return null;
 
-        HashMap<Integer, Node> map = new HashMap<Integer, Node>();
+        HashMap<Node, Node> map = new HashMap<Node, Node>();
         Queue<Node> queue = new LinkedList<Node>();        
-        Node newNode = new Node(node.val);
         
         queue.add(node);
-        map.put(node.val, newNode);
+        map.put(node, new Node(node.val));
         
          while(!queue.isEmpty()){
              Node curNode = queue.poll();
                     
              for(Node neighbor : curNode.neighbors){
-                 if(!map.containsKey(neighbor.val)){
-                     map.put(neighbor.val, new Node(neighbor.val));
+                 if(!map.containsKey(neighbor)){
+                     map.put(neighbor, new Node(neighbor.val));
                      queue.add(neighbor);                     
                  }
-                 map.get(curNode.val).neighbors.add(map.get(neighbor.val));
+                 map.get(curNode).neighbors.add(map.get(neighbor));
              }             
          }        
-        return newNode;
+        return map.get(node);
     }
 }
