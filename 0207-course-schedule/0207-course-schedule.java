@@ -5,45 +5,48 @@ class Solution {
             return true;
         
         Map<Integer, List<Integer>> topoMap = new HashMap<Integer, List<Integer>>();        
+        Map<Integer, Integer> inDegree = new HashMap<>();
         
         //init map
         for(int i=0; i<numCourses; i++){
             topoMap.put(i, new ArrayList<Integer>());
+            inDegree.put(i, 0);
         }
          
         //setting map
         for(int[] prerequisity : prerequisites){
             int preCourse = prerequisity[1];
-            int postCourse = prerequisity[0];            
+            int curCourse = prerequisity[0];            
             
-            topoMap.get(preCourse).add(postCourse);
+            topoMap.get(preCourse).add(curCourse);
+            inDegree.put(curCourse, inDegree.get(curCourse) + 1);
         }
         
-        int[] visited = new int[numCourses];
-
-        for(int key : topoMap.keySet()){
-            if(iscyclic(topoMap, visited, key))
-                return false;
+        Queue<Integer> queue = new LinkedList<>();    
+        List<Integer> order = new ArrayList<>();
+        
+        for(int course : inDegree.keySet()){
+            if(inDegree.get(course) == 0)
+                queue.add(course);
         }
 
-        return true;
-    }
-    
-    public boolean iscyclic(Map<Integer, List<Integer>> topoMap, int[] visited, int key){
-
-        if(visited[key] == 2)
-            return true;
-
-        visited[key] = 2;
-        for(int child : topoMap.get(key)){
-            if(visited[child] != 1){
-                if(iscyclic(topoMap, visited, child)){
-                    return true;
-                }            
+        while(!queue.isEmpty()){
+            int key = queue.poll();
+            
+            order.add(key);
+            
+            System.out.println(queue);
+            
+            for(int child : topoMap.get(key)){
+                inDegree.put(child, inDegree.get(child) - 1);
+                if(inDegree.get(child) == 0)
+                    queue.add(child);
             }
         }
-
-        visited[key] = 1;
-        return false;
+        
+        if(order.size() != numCourses)
+            return false;
+        
+        return true;
     }
 }
