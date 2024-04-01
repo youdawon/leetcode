@@ -2,12 +2,12 @@ class Solution {
     public int[] countBits(int n) {
 
         int[] result = new int[n+1];
-        result[0] = 0;        
+        // result[0] = 0;        
  
-        if(n == 0)
-            return result;
+        // if(n == 0)
+        //     return result;
         
-       for(int i=1; i<=n; i++){
+       for(int i=0; i<=n; i++){
            int remainder = i % 2;
            int divided = i / 2;
            
