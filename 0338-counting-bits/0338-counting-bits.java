@@ -4,7 +4,7 @@ class Solution {
         int[] result = new int[n+1];
         
        for(int i=0; i<=n; i++){           
-           result[i] = result[(i/2)] + (i % 2);
+           result[i] = result[(i/2)] + (i & 1);
        }        
         
         return result;
