@@ -37,7 +37,6 @@ class Solution {
 
         visited[key] = 2;
         for(int child : topoMap.get(key)){
-            System.out.println("child " + child);
             if(visited[child] != 1){
                 if(iscyclic(topoMap, visited, child)){
                     return true;
