@@ -6,8 +6,6 @@ class Solution {
         
         int[] result = new int[n+1];
         result[0] = 0;        
- 
-        
         
        for(int i=1; i<=n; i++){
            int remainder = i % 2;
