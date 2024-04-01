@@ -24,7 +24,6 @@ class Solution {
         for(int key : topoMap.keySet()){
             if(iscyclic(topoMap, visited, key))
                 return false;
-            // visited.remove(key);
         }
 
         return true;
