@@ -1,8 +1,8 @@
 class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         
-        if(numCourses == 1 && prerequisites.length == 0)
-            return new int[]{0};
+        // if(numCourses == 1 && prerequisites.length == 0)
+        //     return new int[]{0};
 
         List<List<Integer>> courses = new ArrayList<List<Integer>>();
         int[] inDegreeArr = new int[numCourses];
