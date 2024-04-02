@@ -55,17 +55,15 @@ class TrieNode{
     
     char c;
     boolean isEndOfWord;
-    TrieNode[] children;
+    TrieNode[] children = new TrieNode[26];
 
     TrieNode(){
         isEndOfWord = false;
-        this.children = new TrieNode[26];
     }
         
     TrieNode(char c){
         this.c = c;
         isEndOfWord = false;
-        this.children = new TrieNode[26];
     }
 }
 
