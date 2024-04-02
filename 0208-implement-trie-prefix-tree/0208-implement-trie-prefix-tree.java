@@ -26,19 +26,13 @@ class Trie {
         
         for(int i=0; i<word.length(); i++){
             
-            TrieNode child = current.children[word.charAt(i) - 'a'];
-            
-            if(child == null){
+            if(current.children[word.charAt(i) - 'a'] == null)
                 return false;
-            }
-            
-            if(i == word.length() - 1 && child.isEndOfWord)
-                return true;
-            
-            current = child;
+
+            current = current.children[word.charAt(i) - 'a'];
         }
         
-        return false;
+        return current.isEndOfWord;
     }
     
     public boolean startsWith(String prefix) {
@@ -47,19 +41,13 @@ class Trie {
         
         for(int i=0; i<prefix.length(); i++){
             
-            TrieNode child = current.children[prefix.charAt(i) - 'a'];
-            
-            if(child == null){
+            if(current.children[prefix.charAt(i) - 'a'] == null)
                 return false;
-            }
-            
-            if(i == prefix.length() - 1)
-                return true;
-            
-            current = child;
+
+            current = current.children[prefix.charAt(i) - 'a'];
         }
         
-        return false;
+        return true;
     }
 }
 
