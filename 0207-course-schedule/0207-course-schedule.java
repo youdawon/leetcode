@@ -4,7 +4,7 @@ class Solution {
         if(prerequisites.length == 0)
             return true;
         
-        Map<Integer, List<Integer>> topoMap = new HashMap<Integer, List<Integer>>();        
+        Map<Integer, List<Integer>> topoMap = new HashMap<Integer, List<Integer>>();     
         Map<Integer, Integer> inDegree = new HashMap<>();
         
         //init map
@@ -22,29 +22,37 @@ class Solution {
             inDegree.put(curCourse, inDegree.get(curCourse) + 1);
         }
         
-        Queue<Integer> queue = new LinkedList<>();    
+        Set<Integer> set = new HashSet<Integer>();
         List<Integer> order = new ArrayList<>();
         
-        for(int course : inDegree.keySet()){
-            if(inDegree.get(course) == 0)
-                queue.add(course);
+        for(int key : topoMap.keySet()){
+            if(isCycling(topoMap, set, key)){
+                return false;
+            }
         }
 
-        while(!queue.isEmpty()){
-            int key = queue.poll();
+        return true;
+    }
+    
+    public boolean isCycling(Map<Integer, List<Integer>> topoMap, Set<Integer> set, int key){
+        
+        if(set.contains(key)){
+            return true;
+        }
+        
+        set.add(key);
+        
+        for(int child : topoMap.get(key)){
             
-            order.add(key);
-            
-            for(int child : topoMap.get(key)){
-                inDegree.put(child, inDegree.get(child) - 1);
-                if(inDegree.get(child) == 0)
-                    queue.add(child);
+            if(isCycling(topoMap, set, child)){
+                return true;
             }
         }
         
-        if(order.size() != numCourses)
-            return false;
         
-        return true;
+        set.remove(key);
+        topoMap.put(key, new ArrayList<Integer>());
+
+        return false;
     }
 }
