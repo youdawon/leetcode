@@ -5,12 +5,10 @@ class Solution {
             return true;
         
         Map<Integer, List<Integer>> topoMap = new HashMap<Integer, List<Integer>>();     
-        Map<Integer, Integer> inDegree = new HashMap<>();
         
         //init map
         for(int i=0; i<numCourses; i++){
             topoMap.put(i, new ArrayList<Integer>());
-            inDegree.put(i, 0);
         }
          
         //setting map
@@ -19,7 +17,6 @@ class Solution {
             int curCourse = prerequisity[0];            
             
             topoMap.get(preCourse).add(curCourse);
-            inDegree.put(curCourse, inDegree.get(curCourse) + 1);
         }
         
         int[] visited = new int[numCourses];
