@@ -4,11 +4,11 @@ class Solution {
         if(prerequisites.length == 0)
             return true;
         
-        Map<Integer, List<Integer>> topoMap = new HashMap<Integer, List<Integer>>();     
+        List<List<Integer>> courses = new ArrayList<List<Integer>>();
         
         //init map
         for(int i=0; i<numCourses; i++){
-            topoMap.put(i, new ArrayList<Integer>());
+            courses.add(new ArrayList<Integer>());
         }
          
         //setting map
@@ -16,13 +16,13 @@ class Solution {
             int preCourse = prerequisity[1];
             int curCourse = prerequisity[0];            
             
-            topoMap.get(preCourse).add(curCourse);
+            courses.get(preCourse).add(curCourse);
         }
         
         int[] visited = new int[numCourses];
                 
-        for(int key : topoMap.keySet()){
-            if(isCycling(topoMap, visited, key)){
+        for(int key = 0; key < courses.size(); key++){
+            if(isCycling(courses, visited, key)){
                 return false;
             }
         }
@@ -30,17 +30,17 @@ class Solution {
         return true;
     }
     
-    public boolean isCycling(Map<Integer, List<Integer>> topoMap, int[] visited, int key){
+    public boolean isCycling(List<List<Integer>> courses, int[] visited, int key){
         
         if(visited[key] == 2)
             return true;
         
         visited[key] = 2;
         
-        for(int child : topoMap.get(key)){
+        for(int child : courses.get(key)){
             
             if(visited[child] != 1){                
-                if(isCycling(topoMap, visited, child)){
+                if(isCycling(courses, visited, child)){
                     return true;
                 }
             }
