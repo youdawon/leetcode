@@ -24,7 +24,6 @@ class Trie {
         
         for(String keyword : trie){
             if(keyword.startsWith(prefix)){
-              //  trie.add(prefix);
                 return true;
             }
         }
