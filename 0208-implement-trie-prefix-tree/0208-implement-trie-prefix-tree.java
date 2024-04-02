@@ -1,51 +1,84 @@
 class Trie {
     
-    Set<String> trie;
-    HashMap<Character, HashSet<String>> prefixTrie;
-
+    TrieNode root;
+    
     public Trie() {
-        trie = new HashSet<>();        
-        prefixTrie = new HashMap<Character, HashSet<String>>();                
+        this.root = new TrieNode();
     }
     
     public void insert(String word) {
-        trie.add(word);
         
-        HashSet<String> prefixKeywords = new HashSet<String>();        
+        TrieNode current = this.root;
         
-        if(prefixTrie.containsKey(word.charAt(0))){
-            prefixKeywords = prefixTrie.get(word.charAt(0));
+        for(int i=0; i<word.length(); i++){
+
+            TrieNode child = new TrieNode();
+            
+            if(!current.children.containsKey(word.charAt(i))){
+                child = new TrieNode(word.charAt(i));                
+                current.children.put(word.charAt(i), child);
+            } else {
+                child = current.children.get(word.charAt(i)); 
+            }   
+            
+            if(i == word.length()-1)
+                child.isEndOfWord = true;
+            
+            current = child;
         }
-        
-        prefixKeywords.add(word);
-        
-        prefixTrie.put(word.charAt(0), prefixKeywords);
     }
     
     public boolean search(String word) {
-        if(trie.contains(word))
-            return true;
+        
+        TrieNode current = this.root;
+
+        for(int i=0; i<word.length(); i++){            
+            if(!current.children.containsKey(word.charAt(i)))
+                return false;
+            
+            current = current.children.get(word.charAt(i));  
+            
+
+                            
+            if(i == word.length() - 1 && current.isEndOfWord)
+                return true;
+        }
         
         return false;
     }
     
     public boolean startsWith(String prefix) {
-        
-        if(trie.contains(prefix))
-            return true;
-        
-        
-        if(prefixTrie.containsKey(prefix.charAt(0)) && prefixTrie.get(prefix.charAt(0)).contains(prefix))
-            return true;
-        
-        for(String keyword : trie){
-            if(keyword.startsWith(prefix)){
-                prefixTrie.get(prefix.charAt(0)).add(prefix);
+        TrieNode current = this.root;
+
+        for(int i=0; i<prefix.length(); i++){
+            if(!current.children.containsKey(prefix.charAt(i)))
+                return false;
+            
+            current = current.children.get(prefix.charAt(i));            
+                            
+            if(i == prefix.length() - 1)
                 return true;
-            }
         }
         
         return false;
+    }
+}
+
+class TrieNode{
+    
+    char c;
+    boolean isEndOfWord;
+    HashMap<Character, TrieNode> children;
+
+    TrieNode(){
+        isEndOfWord = false;
+        this.children = new HashMap<Character, TrieNode>();
+    }
+        
+    TrieNode(char c){
+        this.c = c;
+        isEndOfWord = false;
+        this.children = new HashMap<Character, TrieNode>();        
     }
 }
 
