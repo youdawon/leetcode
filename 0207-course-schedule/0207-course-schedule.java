@@ -35,8 +35,6 @@ class Solution {
             
             order.add(key);
             
-            System.out.println(queue);
-            
             for(int child : topoMap.get(key)){
                 inDegree.put(child, inDegree.get(child) - 1);
                 if(inDegree.get(child) == 0)
