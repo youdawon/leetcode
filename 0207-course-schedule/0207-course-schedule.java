@@ -36,11 +36,9 @@ class Solution {
     
     public boolean isCycling(Map<Integer, List<Integer>> topoMap, Set<Integer> set, int key){
         
-        if(set.contains(key)){
+        if(!set.add(key)){
             return true;
         }
-        
-        set.add(key);
         
         if(topoMap.get(key) != null){
         
