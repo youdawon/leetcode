@@ -1,15 +1,25 @@
 class Trie {
     
     Set<String> trie;
-    Set<String> prefixTrie;    
+    HashMap<Character, HashSet<String>> prefixTrie;
 
     public Trie() {
         trie = new HashSet<>();        
-        prefixTrie = new HashSet<>();                
+        prefixTrie = new HashMap<Character, HashSet<String>>();                
     }
     
     public void insert(String word) {
         trie.add(word);
+        
+        HashSet<String> prefixKeywords = new HashSet<String>();        
+        
+        if(prefixTrie.containsKey(word.charAt(0))){
+            prefixKeywords = prefixTrie.get(word.charAt(0));
+        }
+        
+        prefixKeywords.add(word);
+        
+        prefixTrie.put(word.charAt(0), prefixKeywords);
     }
     
     public boolean search(String word) {
@@ -21,12 +31,16 @@ class Trie {
     
     public boolean startsWith(String prefix) {
         
-        if(trie.contains(prefix) || prefixTrie.contains(prefix))
+        if(trie.contains(prefix))
+            return true;
+        
+        
+        if(prefixTrie.containsKey(prefix.charAt(0)) && prefixTrie.get(prefix.charAt(0)).contains(prefix))
             return true;
         
         for(String keyword : trie){
             if(keyword.startsWith(prefix)){
-                prefixTrie.add(prefix);
+                prefixTrie.get(prefix.charAt(0)).add(prefix);
                 return true;
             }
         }
