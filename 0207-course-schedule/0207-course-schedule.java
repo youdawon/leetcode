@@ -22,11 +22,10 @@ class Solution {
             inDegree.put(curCourse, inDegree.get(curCourse) + 1);
         }
         
-        Set<Integer> set = new HashSet<Integer>();
-        
-        
+        int[] visited = new int[numCourses];
+                
         for(int key : topoMap.keySet()){
-            if(isCycling(topoMap, set, key)){
+            if(isCycling(topoMap, visited, key)){
                 return false;
             }
         }
@@ -34,25 +33,23 @@ class Solution {
         return true;
     }
     
-    public boolean isCycling(Map<Integer, List<Integer>> topoMap, Set<Integer> set, int key){
+    public boolean isCycling(Map<Integer, List<Integer>> topoMap, int[] visited, int key){
         
-        if(!set.add(key)){
+        if(visited[key] == 2)
             return true;
-        }
         
-        if(topoMap.get(key) != null){
+        visited[key] = 2;
         
-            for(int child : topoMap.get(key)){
-
-                if(isCycling(topoMap, set, child)){
+        for(int child : topoMap.get(key)){
+            
+            if(visited[child] != 1){                
+                if(isCycling(topoMap, visited, child)){
                     return true;
                 }
             }
         }
-
-        
-        set.remove(key);        
-        topoMap.put(key, null);
+       
+        visited[key] = 1;
 
         return false;
     }
