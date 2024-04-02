@@ -23,7 +23,7 @@ class Solution {
         }
         
         Set<Integer> set = new HashSet<Integer>();
-        List<Integer> order = new ArrayList<>();
+        
         
         for(int key : topoMap.keySet()){
             if(isCycling(topoMap, set, key)){
@@ -42,16 +42,19 @@ class Solution {
         
         set.add(key);
         
-        for(int child : topoMap.get(key)){
-            
-            if(isCycling(topoMap, set, child)){
-                return true;
+        if(topoMap.get(key) != null){
+        
+            for(int child : topoMap.get(key)){
+
+                if(isCycling(topoMap, set, child)){
+                    return true;
+                }
             }
         }
+
         
-        
-        set.remove(key);
-        topoMap.put(key, new ArrayList<Integer>());
+        set.remove(key);        
+        topoMap.put(key, null);
 
         return false;
     }
