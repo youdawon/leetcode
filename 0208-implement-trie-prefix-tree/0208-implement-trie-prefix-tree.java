@@ -12,18 +12,12 @@ class Trie {
         
         for(int i=0; i<word.length(); i++){
             
-            TrieNode child = current.children[word.charAt(i) - 'a'];
-            
-            if(child == null){
-                child = new TrieNode(word.charAt(i));
-                current.children[word.charAt(i) - 'a'] = child;
-            }
-            
-            if(i == word.length() - 1)
-                child.isEndOfWord = true; 
-            
-            current = child;
+            if(current.children[word.charAt(i) - 'a'] == null){
+                current.children[word.charAt(i) - 'a'] = new TrieNode(word.charAt(i));
+            }            
+            current = current.children[word.charAt(i) - 'a'];
         }
+        current.isEndOfWord = true;
     }
     
     public boolean search(String word) {
