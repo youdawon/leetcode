@@ -1,9 +1,11 @@
 class Trie {
     
     Set<String> trie;
+    Set<String> prefixTrie;    
 
     public Trie() {
         trie = new HashSet<>();        
+        prefixTrie = new HashSet<>();                
     }
     
     public void insert(String word) {
@@ -19,11 +21,12 @@ class Trie {
     
     public boolean startsWith(String prefix) {
         
-        if(trie.contains(prefix))
+        if(trie.contains(prefix) || prefixTrie.contains(prefix))
             return true;
         
         for(String keyword : trie){
             if(keyword.startsWith(prefix)){
+                prefixTrie.add(prefix);
                 return true;
             }
         }
