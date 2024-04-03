@@ -1,41 +1,44 @@
 class Solution {
     public int[][] updateMatrix(int[][] mat) {
-     
-        Queue<int[]> q = new LinkedList<>();
         
-        for(int i=0; i<mat.length; i++){
-            for(int j=0; j<mat[i].length; j++){
-                if(mat[i][j] == 0){
-                    q.offer(new int[]{i, j});
-                } else {
-                    mat[i][j] = Integer.MAX_VALUE;
-                }               
-            }
-        }
-
-        int[][] direction = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-        while(!q.isEmpty()){
-            
-            int[] cell = q.poll();
-            
-            int m = cell[0];
-            int n = cell[1];
-            
-            for(int i=0; i<4; i++){            
-                int r = cell[0] + direction[i][0];
-                int c = cell[1] + direction[i][1];
-                
-                if(r < 0 || r >= mat.length || c < 0 || c >= mat[0].length || 
-                  mat[r][c] != Integer.MAX_VALUE){
+        int rowMax = mat.length-1;
+        int colMax = mat[0].length-1;
+        int INF = rowMax + colMax;
+        
+        for(int i=0; i<=rowMax; i++){
+            for(int j=0; j<=colMax; j++){
+                if(mat[i][j] == 0)
                     continue;
-                }
                 
-                mat[r][c] = mat[m][n] + 1;
+                int left = INF;
+                int top = INF;
+                if(i-1 >= 0)
+                    left = mat[i-1][j];
+                if(j-1 >= 0)                
+                    top = mat[i][j-1];                
+                    
+                mat[i][j] = Math.min(top, left) + 1;
                 
-                q.offer(new int[]{r, c});
             }
-        }
-            
+        }     
+        
+        for(int i=rowMax; i>=0; i--){
+            for(int j=colMax; j>=0; j--){
+                if(mat[i][j] == 0)
+                    continue;
+                
+                int right = INF;
+                int bottom = INF;
+                if(i+1 <= rowMax)
+                    right = mat[i + 1][j];
+                if(j+1 <= colMax)                
+                    bottom = mat[i][j+1];                
+                    
+                mat[i][j] = Math.min(mat[i][j], Math.min(right,bottom) + 1);                
+            }
+        }     
+        
+        
         return mat;
     }
 }
