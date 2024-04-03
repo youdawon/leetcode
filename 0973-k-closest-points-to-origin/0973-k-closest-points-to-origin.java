@@ -21,10 +21,13 @@ class Solution {
     }
     
     public int partition(int[][] points, int low, int high){
-
-        int[] pivot = points[low];
+        
+        int pivotPoint = (low + high) / 2;        
+        int[] pivot = points[pivotPoint];
         int i=low;
         int j=high;
+        
+        swap(points, low, pivotPoint);        
         
         while(i<j){
             while(getDistance(pivot) < getDistance(points[j])){
@@ -33,13 +36,14 @@ class Solution {
 
             while(i<j && getDistance(pivot) >= getDistance(points[i])){
                 i++;
-            }
-            
+            }            
             swap(points, i, j);
             
         }  
+                
         points[low] = points[i];
         points[i] = pivot;  
+
 
         return i;
     }    
