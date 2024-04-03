@@ -3,23 +3,54 @@ class Solution {
         
         if(k == points.length)
             return points;
-                
-        int[] distance = new int[points.length];
         
-        PriorityQueue<Pair<Integer, int[]>> pQueue = new PriorityQueue<>(Comparator.comparing(Pair::getKey));        
+        quickSort(points, 0, points.length-1);
         
-        for(int i=0; i<points.length; i++){            
-            distance[i] = points[i][0]*points[i][0] + points[i][1] *points[i][1];
-            pQueue.add(new Pair<>(distance[i], points[i]));
-        }
+        return Arrays.copyOfRange(points, 0, k);
+    }
+    
+    public void quickSort(int[][] points, int low, int high){
         
-        int[][] result = new int[k][2];
+        if(low >= high)
+            return;
         
-        for(int i=0; i<result.length; i++){
-            Pair<Integer, int[]> pair = pQueue.poll();
-            result[i] = pair.getValue();
-        }
+        int pi = partition(points, low, high);
         
-        return result;
+        quickSort(points, low, pi-1);
+        quickSort(points, pi+1, high);        
+    }
+    
+    public int partition(int[][] points, int low, int high){
+
+        int[] pivot = points[low];
+        int i=low;
+        int j=high;
+        
+        while(i<j){
+            while(getDistance(pivot) < getDistance(points[j])){
+                j--;
+            }
+
+            while(i<j && getDistance(pivot) >= getDistance(points[i])){
+                i++;
+            }
+            
+            swap(points, i, j);
+            
+        }  
+        points[low] = points[i];
+        points[i] = pivot;  
+
+        return i;
+    }    
+    
+    public int getDistance(int[] value){
+        return value[0]*value[0] + value[1]*value[1];
+    }
+    
+    public void swap(int[][] points, int i, int j){
+        int[] temp = points[i];
+        points[i] = points[j];
+        points[j] = temp; 
     }
 }
