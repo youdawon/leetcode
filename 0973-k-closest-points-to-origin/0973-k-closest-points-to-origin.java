@@ -1,5 +1,8 @@
 class Solution {
     public int[][] kClosest(int[][] points, int k) {
+        
+        if(k == points.length)
+            return points;
                 
         int[] distance = new int[points.length];
         
@@ -8,9 +11,6 @@ class Solution {
         for(int i=0; i<points.length; i++){            
             distance[i] = points[i][0]*points[i][0] + points[i][1] *points[i][1];
             pQueue.add(new Pair<>(distance[i], points[i]));
-            
-
-            
         }
         
         int[][] result = new int[k][2];
