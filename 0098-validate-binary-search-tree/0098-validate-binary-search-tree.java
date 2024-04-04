@@ -14,20 +14,25 @@
  * }
  */
 class Solution {
-    public boolean isValidBST(TreeNode root) {        
-        return isValidTree(root, null, null);
+    public boolean isValidBST(TreeNode root) {
+        
+        Stack<Integer> stack = new Stack<>();
+        
+        addNodeValues(stack, root);
+    
+        while(!stack.isEmpty() && stack.size() > 1){
+            int curValue = stack.pop();
+            if(curValue <= stack.peek())
+                return false;
+        }            
+            
+        return true;
     }
     
-    public boolean isValidTree(TreeNode root, TreeNode minNode, TreeNode maxNode){
+    public void addNodeValues(Stack<Integer> stack, TreeNode node){
         
-        if(root == null)
-            return true;
-        if(minNode != null && minNode.val >= root.val)
-            return false;
-        if(maxNode != null && maxNode.val <= root.val)
-            return false;        
-        
-        
-        return isValidTree(root.left, minNode, root) && isValidTree(root.right, root, maxNode);
+        if(node.left != null) addNodeValues(stack, node.left);
+        stack.add(node.val);
+        if(node.right != null) addNodeValues(stack, node.right);        
     }
 }
