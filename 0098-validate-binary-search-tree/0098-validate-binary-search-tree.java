@@ -16,23 +16,21 @@
 class Solution {
     public boolean isValidBST(TreeNode root) {
         
-        Stack<Integer> stack = new Stack<>();
         
-        addNodeValues(stack, root);
-    
-        while(!stack.isEmpty() && stack.size() > 1){
-            int curValue = stack.pop();
-            if(curValue <= stack.peek())
-                return false;
-        }            
-            
-        return true;
+        return isChildValid(root, null, null);
     }
-    
-    public void addNodeValues(Stack<Integer> stack, TreeNode node){
+
+    public boolean isChildValid(TreeNode root, TreeNode minNode, TreeNode maxNode){
+
+        if(root == null)
+            return true;
         
-        if(node.left != null) addNodeValues(stack, node.left);
-        stack.add(node.val);
-        if(node.right != null) addNodeValues(stack, node.right);        
+        if(minNode != null && minNode.val >= root.val)
+            return false;
+        
+        if(maxNode != null && maxNode.val <= root.val)
+            return false;
+        
+        return isChildValid(root.left, minNode, root) && isChildValid(root.right, root, maxNode);
     }
 }
