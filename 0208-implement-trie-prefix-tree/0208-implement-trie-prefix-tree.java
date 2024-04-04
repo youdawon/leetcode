@@ -9,11 +9,10 @@ class Trie {
     public void insert(String word) {        
         TreeNode current = node;
         
-        for(char c : word.toCharArray()){
-            if(!current.children.containsKey(c)){
-                current.children.put(c, new TreeNode(c));
-            } 
-            current = current.children.get(c);
+        for(char c : word.toCharArray()){            
+            if(current.children[c-'a'] == null)
+                current.children[c-'a'] = new TreeNode(c);
+            current = current.children[c-'a'];
         }
         current.isEndOfWord = true;
     }
@@ -22,9 +21,9 @@ class Trie {
         TreeNode current = node;
         
         for(char c : word.toCharArray()){
-            if(!current.children.containsKey(c))
+            if(current.children[c-'a'] == null)
                 return false;
-            current = current.children.get(c);
+            current = current.children[c-'a'];
         }
         if(current.isEndOfWord)
             return true;
@@ -35,9 +34,9 @@ class Trie {
         TreeNode current = node;
         
         for(char c : prefix.toCharArray()){
-            if(!current.children.containsKey(c))
+            if(current.children[c-'a'] == null)
                 return false;
-            current = current.children.get(c);
+            current = current.children[c-'a'];
         }
         return true;        
     }
@@ -47,16 +46,16 @@ class TreeNode {
     
     char val;
     boolean isEndOfWord;
-    HashMap<Character, TreeNode> children;
+    TreeNode[] children;
     
     TreeNode(){
-        children = new HashMap<Character, TreeNode>();
+        children = new TreeNode[26];        
         isEndOfWord = false;
     }
 
     TreeNode(char val){
         this.val = val;
-        children = new HashMap<Character, TreeNode>();
+        children = new TreeNode[26];        
         isEndOfWord = false;
     }
 }
