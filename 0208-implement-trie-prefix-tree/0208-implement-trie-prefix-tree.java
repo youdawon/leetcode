@@ -1,68 +1,62 @@
 class Trie {
     
-    TrieNode root;
-    
+    TreeNode node;
+
     public Trie() {
-        this.root = new TrieNode();
+        node = new TreeNode();
     }
     
-    public void insert(String word) {
+    public void insert(String word) {        
+        TreeNode current = node;
         
-        TrieNode current = this.root;
-        
-        for(int i=0; i<word.length(); i++){
-            
-            if(current.children[word.charAt(i) - 'a'] == null){
-                current.children[word.charAt(i) - 'a'] = new TrieNode(word.charAt(i));
-            }            
-            current = current.children[word.charAt(i) - 'a'];
+        for(char c : word.toCharArray()){
+            if(!current.children.containsKey(c)){
+                current.children.put(c, new TreeNode(c));
+            } 
+            current = current.children.get(c);
         }
         current.isEndOfWord = true;
     }
     
     public boolean search(String word) {
+        TreeNode current = node;
         
-        TrieNode current = this.root;
-        
-        for(int i=0; i<word.length(); i++){
-            
-            if(current.children[word.charAt(i) - 'a'] == null)
+        for(char c : word.toCharArray()){
+            if(!current.children.containsKey(c))
                 return false;
-
-            current = current.children[word.charAt(i) - 'a'];
+            current = current.children.get(c);
         }
-        
-        return current.isEndOfWord;
+        if(current.isEndOfWord)
+            return true;
+        return false;
     }
     
     public boolean startsWith(String prefix) {
+        TreeNode current = node;
         
-        TrieNode current = this.root;
-        
-        for(int i=0; i<prefix.length(); i++){
-            
-            if(current.children[prefix.charAt(i) - 'a'] == null)
+        for(char c : prefix.toCharArray()){
+            if(!current.children.containsKey(c))
                 return false;
-
-            current = current.children[prefix.charAt(i) - 'a'];
+            current = current.children.get(c);
         }
-        
-        return true;
+        return true;        
     }
 }
 
-class TrieNode{
+class TreeNode {
     
-    char c;
+    char val;
     boolean isEndOfWord;
-    TrieNode[] children = new TrieNode[26];
-
-    TrieNode(){
+    HashMap<Character, TreeNode> children;
+    
+    TreeNode(){
+        children = new HashMap<Character, TreeNode>();
         isEndOfWord = false;
     }
-        
-    TrieNode(char c){
-        this.c = c;
+
+    TreeNode(char val){
+        this.val = val;
+        children = new HashMap<Character, TreeNode>();
         isEndOfWord = false;
     }
 }
