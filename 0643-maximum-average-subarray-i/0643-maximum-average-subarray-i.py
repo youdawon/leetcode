@@ -7,7 +7,9 @@ class Solution:
         for i in range(k, len(nums)):
             
             currSum = currSum + nums[i] - nums[i-k]
-            
-            maxSum = max(maxSum, currSum);
+
+            if currSum > maxSum : 
+                maxSum = currSum
+            # maxSum = max(maxSum, currSum);
             
         return maxSum / k
