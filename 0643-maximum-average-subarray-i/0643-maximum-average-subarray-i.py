@@ -10,6 +10,5 @@ class Solution:
 
             if currSum > maxSum : 
                 maxSum = currSum
-            # maxSum = max(maxSum, currSum);
             
         return maxSum / k
