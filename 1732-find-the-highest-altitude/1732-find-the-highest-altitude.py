@@ -7,7 +7,8 @@ class Solution:
         for g in gain:            
             curSum += g
 
-            result = max(curSum, result)
+            if curSum > result:
+                result = curSum
                         
         return result
             
