@@ -9,7 +9,6 @@ class Solution:
 
             if curSum > result:
                 result = curSum
-                
-        
+                        
         return result
             
