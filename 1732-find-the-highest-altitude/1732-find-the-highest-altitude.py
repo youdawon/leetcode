@@ -5,10 +5,9 @@ class Solution:
         curSum = 0
         
         for g in gain:            
-            curSum = curSum + g
+            curSum += g
 
-            if curSum > result:
-                result = curSum
+            result = max(curSum, result)
                         
         return result
             
