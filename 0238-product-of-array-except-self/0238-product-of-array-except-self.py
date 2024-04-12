@@ -7,10 +7,12 @@ class Solution:
             arr.append(arr[i-1] * nums[i-1])
             
         prev = 1
+        
+        lastIndex = len(nums)-1
             
-        for i in reversed(range(len(nums))):
-            arr[i] = arr[i] * prev            
-            prev = nums[i] * prev
+        for i in range(0, len(nums)):
+            arr[lastIndex-i] = arr[lastIndex-i] * prev            
+            prev = nums[lastIndex-i] * prev
             
         return arr
         
