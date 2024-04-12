@@ -5,8 +5,8 @@ class Solution:
         map[0] = 1
         currSum=count=0
         
-        for i in range(len(nums)):
-            currSum += nums[i]
+        for num in nums:
+            currSum += num
             
             count += map.get(currSum-k, 0)
                 
