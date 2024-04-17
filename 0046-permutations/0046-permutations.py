@@ -1,18 +1,22 @@
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+ def permute(self, nums: List[int]) -> List[List[int]]:
 
         res = []
 
-        if len(nums) == 1:
-            return [nums.copy()]
+        def dfs(res, current, nums, used):
+
+            if len(current) == len(nums):
+                res.append(current.copy())
+                return
+
+            for i in range(0, len(nums)):
+                if used[i] is False:
+                    used[i] = True
+                    current.append(nums[i])
+                    dfs(res, current, nums, used)                
+                    used[i] = False
+                    current.pop()
+
+        dfs(res, [], nums, [False]*len(nums))            
         
-        for i in range(len(nums)):
-            n = nums.pop(0)
-            perms = self.permute(nums)
-
-            for perm in perms:
-                perm.append(n)
-            res.extend(perms)
-            nums.append(n)
-
         return res
