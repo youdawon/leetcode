@@ -9,9 +9,7 @@ class Solution:
                 return 0
             grid[i][j] = 0
             
-            total = traverse(i-1, j) + traverse(i+1, j) + traverse(i, j-1) + traverse(i, j+1)                        
-
-            return 1 + total 
+            return traverse(i-1, j) + traverse(i+1, j) + traverse(i, j-1) + traverse(i, j+1) + 1
 
         maxArea = 0
 
