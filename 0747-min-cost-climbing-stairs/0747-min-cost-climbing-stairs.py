@@ -1,12 +1,20 @@
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
 
-        minValue = -inf
-        minCost = [0]*(len(cost) + 1)
-        minCost[0] = 0
-        minCost[1] = cost[0]
+        dp = [-1] * len(cost)
 
-        for i in range(1, len(cost)):
-            minCost[i+1] = cost[i] + min(minCost[i], minCost[i-1])
+        def recursion(n):
+            if n < 0:
+                return 0
+            if n < 2:
+                return cost[n]            
+            if dp[n] != -1:
+                return dp[n]
 
-        return min(minCost[-1], minCost[-2])
+            dp[n] = cost[n] + min(recursion(n-1), recursion(n-2))
+
+            return dp[n]
+
+        n = len(cost)
+
+        return min(recursion(n-1), recursion(n-2))
