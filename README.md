@@ -14,6 +14,7 @@
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/youdawon/leetcode/tree/master/0053-maximum-subarray) |
+| [0191-number-of-1-bits](https://github.com/youdawon/leetcode/tree/master/0191-number-of-1-bits) |
 # Dynamic Programming
 |  |
 | ------- |
@@ -66,3 +67,7 @@
 | ------- |
 | [0130-surrounded-regions](https://github.com/youdawon/leetcode/tree/master/0130-surrounded-regions) |
 | [0695-max-area-of-island](https://github.com/youdawon/leetcode/tree/master/0695-max-area-of-island) |
+# Bit Manipulation
+|  |
+| ------- |
+| [0191-number-of-1-bits](https://github.com/youdawon/leetcode/tree/master/0191-number-of-1-bits) |
