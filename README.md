@@ -4,6 +4,7 @@
 # Array
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0053-maximum-subarray](https://github.com/youdawon/leetcode/tree/master/0053-maximum-subarray) |
 | [0130-surrounded-regions](https://github.com/youdawon/leetcode/tree/master/0130-surrounded-regions) |
 | [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
@@ -67,6 +68,7 @@
 # Matrix
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0130-surrounded-regions](https://github.com/youdawon/leetcode/tree/master/0130-surrounded-regions) |
 | [0695-max-area-of-island](https://github.com/youdawon/leetcode/tree/master/0695-max-area-of-island) |
 # Bit Manipulation
@@ -77,6 +79,7 @@
 # Math
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 # Binary Search
 |  |
