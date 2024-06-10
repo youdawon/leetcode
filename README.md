@@ -8,6 +8,7 @@
 | [0130-surrounded-regions](https://github.com/youdawon/leetcode/tree/master/0130-surrounded-regions) |
 | [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/youdawon/leetcode/tree/master/0213-house-robber-ii) |
+| [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0695-max-area-of-island](https://github.com/youdawon/leetcode/tree/master/0695-max-area-of-island) |
 | [0747-min-cost-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 # Divide and Conquer
@@ -53,6 +54,7 @@
 |  |
 | ------- |
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
+| [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 # Graph
 |  |
 | ------- |
@@ -71,3 +73,16 @@
 |  |
 | ------- |
 | [0191-number-of-1-bits](https://github.com/youdawon/leetcode/tree/master/0191-number-of-1-bits) |
+| [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
+# Math
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
+# Binary Search
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
+# Sorting
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
