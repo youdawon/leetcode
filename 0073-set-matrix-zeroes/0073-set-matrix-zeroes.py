@@ -20,5 +20,5 @@ class Solution:
                 matrix[i][j] = 0
 
         for i in col:
-            for j in range(m):
+            for j in range(m):  
                 matrix[j][i] = 0
