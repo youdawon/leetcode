@@ -12,6 +12,7 @@
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0695-max-area-of-island](https://github.com/youdawon/leetcode/tree/master/0695-max-area-of-island) |
 | [0747-min-cost-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0747-min-cost-climbing-stairs) |
+| [2015-determine-whether-matrix-can-be-obtained-by-rotation](https://github.com/youdawon/leetcode/tree/master/2015-determine-whether-matrix-can-be-obtained-by-rotation) |
 # Divide and Conquer
 |  |
 | ------- |
@@ -71,6 +72,7 @@
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0130-surrounded-regions](https://github.com/youdawon/leetcode/tree/master/0130-surrounded-regions) |
 | [0695-max-area-of-island](https://github.com/youdawon/leetcode/tree/master/0695-max-area-of-island) |
+| [2015-determine-whether-matrix-can-be-obtained-by-rotation](https://github.com/youdawon/leetcode/tree/master/2015-determine-whether-matrix-can-be-obtained-by-rotation) |
 # Bit Manipulation
 |  |
 | ------- |
