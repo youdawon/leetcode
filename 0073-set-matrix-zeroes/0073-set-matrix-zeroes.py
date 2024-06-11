@@ -3,8 +3,7 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        m = len(matrix)
-        n = len(matrix[0])
+        m, n = len(matrix), len(matrix[0])
 
         row = set()
         col = set()
@@ -17,8 +16,8 @@ class Solution:
 
         for i in row:
             for j in range(n):
-                matrix[i][j] = 0
+                matrix[i][j] = 0                
 
-        for i in col:
-            for j in range(m):  
-                matrix[j][i] = 0
+        for j in col:
+            for i in range(m):
+                matrix[i][j] = 0                                
