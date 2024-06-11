@@ -20,6 +20,6 @@ class Solution:
             row_end -= 1
             for r in range(row_end, row_begin-1, -1):
                 res.append(matrix[r][col_begin])                
-            col_begin += 1\
+            col_begin += 1
             
         return res[:m*n]
