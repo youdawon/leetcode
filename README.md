@@ -38,6 +38,7 @@
 | [0091-decode-ways](https://github.com/youdawon/leetcode/tree/master/0091-decode-ways) |
 | [0125-valid-palindrome](https://github.com/youdawon/leetcode/tree/master/0125-valid-palindrome) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
+| [0242-valid-anagram](https://github.com/youdawon/leetcode/tree/master/0242-valid-anagram) |
 # Tree
 |  |
 | ------- |
@@ -66,6 +67,7 @@
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
+| [0242-valid-anagram](https://github.com/youdawon/leetcode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [2483-task-scheduler-ii](https://github.com/youdawon/leetcode/tree/master/2483-task-scheduler-ii) |
 # Graph
@@ -104,6 +106,7 @@
 # Sorting
 |  |
 | ------- |
+| [0242-valid-anagram](https://github.com/youdawon/leetcode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 # Simulation
