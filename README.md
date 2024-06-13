@@ -27,6 +27,7 @@
 # Dynamic Programming
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/youdawon/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0053-maximum-subarray](https://github.com/youdawon/leetcode/tree/master/0053-maximum-subarray) |
 | [0091-decode-ways](https://github.com/youdawon/leetcode/tree/master/0091-decode-ways) |
 | [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
@@ -35,6 +36,7 @@
 # String
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/youdawon/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0091-decode-ways](https://github.com/youdawon/leetcode/tree/master/0091-decode-ways) |
 | [0125-valid-palindrome](https://github.com/youdawon/leetcode/tree/master/0125-valid-palindrome) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
@@ -143,6 +145,7 @@
 # Two Pointers
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/youdawon/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0125-valid-palindrome](https://github.com/youdawon/leetcode/tree/master/0125-valid-palindrome) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 # Data Stream
