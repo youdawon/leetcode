@@ -116,6 +116,7 @@
 | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
+| [0937-online-stock-span](https://github.com/youdawon/leetcode/tree/master/0937-online-stock-span) |
 # Trie
 |  |
 | ------- |
@@ -141,11 +142,14 @@
 |  |
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
+| [0937-online-stock-span](https://github.com/youdawon/leetcode/tree/master/0937-online-stock-span) |
 # Stack
 |  |
 | ------- |
 | [0739-daily-temperatures](https://github.com/youdawon/leetcode/tree/master/0739-daily-temperatures) |
+| [0937-online-stock-span](https://github.com/youdawon/leetcode/tree/master/0937-online-stock-span) |
 # Monotonic Stack
 |  |
 | ------- |
 | [0739-daily-temperatures](https://github.com/youdawon/leetcode/tree/master/0739-daily-temperatures) |
+| [0937-online-stock-span](https://github.com/youdawon/leetcode/tree/master/0937-online-stock-span) |
