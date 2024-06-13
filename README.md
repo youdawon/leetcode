@@ -36,6 +36,7 @@
 |  |
 | ------- |
 | [0091-decode-ways](https://github.com/youdawon/leetcode/tree/master/0091-decode-ways) |
+| [0125-valid-palindrome](https://github.com/youdawon/leetcode/tree/master/0125-valid-palindrome) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 # Tree
 |  |
@@ -137,6 +138,7 @@
 # Two Pointers
 |  |
 | ------- |
+| [0125-valid-palindrome](https://github.com/youdawon/leetcode/tree/master/0125-valid-palindrome) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 # Data Stream
 |  |
