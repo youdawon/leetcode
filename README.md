@@ -39,6 +39,7 @@
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/youdawon/leetcode/tree/master/0005-longest-palindromic-substring) |
+| [0008-string-to-integer-atoi](https://github.com/youdawon/leetcode/tree/master/0008-string-to-integer-atoi) |
 | [0091-decode-ways](https://github.com/youdawon/leetcode/tree/master/0091-decode-ways) |
 | [0125-valid-palindrome](https://github.com/youdawon/leetcode/tree/master/0125-valid-palindrome) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
