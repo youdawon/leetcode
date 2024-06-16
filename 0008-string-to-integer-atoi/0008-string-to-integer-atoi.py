@@ -27,8 +27,6 @@ class Solution:
                 break
             letter += s[j]
 
-        print(letter)
-
         if not letter:
             return 0
         
