@@ -11,21 +11,19 @@ class Solution:
 
         res = 0
 
-        if s[0] == "-":
+        if s[i] == "-":
             sign = -1
             i += 1
-        elif s[0] == "+":
+        elif s[i] == "+":
             i += 1
 
-        if i == len(s) or not s[i].isdigit():
-            return 0
-        
-        letter = ""       
-        for j in range(i, len(s)):
-            
-            if not s[j].isdigit():
+        letter = ""
+
+        while i < len(s):
+            if not s[i].isdigit():
                 break
-            letter += s[j]
+            letter += s[i]
+            i += 1
 
         if not letter:
             return 0
