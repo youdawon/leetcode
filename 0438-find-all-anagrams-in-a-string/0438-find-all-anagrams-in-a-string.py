@@ -7,10 +7,10 @@ class Solution:
         sCount, pCount = {}, {}
 
         for i in range(len(p)):
+            sCount[s[i]] = sCount.get(s[i], 0) + 1
             pCount[p[i]] = pCount.get(p[i], 0) + 1
-            sCount[s[i]] = sCount.get(s[i], 0) + 1            
 
-        res = [0] if pCount == sCount else []
+        res = [0] if sCount == pCount else []
 
         l = 0
         for r in range(len(p), len(s)):
@@ -19,10 +19,10 @@ class Solution:
 
             if sCount[s[l]] == 0:
                 sCount.pop(s[l])
-
             l += 1
 
             if sCount == pCount:
                 res.append(l)
 
+            
         return res
