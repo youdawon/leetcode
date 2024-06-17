@@ -10,10 +10,9 @@ class Solution:
             if s[right] in vowels:            
                 vowelCnt += 1
 
-            res = max(res, vowelCnt)           
-            while right - left + 1 >= k:
-                if s[left] in vowels:
+            if right >= k and s[right-k] in vowels:
                     vowelCnt -=1
-                left += 1
+
+            res = max(res, vowelCnt)           
 
         return res
