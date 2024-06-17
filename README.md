@@ -16,6 +16,7 @@
 | [0695-max-area-of-island](https://github.com/youdawon/leetcode/tree/master/0695-max-area-of-island) |
 | [0739-daily-temperatures](https://github.com/youdawon/leetcode/tree/master/0739-daily-temperatures) |
 | [0747-min-cost-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0747-min-cost-climbing-stairs) |
+| [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/youdawon/leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [2015-determine-whether-matrix-can-be-obtained-by-rotation](https://github.com/youdawon/leetcode/tree/master/2015-determine-whether-matrix-can-be-obtained-by-rotation) |
 | [2483-task-scheduler-ii](https://github.com/youdawon/leetcode/tree/master/2483-task-scheduler-ii) |
 # Divide and Conquer
@@ -35,6 +36,7 @@
 | [0516-longest-palindromic-subsequence](https://github.com/youdawon/leetcode/tree/master/0516-longest-palindromic-subsequence) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
 | [0747-min-cost-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0747-min-cost-climbing-stairs) |
+| [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/youdawon/leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 # String
 |  |
 | ------- |
@@ -187,3 +189,4 @@
 | [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [1567-maximum-number-of-vowels-in-a-substring-of-given-length](https://github.com/youdawon/leetcode/tree/master/1567-maximum-number-of-vowels-in-a-substring-of-given-length) |
+| [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/youdawon/leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
