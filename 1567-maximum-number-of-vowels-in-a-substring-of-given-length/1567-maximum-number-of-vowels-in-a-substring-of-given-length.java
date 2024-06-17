@@ -10,11 +10,9 @@ class Solution {
         for(int right=0; right<s.length(); right++){
             if (vowels.contains(s.charAt(right))) vowelCount += 1;
 
+            if (right >= k && vowels.contains(s.charAt(right-k))) vowelCount -= 1;
+
             res = Math.max(res, vowelCount);
-            while (right-left+1 >= k){
-                if (vowels.contains(s.charAt(left))) vowelCount -= 1;
-                left += 1;
-            }
         }
 
         return res;
