@@ -57,6 +57,7 @@
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0516-longest-palindromic-subsequence](https://github.com/youdawon/leetcode/tree/master/0516-longest-palindromic-subsequence) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
+| [1321-get-equal-substrings-within-budget](https://github.com/youdawon/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
 | [1567-maximum-number-of-vowels-in-a-substring-of-given-length](https://github.com/youdawon/leetcode/tree/master/1567-maximum-number-of-vowels-in-a-substring-of-given-length) |
 # Tree
 |  |
@@ -128,6 +129,7 @@
 |  |
 | ------- |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
+| [1321-get-equal-substrings-within-budget](https://github.com/youdawon/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
 # Sorting
 |  |
@@ -199,6 +201,7 @@
 | [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0940-fruit-into-baskets](https://github.com/youdawon/leetcode/tree/master/0940-fruit-into-baskets) |
+| [1321-get-equal-substrings-within-budget](https://github.com/youdawon/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/youdawon/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1567-maximum-number-of-vowels-in-a-substring-of-given-length](https://github.com/youdawon/leetcode/tree/master/1567-maximum-number-of-vowels-in-a-substring-of-given-length) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/youdawon/leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
@@ -208,4 +211,5 @@
 # Prefix Sum
 |  |
 | ------- |
+| [1321-get-equal-substrings-within-budget](https://github.com/youdawon/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
