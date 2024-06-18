@@ -12,7 +12,7 @@ class Solution:
             while len(basket) > basketCount:
                 basket[fruits[left]] = basket[fruits[left]] - 1                
                 if basket[fruits[left]] == 0:
-                    basket.pop(fruits[left])
+                    del basket[fruits[left]]
                 left += 1
 
             num = max(num, right-left+1)
