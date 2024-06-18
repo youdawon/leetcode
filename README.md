@@ -23,6 +23,7 @@
 | [2015-determine-whether-matrix-can-be-obtained-by-rotation](https://github.com/youdawon/leetcode/tree/master/2015-determine-whether-matrix-can-be-obtained-by-rotation) |
 | [2483-task-scheduler-ii](https://github.com/youdawon/leetcode/tree/master/2483-task-scheduler-ii) |
 | [3213-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/youdawon/leetcode/tree/master/3213-count-subarrays-where-max-element-appears-at-least-k-times) |
+| [3225-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/youdawon/leetcode/tree/master/3225-length-of-longest-subarray-with-at-most-k-frequency) |
 # Divide and Conquer
 |  |
 | ------- |
@@ -93,6 +94,7 @@
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0940-fruit-into-baskets](https://github.com/youdawon/leetcode/tree/master/0940-fruit-into-baskets) |
 | [2483-task-scheduler-ii](https://github.com/youdawon/leetcode/tree/master/2483-task-scheduler-ii) |
+| [3225-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/youdawon/leetcode/tree/master/3225-length-of-longest-subarray-with-at-most-k-frequency) |
 # Graph
 |  |
 | ------- |
@@ -202,6 +204,7 @@
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/youdawon/leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
 | [3213-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/youdawon/leetcode/tree/master/3213-count-subarrays-where-max-element-appears-at-least-k-times) |
+| [3225-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/youdawon/leetcode/tree/master/3225-length-of-longest-subarray-with-at-most-k-frequency) |
 # Prefix Sum
 |  |
 | ------- |
