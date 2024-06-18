@@ -9,9 +9,8 @@ class Solution:
 
         for right in range(len(nums)):
             currSum += nums[right]
-            while currSum + k < nums[right] * (right-left+1):
+            if currSum + k < nums[right] * (right-left+1):
                 currSum -= nums[left] 
                 left += 1
-            res = max(res, right-left+1)
 
-        return res
+        return right-left+1
