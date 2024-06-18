@@ -22,6 +22,7 @@
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
 | [2015-determine-whether-matrix-can-be-obtained-by-rotation](https://github.com/youdawon/leetcode/tree/master/2015-determine-whether-matrix-can-be-obtained-by-rotation) |
 | [2483-task-scheduler-ii](https://github.com/youdawon/leetcode/tree/master/2483-task-scheduler-ii) |
+| [3213-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/youdawon/leetcode/tree/master/3213-count-subarrays-where-max-element-appears-at-least-k-times) |
 # Divide and Conquer
 |  |
 | ------- |
@@ -200,6 +201,7 @@
 | [1567-maximum-number-of-vowels-in-a-substring-of-given-length](https://github.com/youdawon/leetcode/tree/master/1567-maximum-number-of-vowels-in-a-substring-of-given-length) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/youdawon/leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
+| [3213-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/youdawon/leetcode/tree/master/3213-count-subarrays-where-max-element-appears-at-least-k-times) |
 # Prefix Sum
 |  |
 | ------- |
