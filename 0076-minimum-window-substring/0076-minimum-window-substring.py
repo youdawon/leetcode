@@ -4,9 +4,12 @@ class Solution:
         if len(s) == 0 or len(t) == 0:
             return ""
 
-        letterCount = collections.Counter(t)
+        letterCount = collections.defaultdict(int)
         res = ""
         needCount = len(t)
+
+        for c in t:
+            letterCount[c] = letterCount.get(c, 0) + 1
         
         left = 0
         for right in range(len(s)):
