@@ -19,6 +19,7 @@
 | [0713-subarray-product-less-than-k](https://github.com/youdawon/leetcode/tree/master/0713-subarray-product-less-than-k) |
 | [0739-daily-temperatures](https://github.com/youdawon/leetcode/tree/master/0739-daily-temperatures) |
 | [0747-min-cost-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0747-min-cost-climbing-stairs) |
+| [0792-binary-search](https://github.com/youdawon/leetcode/tree/master/0792-binary-search) |
 | [0940-fruit-into-baskets](https://github.com/youdawon/leetcode/tree/master/0940-fruit-into-baskets) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/youdawon/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/youdawon/leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
@@ -136,6 +137,7 @@
 | [0033-search-in-rotated-sorted-array](https://github.com/youdawon/leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/youdawon/leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
+| [0792-binary-search](https://github.com/youdawon/leetcode/tree/master/0792-binary-search) |
 | [1321-get-equal-substrings-within-budget](https://github.com/youdawon/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
 # Sorting
