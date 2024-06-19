@@ -1,7 +1,7 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
 
-        if len(s) < len(t):
+        if len(s) == 0 or len(t) == 0:
             return ""
 
         letterCount = collections.Counter(t)
