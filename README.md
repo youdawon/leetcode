@@ -21,6 +21,7 @@
 | [0747-min-cost-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [0792-binary-search](https://github.com/youdawon/leetcode/tree/master/0792-binary-search) |
 | [0940-fruit-into-baskets](https://github.com/youdawon/leetcode/tree/master/0940-fruit-into-baskets) |
+| [1056-capacity-to-ship-packages-within-d-days](https://github.com/youdawon/leetcode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/youdawon/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/youdawon/leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
@@ -141,6 +142,7 @@
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0792-binary-search](https://github.com/youdawon/leetcode/tree/master/0792-binary-search) |
 | [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
+| [1056-capacity-to-ship-packages-within-d-days](https://github.com/youdawon/leetcode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1321-get-equal-substrings-within-budget](https://github.com/youdawon/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
 # Sorting
