@@ -145,6 +145,7 @@
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/youdawon/leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/youdawon/leetcode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
+| [0278-first-bad-version](https://github.com/youdawon/leetcode/tree/master/0278-first-bad-version) |
 | [0792-binary-search](https://github.com/youdawon/leetcode/tree/master/0792-binary-search) |
 | [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/youdawon/leetcode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
@@ -242,3 +243,7 @@
 | ------- |
 | [1321-get-equal-substrings-within-budget](https://github.com/youdawon/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
+# Interactive
+|  |
+| ------- |
+| [0278-first-bad-version](https://github.com/youdawon/leetcode/tree/master/0278-first-bad-version) |
