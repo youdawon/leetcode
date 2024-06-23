@@ -22,6 +22,7 @@
 | [0739-daily-temperatures](https://github.com/youdawon/leetcode/tree/master/0739-daily-temperatures) |
 | [0747-min-cost-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [0792-binary-search](https://github.com/youdawon/leetcode/tree/master/0792-binary-search) |
+| [0917-boats-to-save-people](https://github.com/youdawon/leetcode/tree/master/0917-boats-to-save-people) |
 | [0940-fruit-into-baskets](https://github.com/youdawon/leetcode/tree/master/0940-fruit-into-baskets) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/youdawon/leetcode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/youdawon/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
@@ -155,6 +156,7 @@
 | [0242-valid-anagram](https://github.com/youdawon/leetcode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
+| [0917-boats-to-save-people](https://github.com/youdawon/leetcode/tree/master/0917-boats-to-save-people) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
 # Simulation
 |  |
@@ -195,6 +197,7 @@
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/youdawon/leetcode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
+| [0917-boats-to-save-people](https://github.com/youdawon/leetcode/tree/master/0917-boats-to-save-people) |
 # Data Stream
 |  |
 | ------- |
@@ -214,6 +217,7 @@
 |  |
 | ------- |
 | [0409-longest-palindrome](https://github.com/youdawon/leetcode/tree/master/0409-longest-palindrome) |
+| [0917-boats-to-save-people](https://github.com/youdawon/leetcode/tree/master/0917-boats-to-save-people) |
 | [1966-frequency-of-the-most-frequent-element](https://github.com/youdawon/leetcode/tree/master/1966-frequency-of-the-most-frequent-element) |
 # Sliding Window
 |  |
