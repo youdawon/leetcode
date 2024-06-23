@@ -137,11 +137,13 @@
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
+| [0069-sqrtx](https://github.com/youdawon/leetcode/tree/master/0069-sqrtx) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 # Binary Search
 |  |
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/youdawon/leetcode/tree/master/0033-search-in-rotated-sorted-array) |
+| [0069-sqrtx](https://github.com/youdawon/leetcode/tree/master/0069-sqrtx) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/youdawon/leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/youdawon/leetcode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
