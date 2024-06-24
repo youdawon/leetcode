@@ -183,6 +183,7 @@
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/youdawon/leetcode/tree/master/0023-merge-k-sorted-lists) |
+| [0206-reverse-linked-list](https://github.com/youdawon/leetcode/tree/master/0206-reverse-linked-list) |
 # Heap (Priority Queue)
 |  |
 | ------- |
@@ -249,3 +250,7 @@
 |  |
 | ------- |
 | [0278-first-bad-version](https://github.com/youdawon/leetcode/tree/master/0278-first-bad-version) |
+# Recursion
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/youdawon/leetcode/tree/master/0206-reverse-linked-list) |
