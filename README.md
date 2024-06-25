@@ -184,6 +184,7 @@
 | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/youdawon/leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0023-merge-k-sorted-lists](https://github.com/youdawon/leetcode/tree/master/0023-merge-k-sorted-lists) |
+| [0024-swap-nodes-in-pairs](https://github.com/youdawon/leetcode/tree/master/0024-swap-nodes-in-pairs) |
 | [0143-reorder-list](https://github.com/youdawon/leetcode/tree/master/0143-reorder-list) |
 | [0206-reverse-linked-list](https://github.com/youdawon/leetcode/tree/master/0206-reverse-linked-list) |
 # Heap (Priority Queue)
@@ -258,5 +259,6 @@
 |  |
 | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/youdawon/leetcode/tree/master/0021-merge-two-sorted-lists) |
+| [0024-swap-nodes-in-pairs](https://github.com/youdawon/leetcode/tree/master/0024-swap-nodes-in-pairs) |
 | [0143-reorder-list](https://github.com/youdawon/leetcode/tree/master/0143-reorder-list) |
 | [0206-reverse-linked-list](https://github.com/youdawon/leetcode/tree/master/0206-reverse-linked-list) |
