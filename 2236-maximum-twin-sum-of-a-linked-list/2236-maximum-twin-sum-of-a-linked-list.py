@@ -15,19 +15,17 @@ class Solution:
             slow = slow.next
 
         current = slow
-        tail = None
+        prev = None
 
-        while current:
+        while current:            
             temp = current.next
-            current.next = tail
-            tail = current
+            current.next = prev
+            prev = current
             current = temp
         
-        link1, link2 = head, tail
-
-        while link1 and link2:
-            maxSum = max(maxSum, link1.val + link2.val)
-            link1 = link1.next
-            link2 = link2.next
+        while head and prev:
+            maxSum = max(maxSum, head.val + prev.val)
+            head = head.next
+            prev = prev.next
 
         return maxSum 
