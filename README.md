@@ -191,6 +191,7 @@
 | [0142-linked-list-cycle-ii](https://github.com/youdawon/leetcode/tree/master/0142-linked-list-cycle-ii) |
 | [0143-reorder-list](https://github.com/youdawon/leetcode/tree/master/0143-reorder-list) |
 | [0206-reverse-linked-list](https://github.com/youdawon/leetcode/tree/master/0206-reverse-linked-list) |
+| [2236-maximum-twin-sum-of-a-linked-list](https://github.com/youdawon/leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
 # Heap (Priority Queue)
 |  |
 | ------- |
@@ -213,6 +214,7 @@
 | [0344-reverse-string](https://github.com/youdawon/leetcode/tree/master/0344-reverse-string) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
 | [0917-boats-to-save-people](https://github.com/youdawon/leetcode/tree/master/0917-boats-to-save-people) |
+| [2236-maximum-twin-sum-of-a-linked-list](https://github.com/youdawon/leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
 # Data Stream
 |  |
 | ------- |
@@ -224,6 +226,7 @@
 | [0143-reorder-list](https://github.com/youdawon/leetcode/tree/master/0143-reorder-list) |
 | [0739-daily-temperatures](https://github.com/youdawon/leetcode/tree/master/0739-daily-temperatures) |
 | [0937-online-stock-span](https://github.com/youdawon/leetcode/tree/master/0937-online-stock-span) |
+| [2236-maximum-twin-sum-of-a-linked-list](https://github.com/youdawon/leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
 # Monotonic Stack
 |  |
 | ------- |
