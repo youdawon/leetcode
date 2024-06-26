@@ -8,18 +8,13 @@ class Solution:
         
         maxSum = 0
 
-        firstLink = ListNode(-1)
-        firstLink.next = head
-
-        fast = head
-        slow = firstLink
+        fast, slow = head, head
 
         while fast:
             fast = fast.next.next
             slow = slow.next
 
-        current = slow.next
-        slow.next = None
+        current = slow
         tail = None
 
         while current:
@@ -28,8 +23,7 @@ class Solution:
             tail = current
             current = temp
         
-        link1 = firstLink.next
-        link2 = tail
+        link1, link2 = head, tail
 
         while link1 and link2:
             maxSum = max(maxSum, link1.val + link2.val)
