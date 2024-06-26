@@ -18,11 +18,9 @@ class Solution:
             fast = fast.next.next
             slow = slow.next
 
-        secondLink = slow.next
+        current = slow.next
         slow.next = None
-
         tail = None
-        current = secondLink
 
         while current:
             temp = current.next
