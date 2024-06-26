@@ -20,7 +20,6 @@ class Solution:
                 tail.next = temp      
                 tail = tail.next
                 tail.next = None
-                print(current)
             else:
                 current = current.next          
 
