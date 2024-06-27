@@ -1,29 +1,26 @@
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         
+        p_set, a_set = set(), set()
         m, n = len(heights), len(heights[0])
+        
+        directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
 
-        res = []
-
-        p_land = set()
-        a_land = set()
-
-        directions=[[0, -1], [0, 1], [-1, 0], [1, 0]]
-
-        def spread(i, j, land):
-            land.add((i, j))
-            for x, y in directions:
-                r, c = x + i, y + j
-                if r < 0 or c < 0 or r >= m or c >= n or heights[r][c] < heights[i][j] or (r, c) in land:
+        def getWaterFlow(i, j, visited):
+            visited.add((i, j))
+            for r, c in directions:
+                row, col = i + r, j + c
+                if row < 0 or col < 0 or row >= m or col >= n or heights[row][col] < heights[i][j] or ((row, col)) in visited:
                     continue
-                spread(r, c, land)
+                getWaterFlow(row, col, visited)
 
         for i in range(m):
-            spread(i, 0, p_land)
-            spread(i, n-1, a_land)            
+            getWaterFlow(i, 0, p_set)
+            getWaterFlow(i, n-1, a_set)
 
         for j in range(n):
-            spread(0, j, p_land)
-            spread(m-1, j, a_land)            
+            getWaterFlow(0, j, p_set)
+            getWaterFlow(m-1, j, a_set)
 
-        return list(p_land & a_land)
+
+        return list(p_set & a_set)
