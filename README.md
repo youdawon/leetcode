@@ -297,6 +297,7 @@
 ## Array
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
 ## Hash Table
 |  |
@@ -305,5 +306,10 @@
 ## Matrix
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
+## Math
+|  |
+| ------- |
+| [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 <!---LeetCode Topics End-->
