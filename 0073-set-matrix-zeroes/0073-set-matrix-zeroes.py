@@ -5,19 +5,16 @@ class Solution:
         """
         m, n = len(matrix), len(matrix[0])
 
-        row = set()
-        col = set()
+        zeroes_row = [False] * m
+        zeroes_col = [False] * n
+                
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == 0:
+                    zeroes_row[i] = True
+                    zeroes_col[j] = True
 
         for i in range(m):
             for j in range(n):
-                if not matrix[i][j]:
-                    row.add(i)
-                    col.add(j)
-
-        for i in row:
-            for j in range(n):
-                matrix[i][j] = 0                
-
-        for j in col:
-            for i in range(m):
-                matrix[i][j] = 0                                
+                if zeroes_row[i] or zeroes_col[j]:
+                    matrix[i][j] = 0
