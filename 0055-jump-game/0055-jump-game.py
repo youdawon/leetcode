@@ -1,6 +1,9 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
 
+        ## time complexity : O(N)
+        ## space Complexity : O(1)
+
         if len(nums) == 1:
             return True
         
