@@ -299,6 +299,7 @@
 | ------- |
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
+| [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
 ## Hash Table
 |  |
 | ------- |
@@ -312,4 +313,8 @@
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
 <!---LeetCode Topics End-->
