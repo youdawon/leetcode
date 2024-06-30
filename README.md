@@ -298,6 +298,7 @@
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
+| [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
 ## Hash Table
@@ -316,5 +317,10 @@
 ## Dynamic Programming
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
 | [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
+## Greedy
+|  |
+| ------- |
+| [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
 <!---LeetCode Topics End-->
