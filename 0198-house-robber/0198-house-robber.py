@@ -4,16 +4,20 @@ class Solution:
         ## time complexity : O(n)
         ## space complexity : O(n)
 
-        if len(nums) == 1:
-            return nums[0]
+        dp = [-1]*len(nums)
 
-        arr = [-1]*(len(nums)+1)
-        arr[0] = 0
+        def recursion(i):
 
-        for i in range(len(nums)):
-            if i < 2:
-                arr[i+1] = max(nums[i], arr[i])
-            else:
-                arr[i+1] = max(nums[i] + arr[i-1], arr[i])
+            if i < 0:
+                return 0
+            
+            if dp[i] != -1:
+                return dp[i]
 
-        return max(arr[-1], arr[-2])
+            dp[i] = max(recursion(i-1), recursion(i-2) + nums[i])
+
+            return dp[i]
+
+        n = len(nums)-1
+
+        return recursion(n)
