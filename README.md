@@ -301,6 +301,7 @@
 | [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
+| [0300-longest-increasing-subsequence](https://github.com/youdawon/leetcode/tree/master/0300-longest-increasing-subsequence) |
 ## Hash Table
 |  |
 | ------- |
@@ -319,8 +320,13 @@
 | ------- |
 | [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
 | [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
+| [0300-longest-increasing-subsequence](https://github.com/youdawon/leetcode/tree/master/0300-longest-increasing-subsequence) |
 ## Greedy
 |  |
 | ------- |
 | [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
+## Binary Search
+|  |
+| ------- |
+| [0300-longest-increasing-subsequence](https://github.com/youdawon/leetcode/tree/master/0300-longest-increasing-subsequence) |
 <!---LeetCode Topics End-->
