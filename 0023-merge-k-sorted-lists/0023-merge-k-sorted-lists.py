@@ -8,22 +8,19 @@ class Solution:
         
         head = ListNode(-1)
         current = head
-
         minHeap= []
 
         for i in range(len(lists)):
             if lists[i]:
                 heapq.heappush(minHeap, (lists[i].val, i, lists[i]))
-
         
         while minHeap:
-            val, i, node = heapq.heappop(minHeap)
+            node = heapq.heappop(minHeap)[2]
             current.next = node
 
             if node.next:
                 i += 1
                 heapq.heappush(minHeap, (node.next.val, i, node.next))
-
             current = current.next
         
         return head.next
