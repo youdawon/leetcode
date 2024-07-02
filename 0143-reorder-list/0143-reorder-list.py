@@ -8,28 +8,31 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-        
+
         fast = head
         slow = head
 
         while fast and fast.next:
-            fast = fast.next.next
             slow = slow.next
-
-        current = slow.next
+            fast = fast.next.next
+    
         tail = None
+        current = slow.next
 
         while current:
             temp = current.next
             current.next = tail
             tail = current
-            current = temp 
+            current = temp
 
         slow.next = None
 
-        node1, node2 = head, tail
-        while node2:
-            temp = node1.next
-            node1.next = node2
-            node1 = node1.next
-            node2 = temp
+        l1_current = head
+        l2_current = tail
+
+        while l2_current:
+            temp = l1_current.next
+            l1_current.next = l2_current
+            l1_current = l1_current.next 
+            l2_current = temp           
+
