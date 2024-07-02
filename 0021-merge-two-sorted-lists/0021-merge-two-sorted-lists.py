@@ -6,9 +6,6 @@
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 
-        if list1 is None and list2 is None:
-            return 
-
         head = ListNode(-1)
         current = head
 
@@ -31,4 +28,4 @@ class Solution:
 
             current = current.next
 
-        return head
+        return head.next
