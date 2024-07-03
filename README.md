@@ -297,6 +297,7 @@
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/youdawon/leetcode/tree/master/0001-two-sum) |
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
@@ -306,6 +307,7 @@
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/youdawon/leetcode/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/youdawon/leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0141-linked-list-cycle](https://github.com/youdawon/leetcode/tree/master/0141-linked-list-cycle) |
