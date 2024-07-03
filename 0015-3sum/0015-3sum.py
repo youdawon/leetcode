@@ -20,7 +20,6 @@ class Solution:
                 else:
                     res.append([nums[i], nums[left], nums[right]])
                     left += 1
-                    print(left)
                     while nums[left-1] == nums[left] and left < right:
                         left += 1
         
