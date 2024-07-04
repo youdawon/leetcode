@@ -11,4 +11,5 @@ class Solution:
                 num = num >> 1
             arr.append(count)
 
+
         return arr
