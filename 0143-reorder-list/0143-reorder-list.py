@@ -9,30 +9,32 @@ class Solution:
         Do not return anything, modify head in-place instead.
         """
 
-        fast = head
-        slow = head
+        dummy = ListNode(-1)
+        dummy.next = head
+        slow = dummy
+        fast = head        
 
         while fast and fast.next:
-            slow = slow.next
             fast = fast.next.next
-    
+            slow = slow.next
+
         tail = None
         current = slow.next
+        slow.next = None
 
         while current:
             temp = current.next
-            current.next = tail
+            current.next = tail 
             tail = current
             current = temp
 
-        slow.next = None
+        l1 = dummy.next
+        l2 = tail
 
-        l1_current = head
-        l2_current = tail
-
-        while l2_current:
-            temp = l1_current.next
-            l1_current.next = l2_current
-            l1_current = l1_current.next 
-            l2_current = temp           
-
+        while l1 and l2:
+            temp = l1.next
+            l1.next = l2
+            l1 = l1.next
+            l2 = temp 
+        
+        return head.next
