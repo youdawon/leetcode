@@ -10,5 +10,5 @@ class Solution:
                 while nextNum in numSet:
                     nextNum += 1
                 answer = max(answer, nextNum - num)
-
+        
         return answer
