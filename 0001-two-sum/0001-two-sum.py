@@ -1,5 +1,8 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+
+        ## Time Complexity : O(N)
+        ## Space Complexity : O(N)
         
         numMap = collections.defaultdict(int)
 
