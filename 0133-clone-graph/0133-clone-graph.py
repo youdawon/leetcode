@@ -10,6 +10,9 @@ from typing import Optional
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
 
+        #Time Complexity : O(N)
+        #Space Complexity : O(N)
+
         if node is None:
             return
 
