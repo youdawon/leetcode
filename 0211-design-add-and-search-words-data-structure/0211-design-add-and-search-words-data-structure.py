@@ -24,21 +24,25 @@ class WordDictionary:
 
     def search(self, word: str) -> bool:
 
-        def searchTheWord(word, current):
+        def dfs(i, current):
 
-            for i in range(len(word)):
-                if word[i] == ".":
-                    for node in current.children:
-                        if node and searchTheWord(word[i+1:], node):
-                            return True
-                    return False
-                elif current.children[ord(word[i])-ord('a')] is None:
-                    return False
-                current = current.children[ord(word[i])-ord('a')]        
+            if i == len(word):
+                return current.isEndOfWord
 
-            return current.isEndOfWord
+            c = word[i]
+
+            if c == ".":
+                for node in current.children:
+                    if node and dfs(i+1, node):
+                        return True
+                return False
+            elif current.children[ord(word[i])-ord('a')] is None:
+                return False
+            
+            return dfs(i+1, current.children[ord(word[i])-ord('a')])
         
-        return searchTheWord(word, self.root)
+        return dfs(0, self.root)
+
 
 
 # Your WordDictionary object will be instantiated and called as such:
