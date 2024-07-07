@@ -1,41 +1,43 @@
 class Node:
     def __init__(self, value):
         self.value = value
+        self.children = [None]*26
         self.isEndOfWord = False
-        self.children = [None] * 26
 
 class Trie:
 
     def __init__(self):
-        self.node = Node("")
-        
-    def insert(self, word: str) -> None:
+        self.root = Node("")        
 
-        current = self.node
+    def insert(self, word: str) -> None:
+        current = self.root
 
         for c in word:
-            if current.children[ord(c) - ord('a')] is None:
-                current.children[ord(c) - ord('a')] = Node(c)            
-            current = current.children[ord(c) - ord('a')]
+            if current.children[ord(c)-ord('a')] is None:
+                current.children[ord(c)-ord('a')] = Node(c)
+            current = current.children[ord(c)-ord('a')]
         current.isEndOfWord = True
 
     def search(self, word: str) -> bool:
-        current = self.node
+        current = self.root
 
         for c in word:
-            if current.children[ord(c) - ord('a')] is None:
+            if current.children[ord(c)-ord('a')] is None:
                 return False
-            current = current.children[ord(c) - ord('a')]
+            current = current.children[ord(c)-ord('a')]
+
         return current.isEndOfWord
 
     def startsWith(self, prefix: str) -> bool:
-        current = self.node
+        current = self.root
 
         for c in prefix:
-            if current.children[ord(c) - ord('a')] is None:
+            if current.children[ord(c)-ord('a')] is None:
                 return False
-            current = current.children[ord(c) - ord('a')]
+            current = current.children[ord(c)-ord('a')]
+
         return True
+
 
 # Your Trie object will be instantiated and called as such:
 # obj = Trie()
