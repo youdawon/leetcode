@@ -369,6 +369,7 @@
 ## Breadth-First Search
 |  |
 | ------- |
+| [0104-maximum-depth-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
 | [0322-coin-change](https://github.com/youdawon/leetcode/tree/master/0322-coin-change) |
 ## Linked List
@@ -438,9 +439,18 @@
 ## Depth-First Search
 |  |
 | ------- |
+| [0104-maximum-depth-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
 ## Graph
 |  |
 | ------- |
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
+## Tree
+|  |
+| ------- |
+| [0104-maximum-depth-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [0104-maximum-depth-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 <!---LeetCode Topics End-->
