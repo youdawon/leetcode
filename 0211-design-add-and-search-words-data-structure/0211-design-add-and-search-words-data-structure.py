@@ -24,13 +24,12 @@ class WordDictionary:
 
     def search(self, word: str) -> bool:
 
-        def searchTheWord(word, root):
-            current = root
+        def searchTheWord(word, current):
 
             for i in range(len(word)):
                 if word[i] == ".":
                     for node in current.children:
-                        if node is not None and searchTheWord(word[i+1:], node):
+                        if node and searchTheWord(word[i+1:], node):
                             return True
                     return False
                 elif current.children[ord(word[i])-ord('a')] is None:
