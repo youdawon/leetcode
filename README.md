@@ -444,6 +444,7 @@
 ## Depth-First Search
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/youdawon/leetcode/tree/master/0098-validate-binary-search-tree) |
 | [0100-same-tree](https://github.com/youdawon/leetcode/tree/master/0100-same-tree) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
@@ -456,6 +457,7 @@
 ## Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/youdawon/leetcode/tree/master/0098-validate-binary-search-tree) |
 | [0100-same-tree](https://github.com/youdawon/leetcode/tree/master/0100-same-tree) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/youdawon/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -464,6 +466,7 @@
 ## Binary Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/youdawon/leetcode/tree/master/0098-validate-binary-search-tree) |
 | [0100-same-tree](https://github.com/youdawon/leetcode/tree/master/0100-same-tree) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/youdawon/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -477,4 +480,8 @@
 |  |
 | ------- |
 | [0572-subtree-of-another-tree](https://github.com/youdawon/leetcode/tree/master/0572-subtree-of-another-tree) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0098-validate-binary-search-tree](https://github.com/youdawon/leetcode/tree/master/0098-validate-binary-search-tree) |
 <!---LeetCode Topics End-->
