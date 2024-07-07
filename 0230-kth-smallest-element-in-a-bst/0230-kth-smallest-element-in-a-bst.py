@@ -19,6 +19,3 @@ class Solution:
             if k == 0: return currNode.val            
             if currNode.right:
                 current = currNode.right
-
-        
-        return 0
