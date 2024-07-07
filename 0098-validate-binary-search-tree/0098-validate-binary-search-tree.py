@@ -9,6 +9,9 @@ class Solution:
 
         def isValid(root, minNode, maxNode):
 
+            #Time Complexity : O(N)
+            #Space Complexity : O(N)
+
             if root is None:
                 return True
 
