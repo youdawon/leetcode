@@ -13,9 +13,8 @@ class Solution:
         if root is None or subRoot is None:
             return False
 
-        if root.val == subRoot.val:       
-            if self.isSubTreeSame(root.left, subRoot.left) and self.isSubTreeSame(root.right, subRoot.right):
-                return True
+        if self.isSubTreeSame(root, subRoot):
+            return True
 
         return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)                
 
