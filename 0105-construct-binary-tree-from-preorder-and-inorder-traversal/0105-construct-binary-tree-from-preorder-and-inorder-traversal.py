@@ -12,6 +12,6 @@ class Solution:
 
             rootIndex = inorder.index(root.val)
             root.left = self.buildTree(preorder, inorder[0:rootIndex])
-            root.right = self.buildTree(preorder, inorder[rootIndex+1:])
-        
+            root.right = self.buildTree(preorder, inorder[rootIndex+1:])        
+
             return root
