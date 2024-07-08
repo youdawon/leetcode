@@ -56,7 +56,7 @@ class Solution:
             visited.remove((i, j))
 
         for i in range(len(board)):
-            for j in range(len(board[0])):
+            for j in range(len(board[0])):            
                 dfs(i, j, set(), self.root, "")
 
         return res
