@@ -17,8 +17,7 @@ class Solution:
             leftSum = max(getMaxSum(root.left), 0)
             rightSum = max(getMaxSum(root.right), 0)
 
-            currSum = max(root.val, root.val + leftSum + rightSum)
-            self.maxSum = max(self.maxSum, currSum)
+            self.maxSum = max(self.maxSum, root.val + leftSum + rightSum)
 
             return max(leftSum, rightSum) + root.val
 
