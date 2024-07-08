@@ -10,17 +10,18 @@ class Solution:
         self.maxSum = -inf
 
         def getMaxSum(root):
-            if not root:
+
+            if root is None:
                 return 0
-            
+
             leftSum = max(getMaxSum(root.left), 0)
             rightSum = max(getMaxSum(root.right), 0)
 
-            currSum = max(leftSum + rightSum + root.val, root.val)
+            currSum = max(root.val, root.val + leftSum + rightSum)
             self.maxSum = max(self.maxSum, currSum)
 
             return max(leftSum, rightSum) + root.val
-            
+
         getMaxSum(root)
 
         return self.maxSum
