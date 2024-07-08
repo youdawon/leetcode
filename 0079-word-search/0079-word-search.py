@@ -1,6 +1,9 @@
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
 
+        #Time Complexity : O(m*n*4*len(word))
+        #Space Complexity : O(m*n)
+
         m, n = len(board), len(board[0])
         
         def searchWord(i, j, index, visited):
