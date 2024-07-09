@@ -22,8 +22,8 @@ class Codec:
                 return
 
             self.res.append(root.val)
-            root.left = dfs(root.left)   
-            root.right = dfs(root.right)
+            dfs(root.left)   
+            dfs(root.right)
 
         dfs(root)
 
@@ -38,9 +38,6 @@ class Codec:
         arr = list(map(str, data.split()))
 
         def dfs(arr):
-
-            # if len(arr) == 0:
-            #     return 
 
             value = arr.pop(0)
             
