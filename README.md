@@ -312,6 +312,7 @@
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/youdawon/leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0198-house-robber](https://github.com/youdawon/leetcode/tree/master/0198-house-robber) |
 | [0212-word-search-ii](https://github.com/youdawon/leetcode/tree/master/0212-word-search-ii) |
+| [0217-contains-duplicate](https://github.com/youdawon/leetcode/tree/master/0217-contains-duplicate) |
 | [0238-product-of-array-except-self](https://github.com/youdawon/leetcode/tree/master/0238-product-of-array-except-self) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0300-longest-increasing-subsequence](https://github.com/youdawon/leetcode/tree/master/0300-longest-increasing-subsequence) |
@@ -329,6 +330,7 @@
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
 | [0141-linked-list-cycle](https://github.com/youdawon/leetcode/tree/master/0141-linked-list-cycle) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
+| [0217-contains-duplicate](https://github.com/youdawon/leetcode/tree/master/0217-contains-duplicate) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 ## Matrix
@@ -452,6 +454,7 @@
 |  |
 | ------- |
 | [0015-3sum](https://github.com/youdawon/leetcode/tree/master/0015-3sum) |
+| [0217-contains-duplicate](https://github.com/youdawon/leetcode/tree/master/0217-contains-duplicate) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
