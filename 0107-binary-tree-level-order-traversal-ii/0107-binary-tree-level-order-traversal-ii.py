@@ -7,6 +7,9 @@
 class Solution:
     def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
         
+        ##Time Complexity : O(N)
+        ##Space Complexity : O(N)
+
         self.res = []
         
         def dfs(root, level):
