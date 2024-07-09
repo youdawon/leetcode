@@ -45,7 +45,7 @@ class Codec:
             value = arr.pop(0)
             
             if value == "#":
-                return
+                return None
 
             node = TreeNode(value)
             node.left = dfs(arr)
