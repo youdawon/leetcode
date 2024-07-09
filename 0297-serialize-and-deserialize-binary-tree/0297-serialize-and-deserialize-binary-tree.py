@@ -41,7 +41,7 @@ class Codec:
 
             value = arr.pop(0)
             
-            if value == '#':
+            if value == "#":
                 return None
 
             node = TreeNode(value)
