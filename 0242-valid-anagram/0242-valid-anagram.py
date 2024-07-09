@@ -1,17 +1,21 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
 
-        if len(s) > len(t):
+        if len(s) != len(t):
             return False
-
-        arr = [0] * 26
         
+        letter_map = {}
+
         for c in s:
-            arr[ord(c) - ord('a')] += 1
-
-        for c in t:
-            if arr[ord(c) - ord('a')] == 0:
-                return False
-            arr[ord(c) - ord('a')] -= 1
+            letter_map[c] = letter_map.get(c, 0) + 1
         
+        for c in t:
+            if c not in letter_map:
+                return False
+
+            letter_map[c] -= 1
+
+            if letter_map[c] == 0:
+                del letter_map[c]
+
         return True
