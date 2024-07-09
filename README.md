@@ -377,6 +377,7 @@
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/youdawon/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/youdawon/leetcode/tree/master/0212-word-search-ii) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
 ## Sliding Window
@@ -391,6 +392,7 @@
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
 | [0199-binary-tree-right-side-view](https://github.com/youdawon/leetcode/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/youdawon/leetcode/tree/master/0226-invert-binary-tree) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0322-coin-change](https://github.com/youdawon/leetcode/tree/master/0322-coin-change) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
 ## Linked List
@@ -477,6 +479,7 @@
 | [0211-design-add-and-search-words-data-structure](https://github.com/youdawon/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0226-invert-binary-tree](https://github.com/youdawon/leetcode/tree/master/0226-invert-binary-tree) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/youdawon/leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
 | [0572-subtree-of-another-tree](https://github.com/youdawon/leetcode/tree/master/0572-subtree-of-another-tree) |
 ## Graph
@@ -495,6 +498,7 @@
 | [0199-binary-tree-right-side-view](https://github.com/youdawon/leetcode/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/youdawon/leetcode/tree/master/0226-invert-binary-tree) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/youdawon/leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
 | [0572-subtree-of-another-tree](https://github.com/youdawon/leetcode/tree/master/0572-subtree-of-another-tree) |
 ## Binary Tree
@@ -509,6 +513,7 @@
 | [0199-binary-tree-right-side-view](https://github.com/youdawon/leetcode/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/youdawon/leetcode/tree/master/0226-invert-binary-tree) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/youdawon/leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
 | [0572-subtree-of-another-tree](https://github.com/youdawon/leetcode/tree/master/0572-subtree-of-another-tree) |
 ## String Matching
@@ -531,6 +536,7 @@
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/youdawon/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
 ## Trie
 |  |
