@@ -39,8 +39,8 @@ class Codec:
 
         def dfs(arr):
 
-            if len(arr) == 0:
-                return 
+            # if len(arr) == 0:
+            #     return 
 
             value = arr.pop(0)
             
