@@ -21,13 +21,13 @@ class Codec:
                 self.res.append("#")
                 return
 
-            self.res.append(root.val)
+            self.res.append(str(root.val))
             dfs(root.left)   
             dfs(root.right)
 
         dfs(root)
 
-        return ' '.join(map(str, self.res))
+        return ' '.join(self.res)
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
