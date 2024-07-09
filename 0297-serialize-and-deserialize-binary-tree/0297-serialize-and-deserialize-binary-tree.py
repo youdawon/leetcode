@@ -37,7 +37,7 @@ class Codec:
         """ 
         arr = list(map(str, data.split()))
 
-        def createTree(arr):
+        def dfs(arr):
 
             if len(arr) == 0:
                 return 
@@ -48,12 +48,12 @@ class Codec:
                 return
 
             node = TreeNode(value)
-            node.left = createTree(arr)
-            node.right = createTree(arr)
+            node.left = dfs(arr)
+            node.right = dfs(arr)
 
             return node
 
-        return createTree(arr)
+        return dfs(arr)
 
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()
