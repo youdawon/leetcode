@@ -13,6 +13,10 @@ class Codec:
         :type root: TreeNode
         :rtype: str
         """
+
+        #Time Complexity : O(N)
+        #Space Complexity : O(N)
+
         self.res = []
         
         def dfs(root):
@@ -35,6 +39,10 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """ 
+        
+        #Time Complexity : O(N)
+        #Space Complexity : O(N)
+
         arr = data.split()
 
         def dfs(arr):
