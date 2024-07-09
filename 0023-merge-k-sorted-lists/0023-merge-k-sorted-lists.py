@@ -6,21 +6,22 @@
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         
-        head = ListNode(-1)
-        current = head
-        minHeap= []
+        minHeap = []
 
         for i in range(len(lists)):
             if lists[i]:
                 heapq.heappush(minHeap, (lists[i].val, i, lists[i]))
-        
+
+        dummy = ListNode(-1)
+        current = dummy
+
         while minHeap:
             node = heapq.heappop(minHeap)[2]
             current.next = node
+            current = current.next
 
             if node.next:
                 i += 1
                 heapq.heappush(minHeap, (node.next.val, i, node.next))
-            current = current.next
-        
-        return head.next
+
+        return dummy.next
