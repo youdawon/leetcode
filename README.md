@@ -415,6 +415,7 @@
 | [0019-remove-nth-node-from-end-of-list](https://github.com/youdawon/leetcode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0141-linked-list-cycle](https://github.com/youdawon/leetcode/tree/master/0141-linked-list-cycle) |
 | [0143-reorder-list](https://github.com/youdawon/leetcode/tree/master/0143-reorder-list) |
+| [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
 ## Divide and Conquer
 |  |
@@ -429,6 +430,7 @@
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/youdawon/leetcode/tree/master/0023-merge-k-sorted-lists) |
+| [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 ## Merge Sort
 |  |
@@ -447,6 +449,7 @@
 | ------- |
 | [0015-3sum](https://github.com/youdawon/leetcode/tree/master/0015-3sum) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
+| [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 ## Bit Manipulation
 |  |
@@ -521,6 +524,7 @@
 | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/youdawon/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
+| [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 ## Trie
 |  |
 | ------- |
@@ -544,4 +548,8 @@
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
+## Data Stream
+|  |
+| ------- |
+| [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 <!---LeetCode Topics End-->
