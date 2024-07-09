@@ -35,13 +35,13 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """ 
-        arr = list(map(str, data.split()))
+        arr = data.split()
 
         def dfs(arr):
 
             value = arr.pop(0)
             
-            if value == "#":
+            if value == '#':
                 return None
 
             node = TreeNode(value)
