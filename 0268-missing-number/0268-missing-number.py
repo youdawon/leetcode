@@ -1,12 +1,12 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
 
-        num = 0
+        res = 0
 
         for i in range(len(nums)+1):
-            num ^= i
+            res ^= i
 
-        for i in range(len(nums)):
-            num ^= nums[i] 
+        for num in nums:
+            res ^= num
 
-        return num
+        return res
