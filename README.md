@@ -335,6 +335,7 @@
 | [0217-contains-duplicate](https://github.com/youdawon/leetcode/tree/master/0217-contains-duplicate) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
+| [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 ## Matrix
 |  |
 | ------- |
@@ -385,12 +386,14 @@
 | [0211-design-add-and-search-words-data-structure](https://github.com/youdawon/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/youdawon/leetcode/tree/master/0212-word-search-ii) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
 ## Sliding Window
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/youdawon/leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 ## Breadth-First Search
 |  |
 | ------- |
