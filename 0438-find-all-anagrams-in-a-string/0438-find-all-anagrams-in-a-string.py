@@ -10,19 +10,25 @@ class Solution:
             sCount[s[i]] = sCount.get(s[i], 0) + 1
             pCount[p[i]] = pCount.get(p[i], 0) + 1
 
-        res = [0] if sCount == pCount else []
+        res = []
 
-        l = 0
-        for r in range(len(p), len(s)):
-            sCount[s[r]] = sCount.get(s[r], 0) + 1
-            sCount[s[l]] -= 1
+        if sCount == pCount:
+            res.append(0)
 
-            if sCount[s[l]] == 0:
-                sCount.pop(s[l])
-            l += 1
+        left = 0
+        for right in range(len(p), len(s)):
 
-            if sCount == pCount:
-                res.append(l)
+            sCount[s[right]] = sCount.get(s[right], 0) + 1
 
+            sCount[s[left]] -= 1
+
+            if sCount[s[left]] == 0:
+                del sCount[s[left]]
             
+            left += 1
+
+            if pCount == sCount:
+                res.append(left)
+
+        
         return res
