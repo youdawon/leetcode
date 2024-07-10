@@ -3,18 +3,19 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        m, n = len(matrix), len(matrix[0])
-
-        zeroes_row = [False] * m
-        zeroes_col = [False] * n
-                
-        for i in range(m):
-            for j in range(n):
+        row_set = set()
+        col_set = set()
+        
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
                 if matrix[i][j] == 0:
-                    zeroes_row[i] = True
-                    zeroes_col[j] = True
+                    row_set.add(i)
+                    col_set.add(j)
 
-        for i in range(m):
-            for j in range(n):
-                if zeroes_row[i] or zeroes_col[j]:
-                    matrix[i][j] = 0
+        for row in row_set:
+            for j in range(len(matrix[0])):
+                matrix[row][j] = 0 
+
+        for col in col_set:
+            for i in range(len(matrix)):
+                matrix[i][col] = 0                 
