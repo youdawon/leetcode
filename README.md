@@ -302,6 +302,7 @@
 | [0015-3sum](https://github.com/youdawon/leetcode/tree/master/0015-3sum) |
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
 | [0049-group-anagrams](https://github.com/youdawon/leetcode/tree/master/0049-group-anagrams) |
+| [0054-spiral-matrix](https://github.com/youdawon/leetcode/tree/master/0054-spiral-matrix) |
 | [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/youdawon/leetcode/tree/master/0079-word-search) |
@@ -342,6 +343,7 @@
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
+| [0054-spiral-matrix](https://github.com/youdawon/leetcode/tree/master/0054-spiral-matrix) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/youdawon/leetcode/tree/master/0079-word-search) |
 | [0212-word-search-ii](https://github.com/youdawon/leetcode/tree/master/0212-word-search-ii) |
@@ -591,4 +593,8 @@
 |  |
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
+## Simulation
+|  |
+| ------- |
+| [0054-spiral-matrix](https://github.com/youdawon/leetcode/tree/master/0054-spiral-matrix) |
 <!---LeetCode Topics End-->
