@@ -1,17 +1,18 @@
 class Solution:
-    def characterReplacement(self, s, k):
+    def characterReplacement(self, s: str, k: int) -> int:
 
-        maxLength, mostFreqCount = 0, 0
-        arr = collections.Counter()
+        maxCount, maxLength = -inf, -inf
+        arr = [0]*26
+        left = 0
 
-        for i in range(len(s)):
-            arr[s[i]] += 1
-            ## 가장 빈번한 데이터수 추출
-            mostFreqCount = max(mostFreqCount, arr[s[i]])
+        for right in range(len(s)):
+            arr[ord(s[right]) - ord('A')] += 1
+            maxCount = max(maxCount, arr[ord(s[right]) - ord('A')])
+
+            while right-left+1-maxCount > k:
+                arr[ord(s[left]) - ord('A')] -= 1
+                left += 1              
             
-            if maxLength - mostFreqCount >= k:
-                arr[s[i-maxLength]] -= 1
-            else:
-                maxLength += 1
+            maxLength = max(maxLength, right-left+1)
 
         return maxLength
