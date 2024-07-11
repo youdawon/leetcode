@@ -4,20 +4,21 @@ class Solution:
         m, n = len(grid), len(grid[0])
         count = 0
 
-        def changeLandToWater(r, c):
-
-            if r < 0 or c < 0 or r >= m or c >= n or grid[r][c] == "0":
+        def changeWaterToTheLand(i, j):
+            
+            if i < 0 or j < 0 or i >= m or j >= n or grid[i][j] != "1":
                 return 
-            grid[r][c] = "0"
-            changeLandToWater(r, c-1)
-            changeLandToWater(r-1, c)
-            changeLandToWater(r, c+1)
-            changeLandToWater(r+1, c)
 
+            grid[i][j] = "0"
+            changeWaterToTheLand(i-1, j)
+            changeWaterToTheLand(i+1, j)
+            changeWaterToTheLand(i, j-1)
+            changeWaterToTheLand(i, j+1)                        
+        
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == "1":
                     count += 1
-                    changeLandToWater(i, j)
-
+                    changeWaterToTheLand(i, j)
+    
         return count
