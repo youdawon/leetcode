@@ -4,18 +4,12 @@ class Solution:
         left = 0
         right = len(nums)-1
 
-        while left<right:
-            mid = (left+right) // 2
+        while left < right:
+            mid = left + (right-left) // 2
 
-            if nums[left] <= nums[mid]:
-                if nums[mid] > nums[right]:
-                    left = mid + 1
-                else: 
-                    right = mid
+            if nums[mid] > nums[right]:
+                left = mid + 1
             else:
-                if nums[mid] < nums[right]:
-                    right = mid
-                else:
-                    left = mid + 1
+                right = mid
 
         return nums[left]
