@@ -1,6 +1,9 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
 
+        ## Time Complexity : O(N)
+        ## Space Complexity : O(1)
+
         maxValue, minProd, maxProd = nums[0], nums[0], nums[0]
 
         for i in range(1, len(nums)):
