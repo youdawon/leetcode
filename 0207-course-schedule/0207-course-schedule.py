@@ -1,19 +1,35 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        
-        indegree = [0] * numCourses
-        adj = [ [] for _ in range(numCourses)]
- 
-        for after, pre in prerequisites:
-            adj[pre].append(after)
-            indegree[after] += 1
 
-        arr = [ i for i in range(numCourses) if indegree[i] == 0 ] 
+        indegree = [0]*numCourses
+        courses = [ [] for _ in range(numCourses)]
 
-        for i in arr:
-            for c in adj[i]:
-                indegree[c] -= 1
-                if indegree[c] == 0:
-                    arr.append(c)
-        
-        return numCourses == len(arr)
+        for i in range(len(prerequisites)):
+            currCourse, preCourse = prerequisites[i]
+            indegree[currCourse] += 1
+            courses[preCourse].append(currCourse)
+
+        q = deque()
+
+        for num in range(numCourses):
+            if indegree[num] == 0:
+                q.append(num)
+
+        count = 0
+
+        while q:
+            preCourse = q.popleft()
+            count += 1
+
+            for currCourse in courses[preCourse]:
+                indegree[currCourse] -= 1
+
+                if indegree[currCourse] == 0:
+                    q.append(currCourse)
+
+        print(count)
+
+        if numCourses == count:
+            return True
+        else: 
+            return False
