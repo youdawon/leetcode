@@ -4,11 +4,11 @@ class Solution:
         if n == 1 or n == 2:
             return n
         
-        prev, curr = 1, 1
+        prev, curr = 1, 2
 
-        for i in range(2, n+1):
+        for i in range(2, n):
             temp = curr
-            curr = curr + prev
+            curr = prev + curr
             prev = temp
-        
+
         return curr
