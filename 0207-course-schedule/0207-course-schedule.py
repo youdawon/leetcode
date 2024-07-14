@@ -1,7 +1,7 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
 
-        indegree = [0]*numCourses
+        indegree = [ 0 for _ in range(numCourses)]
         courses = [ [] for _ in range(numCourses)]
 
         for i in range(len(prerequisites)):
@@ -26,8 +26,6 @@ class Solution:
 
                 if indegree[currCourse] == 0:
                     q.append(currCourse)
-
-        print(count)
 
         if numCourses == count:
             return True
