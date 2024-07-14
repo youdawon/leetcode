@@ -1,13 +1,15 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
 
+        ## Time Complexity : O(V+E)
+        ## Space Compelxity : O(V+E)
+
         indegree = [ 0 for _ in range(numCourses)]
         courses = [ [] for _ in range(numCourses)]
 
-        for i in range(len(prerequisites)):
-            currCourse, preCourse = prerequisites[i]
-            indegree[currCourse] += 1
-            courses[preCourse].append(currCourse)
+        for j, i in prerequisites:
+            indegree[j] += 1
+            courses[i].append(j)
 
         q = deque()
 
