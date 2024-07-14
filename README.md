@@ -305,6 +305,7 @@
 | [0053-maximum-subarray](https://github.com/youdawon/leetcode/tree/master/0053-maximum-subarray) |
 | [0054-spiral-matrix](https://github.com/youdawon/leetcode/tree/master/0054-spiral-matrix) |
 | [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
+| [0056-merge-intervals](https://github.com/youdawon/leetcode/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/youdawon/leetcode/tree/master/0057-insert-interval) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/youdawon/leetcode/tree/master/0079-word-search) |
@@ -484,6 +485,7 @@
 | ------- |
 | [0015-3sum](https://github.com/youdawon/leetcode/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/youdawon/leetcode/tree/master/0049-group-anagrams) |
+| [0056-merge-intervals](https://github.com/youdawon/leetcode/tree/master/0056-merge-intervals) |
 | [0217-contains-duplicate](https://github.com/youdawon/leetcode/tree/master/0217-contains-duplicate) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
