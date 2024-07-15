@@ -325,6 +325,7 @@
 | [0322-coin-change](https://github.com/youdawon/leetcode/tree/master/0322-coin-change) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0435-non-overlapping-intervals](https://github.com/youdawon/leetcode/tree/master/0435-non-overlapping-intervals) |
+| [1036-rotting-oranges](https://github.com/youdawon/leetcode/tree/master/1036-rotting-oranges) |
 ## Hash Table
 |  |
 | ------- |
@@ -353,6 +354,7 @@
 | [0079-word-search](https://github.com/youdawon/leetcode/tree/master/0079-word-search) |
 | [0200-number-of-islands](https://github.com/youdawon/leetcode/tree/master/0200-number-of-islands) |
 | [0212-word-search-ii](https://github.com/youdawon/leetcode/tree/master/0212-word-search-ii) |
+| [1036-rotting-oranges](https://github.com/youdawon/leetcode/tree/master/1036-rotting-oranges) |
 ## Math
 |  |
 | ------- |
@@ -427,6 +429,7 @@
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0322-coin-change](https://github.com/youdawon/leetcode/tree/master/0322-coin-change) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
+| [1036-rotting-oranges](https://github.com/youdawon/leetcode/tree/master/1036-rotting-oranges) |
 ## Linked List
 |  |
 | ------- |
