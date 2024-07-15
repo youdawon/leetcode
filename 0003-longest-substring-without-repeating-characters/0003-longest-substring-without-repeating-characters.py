@@ -6,8 +6,8 @@ class Solution:
 
         left = 0        
         for right in range(len(s)):
-            while left <= arr[ord(s[right])]:
-                left += 1
+            if left <= arr[ord(s[right])]:
+                left = arr[ord(s[right])] + 1
 
             maxLength = max(maxLength, right-left+1)                
 
