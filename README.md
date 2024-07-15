@@ -339,6 +339,7 @@
 | [0128-longest-consecutive-sequence](https://github.com/youdawon/leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [0133-clone-graph](https://github.com/youdawon/leetcode/tree/master/0133-clone-graph) |
 | [0141-linked-list-cycle](https://github.com/youdawon/leetcode/tree/master/0141-linked-list-cycle) |
+| [0146-lru-cache](https://github.com/youdawon/leetcode/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0217-contains-duplicate](https://github.com/youdawon/leetcode/tree/master/0217-contains-duplicate) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
@@ -438,6 +439,7 @@
 | [0023-merge-k-sorted-lists](https://github.com/youdawon/leetcode/tree/master/0023-merge-k-sorted-lists) |
 | [0141-linked-list-cycle](https://github.com/youdawon/leetcode/tree/master/0141-linked-list-cycle) |
 | [0143-reorder-list](https://github.com/youdawon/leetcode/tree/master/0143-reorder-list) |
+| [0146-lru-cache](https://github.com/youdawon/leetcode/tree/master/0146-lru-cache) |
 | [0206-reverse-linked-list](https://github.com/youdawon/leetcode/tree/master/0206-reverse-linked-list) |
 ## Recursion
 |  |
@@ -584,6 +586,7 @@
 ## Design
 |  |
 | ------- |
+| [0146-lru-cache](https://github.com/youdawon/leetcode/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/youdawon/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
@@ -628,4 +631,8 @@
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/youdawon/leetcode/tree/master/0207-course-schedule) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/youdawon/leetcode/tree/master/0146-lru-cache) |
 <!---LeetCode Topics End-->
