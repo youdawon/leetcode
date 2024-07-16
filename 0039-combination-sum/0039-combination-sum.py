@@ -1,31 +1,22 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         
-        list = []
+        res = []
 
-        def dfs(i, cur, total):
-            if total == target:
-                list.append(cur.copy())         
-                return
-            if i >= len(candidates) or total > target:
-                return
-            
-            cur.append(candidates[i])
-            dfs(i, cur, total + candidates[i])
-            cur.pop()
-            print(i)
-            print("total " + str(total))
-            dfs(i+1, cur, total)
+        def findSum(current, currSum, currIndex):
 
+            if currSum == target:
+                res.append(current.copy())
+                return
             
-        dfs(0, [], 0)
-        
-        return list
-                    
-                    
-                    
-                    
-                    
-                    
-            
-        
+            if currSum > target:
+                return
+
+            for i in range(currIndex, len(candidates)):
+                current.append(candidates[i])
+                findSum(current, currSum+candidates[i], i)
+                current.pop()                
+
+        findSum([], 0, 0)
+
+        return res
