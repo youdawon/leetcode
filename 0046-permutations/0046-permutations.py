@@ -1,22 +1,22 @@
 class Solution:
- def permute(self, nums: List[int]) -> List[List[int]]:
-
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        
         res = []
 
-        def dfs(res, current, nums, used):
+        def getPermutations(current, used):
 
-            if len(current) == len(nums):
+            if len(nums) == len(current):
                 res.append(current.copy())
                 return
 
-            for i in range(0, len(nums)):
-                if used[i] is False:
-                    used[i] = True
+            for i in range(len(nums)):
+                if nums[i] not in used:
+                    used.add(nums[i])
                     current.append(nums[i])
-                    dfs(res, current, nums, used)                
-                    used[i] = False
+                    getPermutations(current, used)
                     current.pop()
+                    used.remove(nums[i])
 
-        dfs(res, [], nums, [False]*len(nums))            
-        
+        getPermutations([], set())
+
         return res
