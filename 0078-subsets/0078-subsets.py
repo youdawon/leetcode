@@ -1,6 +1,9 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
 
+        ##Time Compleixty : O(N^2)
+        ##Space Complexity : O(N)
+
         res = []
 
         def getSubSets(current, currIndex):
