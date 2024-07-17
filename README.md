@@ -310,6 +310,7 @@
 | [0056-merge-intervals](https://github.com/youdawon/leetcode/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/youdawon/leetcode/tree/master/0057-insert-interval) |
 | [0073-set-matrix-zeroes](https://github.com/youdawon/leetcode/tree/master/0073-set-matrix-zeroes) |
+| [0078-subsets](https://github.com/youdawon/leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/youdawon/leetcode/tree/master/0079-word-search) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/youdawon/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/youdawon/leetcode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
@@ -505,6 +506,7 @@
 ## Bit Manipulation
 |  |
 | ------- |
+| [0078-subsets](https://github.com/youdawon/leetcode/tree/master/0078-subsets) |
 | [0190-reverse-bits](https://github.com/youdawon/leetcode/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/youdawon/leetcode/tree/master/0191-number-of-1-bits) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
@@ -607,6 +609,7 @@
 | ------- |
 | [0039-combination-sum](https://github.com/youdawon/leetcode/tree/master/0039-combination-sum) |
 | [0046-permutations](https://github.com/youdawon/leetcode/tree/master/0046-permutations) |
+| [0078-subsets](https://github.com/youdawon/leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/youdawon/leetcode/tree/master/0079-word-search) |
 | [0212-word-search-ii](https://github.com/youdawon/leetcode/tree/master/0212-word-search-ii) |
 ## Bucket Sort
