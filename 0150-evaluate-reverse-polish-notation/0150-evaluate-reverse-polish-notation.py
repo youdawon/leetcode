@@ -8,14 +8,13 @@ class Solution:
                 right = stack.pop()
                 left = stack.pop()
                 if token == "+":
-                    stack.append(int(left)+int(right))
+                    stack.append(left+right)
                 elif token == "-":
-                    stack.append(int(left)-int(right))
+                    stack.append(left-right)
                 elif token == "*":
-                    stack.append(int(left)*int(right))
+                    stack.append(left*right)
                 elif token == "/":
-                     stack.append(int(left)//int(right)) 
+                     stack.append(int(left/right)) 
             else:
                 stack.append(int(token))
-
         return stack[-1]                               
