@@ -5,7 +5,6 @@ class Solution:
 
         for point in points:
             distance = point[0]*point[0] + point[1]*point[1]
-            print(distance)
             heapq.heappush(maxHeap, (-distance, point))
 
             if len(maxHeap) > k:
