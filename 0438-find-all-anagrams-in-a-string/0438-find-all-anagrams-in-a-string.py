@@ -1,11 +1,12 @@
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
 
+        res = []        
+
         if len(s) < len(p):
             return []
 
-        res = []        
-        sCount, pCount = collections.defaultdict(int), collections.defaultdict(int)
+        sCount, pCount = {}, {}
 
         for i in range(len(p)):
             pCount[p[i]] = pCount.get(p[i], 0) + 1
