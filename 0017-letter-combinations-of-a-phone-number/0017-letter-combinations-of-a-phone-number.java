@@ -8,22 +8,24 @@ class Solution {
 
         if (digits.length() == 0) return res;
 
-        dfs(res, "", 0, digits);
+        dfs(res, new StringBuilder(), 0, digits);
 
         return res;
     }
 
-    public void dfs(List<String> res, String current, int index, String digits){
+    public void dfs(List<String> res, StringBuilder current, int index, String digits){
 
         if(index == digits.length()){
-            res.add(current);
+            res.add(current.toString());
             return;
         }
 
         String currStr = letterArr[digits.charAt(index)-'1'];
 
         for(int i=0; i<currStr.length(); i++){
-            dfs(res, current + currStr.charAt(i), index+1, digits);
+            current.append(currStr.charAt(i));
+            dfs(res, current, index+1, digits);
+            current.deleteCharAt(current.length()-1);
         }
     }
 }
