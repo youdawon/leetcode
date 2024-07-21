@@ -10,7 +10,6 @@ class Solution:
         while maxHeap or q:
             interval += 1
             
-            print(maxHeap)
             if maxHeap:
                 task = 1 + heapq.heappop(maxHeap)
 
