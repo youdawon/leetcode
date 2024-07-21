@@ -330,6 +330,7 @@
 | [0322-coin-change](https://github.com/youdawon/leetcode/tree/master/0322-coin-change) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0435-non-overlapping-intervals](https://github.com/youdawon/leetcode/tree/master/0435-non-overlapping-intervals) |
+| [0621-task-scheduler](https://github.com/youdawon/leetcode/tree/master/0621-task-scheduler) |
 | [1014-k-closest-points-to-origin](https://github.com/youdawon/leetcode/tree/master/1014-k-closest-points-to-origin) |
 | [1036-rotting-oranges](https://github.com/youdawon/leetcode/tree/master/1036-rotting-oranges) |
 ## Hash Table
@@ -353,6 +354,7 @@
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
+| [0621-task-scheduler](https://github.com/youdawon/leetcode/tree/master/0621-task-scheduler) |
 ## Matrix
 |  |
 | ------- |
@@ -394,6 +396,7 @@
 | [0011-container-with-most-water](https://github.com/youdawon/leetcode/tree/master/0011-container-with-most-water) |
 | [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
 | [0435-non-overlapping-intervals](https://github.com/youdawon/leetcode/tree/master/0435-non-overlapping-intervals) |
+| [0621-task-scheduler](https://github.com/youdawon/leetcode/tree/master/0621-task-scheduler) |
 ## Binary Search
 |  |
 | ------- |
@@ -487,6 +490,7 @@
 | [0023-merge-k-sorted-lists](https://github.com/youdawon/leetcode/tree/master/0023-merge-k-sorted-lists) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
+| [0621-task-scheduler](https://github.com/youdawon/leetcode/tree/master/0621-task-scheduler) |
 | [1014-k-closest-points-to-origin](https://github.com/youdawon/leetcode/tree/master/1014-k-closest-points-to-origin) |
 ## Merge Sort
 |  |
@@ -515,6 +519,7 @@
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0435-non-overlapping-intervals](https://github.com/youdawon/leetcode/tree/master/0435-non-overlapping-intervals) |
+| [0621-task-scheduler](https://github.com/youdawon/leetcode/tree/master/0621-task-scheduler) |
 | [1014-k-closest-points-to-origin](https://github.com/youdawon/leetcode/tree/master/1014-k-closest-points-to-origin) |
 ## Bit Manipulation
 |  |
@@ -638,6 +643,7 @@
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
+| [0621-task-scheduler](https://github.com/youdawon/leetcode/tree/master/0621-task-scheduler) |
 ## Quickselect
 |  |
 | ------- |
