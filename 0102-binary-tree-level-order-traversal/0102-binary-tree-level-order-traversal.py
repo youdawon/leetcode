@@ -8,20 +8,20 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
 
         res = []
+        
+        def dfs(root, level):
 
-        def getOrders(level, root):
-
-            if not root:
+            if root is None:
                 return
 
-            if len(res) >= level:
-                res[level-1].append(root.val)
-            else:
+            if len(res) == level:
                 res.append([root.val])
+            else:
+                res[level].append(root.val)
 
-            getOrders(level + 1, root.left)
-            getOrders(level + 1, root.right)
+            dfs(root.left, level+1)
+            dfs(root.right, level+1)            
 
-        getOrders(1, root)
+        dfs(root, 0)
 
         return res
