@@ -313,6 +313,7 @@
 | [0075-sort-colors](https://github.com/youdawon/leetcode/tree/master/0075-sort-colors) |
 | [0078-subsets](https://github.com/youdawon/leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/youdawon/leetcode/tree/master/0079-word-search) |
+| [0084-largest-rectangle-in-histogram](https://github.com/youdawon/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/youdawon/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/youdawon/leetcode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/youdawon/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -500,6 +501,7 @@
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/youdawon/leetcode/tree/master/0020-valid-parentheses) |
+| [0084-largest-rectangle-in-histogram](https://github.com/youdawon/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0143-reorder-list](https://github.com/youdawon/leetcode/tree/master/0143-reorder-list) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/youdawon/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/youdawon/leetcode/tree/master/0155-min-stack) |
@@ -673,4 +675,8 @@
 |  |
 | ------- |
 | [1014-k-closest-points-to-origin](https://github.com/youdawon/leetcode/tree/master/1014-k-closest-points-to-origin) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/youdawon/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 <!---LeetCode Topics End-->
