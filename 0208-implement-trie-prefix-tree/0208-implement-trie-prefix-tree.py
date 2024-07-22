@@ -1,40 +1,43 @@
-class Node:
+class TreeNode:
     def __init__(self, value):
         self.value = value
-        self.children = [None]*26
         self.isEndOfWord = False
+        self.next = [None] * 26
 
 class Trie:
 
     def __init__(self):
-        self.root = Node("")        
+        self.head = TreeNode("")
+        
 
     def insert(self, word: str) -> None:
-        current = self.root
+
+        current = self.head
 
         for c in word:
-            if current.children[ord(c)-ord('a')] is None:
-                current.children[ord(c)-ord('a')] = Node(c)
-            current = current.children[ord(c)-ord('a')]
+            if current.next[ord(c) - ord('a')] is None:
+                current.next[ord(c) - ord('a')] = TreeNode(c)
+            current = current.next[ord(c) - ord('a')]
+
         current.isEndOfWord = True
 
     def search(self, word: str) -> bool:
-        current = self.root
+        current = self.head
 
         for c in word:
-            if current.children[ord(c)-ord('a')] is None:
+            if current.next[ord(c) - ord('a')] is None:
                 return False
-            current = current.children[ord(c)-ord('a')]
+            current = current.next[ord(c) - ord('a')]
 
         return current.isEndOfWord
 
     def startsWith(self, prefix: str) -> bool:
-        current = self.root
+        current = self.head
 
         for c in prefix:
-            if current.children[ord(c)-ord('a')] is None:
+            if current.next[ord(c) - ord('a')] is None:
                 return False
-            current = current.children[ord(c)-ord('a')]
+            current = current.next[ord(c) - ord('a')]
 
         return True
 
