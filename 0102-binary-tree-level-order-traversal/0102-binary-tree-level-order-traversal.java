@@ -15,31 +15,25 @@
  */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
-        
-        List<List<Integer>> list = new ArrayList<List<Integer>>();       
-        
-        if(root == null)
-            return list;
 
-        getLevels(root, list, 0);
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+
+        dfs(res, root, 0);
+
+        return res;
         
-        return list;        
     }
-    
-    public void getLevels(TreeNode root, List<List<Integer>> list, int index){
-        
-        if(root == null)
-            return;
-        
-        if(list.size()-1 >= index){
-            list.get(index).add(root.val);            
-        } else {
-            List<Integer> subList = new ArrayList<>();                                     
-            subList.add(root.val);
-            list.add(subList);            
-        }
 
-        getLevels(root.left, list, index+1);
-        getLevels(root.right, list, index+1);        
+    public void dfs(List<List<Integer>> res, TreeNode root, int level){
+
+        if(root == null) return;
+
+        if(res.size() == level){
+            res.add(new ArrayList<Integer>());
+        }
+        res.get(level).add(root.val);
+
+        dfs(res, root.left, level+1);
+        dfs(res, root.right, level+1);        
     }
 }
