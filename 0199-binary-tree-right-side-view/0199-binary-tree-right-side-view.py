@@ -7,19 +7,22 @@
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
 
+        #Time Complexity : O(N)
+        #Space Complexity : O(logN)
+
         res = []
 
-        def getSide(root, level):
+        def dfs(root, level):
 
             if root is None:
-                return 
+                return
 
-            if len(res) < level:
+            if len(res) == level:
                 res.append(root.val)
+            
+            dfs(root.right, level+1)
+            dfs(root.left, level+1)
 
-            getSide(root.right, level+1)
-            getSide(root.left, level+1)
-
-        getSide(root, 1)
+        dfs(root, 0)
 
         return res
