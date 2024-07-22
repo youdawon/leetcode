@@ -356,6 +356,7 @@
 | [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0621-task-scheduler](https://github.com/youdawon/leetcode/tree/master/0621-task-scheduler) |
+| [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
 ## Matrix
 |  |
 | ------- |
@@ -404,6 +405,7 @@
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/youdawon/leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0300-longest-increasing-subsequence](https://github.com/youdawon/leetcode/tree/master/0300-longest-increasing-subsequence) |
+| [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
 ## String
 |  |
 | ------- |
@@ -423,6 +425,7 @@
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
+| [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
 ## Sliding Window
 |  |
 | ------- |
@@ -622,6 +625,7 @@
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
+| [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
 ## Trie
 |  |
 | ------- |
