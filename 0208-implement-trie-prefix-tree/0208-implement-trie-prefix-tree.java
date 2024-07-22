@@ -1,17 +1,15 @@
 class TreeNode {
+    
     char value;
     boolean isEndOfWord = false;
-    Map<Character, TreeNode> nextNodes;
+    TreeNode[] nextNodes = new TreeNode[26];
 
     public TreeNode(){
-
-        nextNodes = new HashMap<Character, TreeNode>();
     }
 
 
     public TreeNode(char value){
         this.value = value;
-        nextNodes = new HashMap<Character, TreeNode>();
     }    
 }
 
@@ -27,32 +25,31 @@ class Trie {
 
         TreeNode current = this.head;
 
-        for (char c : word.toCharArray()){
-            if(!current.nextNodes.containsKey(c)){
-                current.nextNodes.put(c, new TreeNode(c));
+        for(int i=0; i<word.length(); i++){
+            if(current.nextNodes[word.charAt(i) - 'a'] == null){
+                current.nextNodes[word.charAt(i) - 'a'] = new TreeNode(word.charAt(i));
             }
-            current = current.nextNodes.get(c);
+            current = current.nextNodes[word.charAt(i) - 'a'];
         }
         current.isEndOfWord = true;
     }
     
     public boolean search(String word) {
-
         TreeNode current = this.head;
 
-        for (char c : word.toCharArray()){
-            if(!current.nextNodes.containsKey(c)) return false;
-            current = current.nextNodes.get(c);
+        for(int i=0; i<word.length(); i++){
+            if(current.nextNodes[word.charAt(i) - 'a'] == null) return false;
+            current = current.nextNodes[word.charAt(i) - 'a'];
         }
-        return current.isEndOfWord;    
+        return current.isEndOfWord;
     }
     
     public boolean startsWith(String prefix) {
         TreeNode current = this.head;
 
-        for (char c : prefix.toCharArray()){
-            if(!current.nextNodes.containsKey(c)) return false;
-            current = current.nextNodes.get(c);
+        for(int i=0; i<prefix.length(); i++){
+            if(current.nextNodes[prefix.charAt(i) - 'a'] == null) return false;
+            current = current.nextNodes[prefix.charAt(i) - 'a'];
         }
         return true;
     }
