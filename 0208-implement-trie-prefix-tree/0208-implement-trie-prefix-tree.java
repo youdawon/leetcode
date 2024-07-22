@@ -1,62 +1,60 @@
+class TreeNode {
+    char value;
+    boolean isEndOfWord = false;
+    Map<Character, TreeNode> nextNodes;
+
+    public TreeNode(){
+
+        nextNodes = new HashMap<Character, TreeNode>();
+    }
+
+
+    public TreeNode(char value){
+        this.value = value;
+        nextNodes = new HashMap<Character, TreeNode>();
+    }    
+}
+
 class Trie {
-    
-    TreeNode node;
+
+    TreeNode head;
 
     public Trie() {
-        node = new TreeNode();
+        this.head = new TreeNode();
     }
     
-    public void insert(String word) {        
-        TreeNode current = node;
-        
-        for(char c : word.toCharArray()){            
-            if(current.children[c-'a'] == null)
-                current.children[c-'a'] = new TreeNode(c);
-            current = current.children[c-'a'];
+    public void insert(String word) {
+
+        TreeNode current = this.head;
+
+        for (char c : word.toCharArray()){
+            if(!current.nextNodes.containsKey(c)){
+                current.nextNodes.put(c, new TreeNode(c));
+            }
+            current = current.nextNodes.get(c);
         }
         current.isEndOfWord = true;
     }
     
     public boolean search(String word) {
-        TreeNode current = node;
-        
-        for(char c : word.toCharArray()){
-            if(current.children[c-'a'] == null)
-                return false;
-            current = current.children[c-'a'];
+
+        TreeNode current = this.head;
+
+        for (char c : word.toCharArray()){
+            if(!current.nextNodes.containsKey(c)) return false;
+            current = current.nextNodes.get(c);
         }
-        if(current.isEndOfWord)
-            return true;
-        return false;
+        return current.isEndOfWord;    
     }
     
     public boolean startsWith(String prefix) {
-        TreeNode current = node;
-        
-        for(char c : prefix.toCharArray()){
-            if(current.children[c-'a'] == null)
-                return false;
-            current = current.children[c-'a'];
+        TreeNode current = this.head;
+
+        for (char c : prefix.toCharArray()){
+            if(!current.nextNodes.containsKey(c)) return false;
+            current = current.nextNodes.get(c);
         }
-        return true;        
-    }
-}
-
-class TreeNode {
-    
-    char val;
-    boolean isEndOfWord;
-    TreeNode[] children;
-    
-    TreeNode(){
-        children = new TreeNode[26];        
-        isEndOfWord = false;
-    }
-
-    TreeNode(char val){
-        this.val = val;
-        children = new TreeNode[26];        
-        isEndOfWord = false;
+        return true;
     }
 }
 
