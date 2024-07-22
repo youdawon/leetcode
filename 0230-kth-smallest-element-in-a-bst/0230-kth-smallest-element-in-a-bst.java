@@ -16,6 +16,9 @@
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
 
+        //Time Complexity : O(N)
+        //Space Complexity : O(N)
+
         TreeNode current = root;
         Stack<TreeNode> stack = new Stack<>();
 
