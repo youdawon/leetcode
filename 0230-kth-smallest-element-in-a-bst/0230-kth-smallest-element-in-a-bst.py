@@ -10,9 +10,9 @@ class Solution:
         stack = [root]
         current = root
         
-        while stack:
-            while current.left:
-                stack.append(current.left)
+        while stack or current:
+            while current:
+                stack.append(current)
                 current = current.left
             
             node = stack.pop()
@@ -22,4 +22,4 @@ class Solution:
                 return node.val
 
             if node.right:
-                stack.append(node.right)
+                current = node.right
