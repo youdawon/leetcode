@@ -20,7 +20,6 @@ class TimeMap:
         while left <= right:
             mid = left + (right-left) // 2
 
-            print(mid)
             if arr[mid] <= timestamp:
                 res = self.valueMap[arr[mid]]
                 left = mid+1
