@@ -15,32 +15,30 @@
  */
 class Solution {
 
-    //Time Complexity : O(N)
-    //Space Complexity : O(N)
+    Map<Integer, Integer> map;
+    int preIndex = 0;
+    int[] preorder;
 
-    int preStart = 0;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
 
-    public TreeNode buildTree(int[] preorder, int[] inorder) { 
-        return buildTree2(preorder, inorder, 0, inorder.length-1);
+        this.preorder = preorder;
+
+        map = new HashMap<Integer, Integer>();
+        for(int i=0; i<inorder.length; i++){
+            map.put(inorder[i], i);
+        }
+        return buildTree2(0, inorder.length-1);
     }
 
-    public TreeNode buildTree2(int[] preorder, int[] inorder, int inStart, int inEnd){
+    public TreeNode buildTree2(int inStart, int inEnd){
+        if(preIndex >= this.preorder.length) return null;
+        if(inStart > inEnd) return null;
 
-        if(preStart >= preorder.length || inStart > inEnd) return null;
+        TreeNode root = new TreeNode(this.preorder[preIndex++]);
+        int rootIndex = map.get(root.val);
+        root.left = buildTree2(inStart, rootIndex-1);
+        root.right = buildTree2(rootIndex+1, inEnd);
 
-        TreeNode node = new TreeNode(preorder[preStart++]);
-        int inIndex = 0;
-
-        for(int i=0; i<inorder.length; i++){
-            if(inorder[i] == node.val){
-                inIndex = i;
-                break;
-            }
-        }
-
-        node.left = buildTree2(preorder, inorder, inStart, inIndex-1);
-        node.right = buildTree2(preorder, inorder, inIndex+1, inEnd);
-
-        return node;
+        return root;
     }
 }
