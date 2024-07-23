@@ -15,6 +15,9 @@
  */
 class Solution {
 
+    //Time Complexity : O(N)
+    //Space Complexity : O(N)
+
     int preStart = 0;
 
     public TreeNode buildTree(int[] preorder, int[] inorder) { 
