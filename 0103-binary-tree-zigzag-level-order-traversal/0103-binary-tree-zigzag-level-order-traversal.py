@@ -13,7 +13,7 @@ class Solution:
         res = []
 
         queue = deque([root])
-        count = 0
+        direction = 1
 
         while queue:
             size = len(queue)
@@ -25,10 +25,7 @@ class Solution:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)                
-            if count % 2 == 0:
-                res.append(current)
-            else:
-                res.append(current[::-1])                
-            count += 1
+            res.append(current[::direction])                
+            direction *= -1
  
         return res
