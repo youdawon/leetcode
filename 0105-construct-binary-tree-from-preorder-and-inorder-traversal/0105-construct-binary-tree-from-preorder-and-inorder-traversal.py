@@ -9,7 +9,6 @@ class Solution:
 
         if inorder:
             root = TreeNode(preorder.pop(0))
-
             rootIndex = inorder.index(root.val)
             root.left = self.buildTree(preorder, inorder[0:rootIndex])
             root.right = self.buildTree(preorder, inorder[rootIndex+1:])        
