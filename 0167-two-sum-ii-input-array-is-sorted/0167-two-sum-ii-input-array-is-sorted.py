@@ -4,6 +4,9 @@ class Solution:
         left = 0
         right = len(numbers)-1
 
+        #Time Complexity : O(N)
+        #Space Complexity : O(1)
+
         while left < right:
             currSum = numbers[left] + numbers[right]
 
