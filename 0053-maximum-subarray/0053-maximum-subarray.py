@@ -5,8 +5,7 @@ class Solution:
         maxSum = -inf
         
         for i in range(len(nums)):
-            currSum = max(nums[i], nums[i] + currSum)
-
+            currSum = currSum + nums[i]
             maxSum = max(maxSum, currSum)
 
             if currSum < 0:
