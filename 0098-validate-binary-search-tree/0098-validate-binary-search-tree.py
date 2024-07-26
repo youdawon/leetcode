@@ -9,15 +9,12 @@ class Solution:
 
         def isValid(root, minNode, maxNode):
 
-            #Time Complexity : O(N)
-            #Space Complexity : O(N)
-
             if root is None:
                 return True
 
             if minNode and root.val <= minNode.val:
                 return False
-
+            
             if maxNode and root.val >= maxNode.val:
                 return False
 
