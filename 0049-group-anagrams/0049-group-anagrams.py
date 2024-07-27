@@ -10,4 +10,4 @@ class Solution:
         ## Time : O(N)
         ## Space : O(N)
 
-        return group.values()
+        return list(group.values())
