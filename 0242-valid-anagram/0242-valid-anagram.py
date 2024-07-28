@@ -4,7 +4,7 @@ class Solution:
         if len(s) != len(t):
             return False
 
-        #Space Complexity : O(26)
+        #Space Complexity : O(1)
         #Time Complexity : O(s+t), O(N)
 
         arr = [0]*26
