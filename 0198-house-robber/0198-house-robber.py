@@ -1,10 +1,9 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
         
-        arr = [0]*(len(nums)+1)
-        
-        for i in range(0, len(nums)):
-            arr[i+1] = max(arr[i], nums[i] + arr[i-1])
+        money = [0]*(len(nums)+2)
 
+        for i in range(len(nums)):
+            money[i+1] = max(money[i], money[i-1] + nums[i])
 
-        return max(arr[-1], arr[-2])
+        return max(money[-1], money[-2])
