@@ -8,6 +8,7 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 
         #Time Complexity : O(N)
+        #Space Complexity : O(logN)
         
         def invert(root):
 
