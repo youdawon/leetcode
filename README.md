@@ -363,6 +363,7 @@
 | [0146-lru-cache](https://github.com/youdawon/leetcode/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0217-contains-duplicate](https://github.com/youdawon/leetcode/tree/master/0217-contains-duplicate) |
+| [0242-valid-anagram](https://github.com/youdawon/leetcode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
@@ -442,6 +443,7 @@
 | [0208-implement-trie-prefix-tree](https://github.com/youdawon/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/youdawon/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/youdawon/leetcode/tree/master/0212-word-search-ii) |
+| [0242-valid-anagram](https://github.com/youdawon/leetcode/tree/master/0242-valid-anagram) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
@@ -555,6 +557,7 @@
 | [0056-merge-intervals](https://github.com/youdawon/leetcode/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/youdawon/leetcode/tree/master/0075-sort-colors) |
 | [0217-contains-duplicate](https://github.com/youdawon/leetcode/tree/master/0217-contains-duplicate) |
+| [0242-valid-anagram](https://github.com/youdawon/leetcode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
