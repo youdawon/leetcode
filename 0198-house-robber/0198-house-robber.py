@@ -1,9 +1,21 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        
-        money = [0]*(len(nums)+2)
 
-        for i in range(len(nums)):
-            money[i+1] = max(money[i], money[i-1] + nums[i])
+        dp = [-1]*len(nums)
 
-        return max(money[-1], money[-2])
+        def recursion(n):
+            
+            if n < 0:
+                return 0
+
+            if dp[n] != -1:
+                return dp[n]
+
+            dp[n] = max(recursion(n-1), recursion(n-2) + nums[n])
+
+            return dp[n]
+
+        n = len(nums)-1
+
+        return recursion(n)
+
