@@ -3,19 +3,18 @@ class Solution:
 
         if len(s) != len(t):
             return False
-        
-        letter_map = {}
 
+        #Space Complexity : O(26)
+        #Time Complexity : O(s+t), O(N)
+
+        arr = [0]*26
+        
         for c in s:
-            letter_map[c] = letter_map.get(c, 0) + 1
-        
+            arr[ord(c)-ord('a')] += 1
+
         for c in t:
-            if c not in letter_map:
+            if arr[ord(c)-ord('a')] <= 0:
                 return False
-
-            letter_map[c] -= 1
-
-            if letter_map[c] == 0:
-                del letter_map[c]
+            arr[ord(c)-ord('a')] -= 1
 
         return True
