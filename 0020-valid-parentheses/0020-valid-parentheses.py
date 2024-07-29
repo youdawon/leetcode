@@ -1,6 +1,9 @@
 class Solution:
     def isValid(self, s: str) -> bool:
 
+        # Time : O(N)
+        # Space : O(N)
+
         stack = []
         
         for c in s:
