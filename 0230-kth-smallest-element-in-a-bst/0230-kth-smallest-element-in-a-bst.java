@@ -31,7 +31,5 @@ class Solution {
 
             if(currNode.right != null) current = currNode.right;
         }             
-
-        return -1;   
     }
 }
