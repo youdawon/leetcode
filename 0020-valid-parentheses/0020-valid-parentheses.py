@@ -12,8 +12,7 @@ class Solution:
                 stack.append("}")
             else:
                 if not stack:
-                    return False
-                
+                    return False                
                 val = stack.pop()
                 if c != val:
                     return False
