@@ -13,6 +13,10 @@ class Solution:
             while right-left-maxCount+1 > k:
                 arr[ord(s[left])-ord('A')] -= 1
                 left += 1        
+
+            print(right)
+            print(left)
+
             maxLength = max(maxLength, right-left+1)
             
         return maxLength
