@@ -6,29 +6,27 @@ class Node:
         self.neighbors = neighbors if neighbors is not None else []
 """
 
-from typing import Optional
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
 
-        #Time Complexity : O(N)
-        #Space Complexity : O(N)
+        # Time : O(V+E)
+        # Space : O(V+E)        
 
         if node is None:
             return
+        
+        q = deque() # O(1)
+        q.append(node) # O(1)
+        nodeMap = {node.val : Node(node.val)} # O(1)
 
-        nodeMap = {node : Node(node.val)}
-
-        q = deque([node])
-
-        while q:
+        while q: # O(V)
             currNode = q.popleft()
-            newNode = nodeMap[currNode]
-            for nextNode in currNode.neighbors:
-                if nextNode not in nodeMap:
-                    nodeMap[nextNode] = Node(nextNode.val)
-                    q.append(nextNode)
+            newNode = nodeMap[currNode.val]
+            for neighbor in currNode.neighbors: #O(E)
+                if neighbor.val not in nodeMap:
+                    nodeMap[neighbor.val] = Node(neighbor.val)
+                    q.append(neighbor)
+                newNode.neighbors.append(nodeMap[neighbor.val])
 
-                newNode.neighbors.append(nodeMap[nextNode])
-
-
-        return nodeMap[node]
+        
+        return nodeMap[node.val]
