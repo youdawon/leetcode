@@ -12,15 +12,15 @@ class Solution:
         def getOrderByLevel(root, level):
 
             #Time Complexity : O(N)
-            #Space Complexity : O(N)
+            #Space Complexity : O(N) + O(H)
 
             if root is None:
                 return
 
             if len(res) == level:
-                res.append([root.val])
-            else:
-                res[level].append(root.val)
+                res.append([])
+
+            res[level].append(root.val)
 
             getOrderByLevel(root.left, level+1)
             getOrderByLevel(root.right, level+1)            
