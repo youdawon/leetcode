@@ -1,9 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
 
-        if len(s) == 1:
-            return False
-
         stack = []
         
         for c in s:
@@ -14,7 +11,11 @@ class Solution:
             elif c == "{":
                 stack.append("}")
             else:
-                if not stack or c != stack.pop():
+                if not stack:
+                    return False
+                
+                val = stack.pop()
+                if c != val:
                     return False
 
-        return False if stack else True
+        return True if not stack else False
