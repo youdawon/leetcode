@@ -16,9 +16,6 @@
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
 
-        //Time Complexity : O(N)
-        //Space Complexity : O(N)
-
         TreeNode current = root;
         Stack<TreeNode> stack = new Stack<>();
 
@@ -28,14 +25,13 @@ class Solution {
                 current = current.left;
             }
 
-            TreeNode tempNode = stack.pop();
             k--;
+            TreeNode currNode = stack.pop();
+            if(k == 0) return currNode.val;
 
-            if(k == 0) return tempNode.val;
+            if(currNode.right != null) current = currNode.right;
+        }             
 
-            if(tempNode.right != null) current = tempNode.right;
-        }
-
-        return -1;
+        return -1;   
     }
 }
