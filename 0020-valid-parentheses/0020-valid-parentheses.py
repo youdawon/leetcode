@@ -13,8 +13,8 @@ class Solution:
             else:
                 if not stack:
                     return False                
-                val = stack.pop()
-                if c != val:
+                if stack[-1] != c:
                     return False
+                stack.pop()
 
         return True if not stack else False
