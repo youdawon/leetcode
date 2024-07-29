@@ -1,7 +1,7 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
 
-        res, maxCount, maxLength = 0, -inf, -inf
+        maxCount, maxLength = 0, 0
         arr = [0]*26
 
         left = 0
