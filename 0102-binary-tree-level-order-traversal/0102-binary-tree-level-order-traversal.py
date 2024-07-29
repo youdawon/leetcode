@@ -8,8 +8,8 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
 
         res = []
-        
-        def dfs(root, level):
+
+        def getOrderByLevel(root, level):
 
             if root is None:
                 return
@@ -19,9 +19,9 @@ class Solution:
             else:
                 res[level].append(root.val)
 
-            dfs(root.left, level+1)
-            dfs(root.right, level+1)            
+            getOrderByLevel(root.left, level+1)
+            getOrderByLevel(root.right, level+1)            
 
-        dfs(root, 0)
+        getOrderByLevel(root, 0)
 
         return res
