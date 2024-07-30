@@ -1,7 +1,10 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
 
-        res = []
+        ## Time : O(N^target)
+        ## Space : O(T)
+
+        res = [] 
 
         def backtracking(current, currSum, index):
 
