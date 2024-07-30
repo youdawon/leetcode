@@ -6,6 +6,9 @@
 #         self.right = right
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+
+        # Time : O(N)
+        # Space : O(H)
         
         if p is None and q is None:
             return True
