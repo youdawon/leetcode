@@ -1,22 +1,22 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        
+
         res = []
 
-        def findSum(current, currSum, currIndex):
+        def backtracking(current, currSum, index):
 
             if currSum == target:
                 res.append(current.copy())
                 return
-            
+
             if currSum > target:
                 return
-
-            for i in range(currIndex, len(candidates)):
+            
+            for i in range(index, len(candidates)):                
                 current.append(candidates[i])
-                findSum(current, currSum+candidates[i], i)
-                current.pop()                
+                backtracking(current, currSum + candidates[i], i)
+                current.pop()
 
-        findSum([], 0, 0)
+        backtracking([], 0, 0)
 
         return res
