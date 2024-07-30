@@ -31,20 +31,16 @@ class WordDictionary:
         if index == len(word):
             return node.isEndOfWord
 
-        current = node
-
         if word[index] == ".":
-            for nextNode in current.next:
+            for nextNode in node.next:
                 if self.searchWord(word, index+1, nextNode):
                     return True
             return False
 
-        if current.next[ord(word[index]) - ord('a')] is None:
+        if node.next[ord(word[index]) - ord('a')] is None:
             return False
 
-        current = current.next[ord(word[index]) - ord('a')]
-
-        return self.searchWord(word, index+1, current)
+        return self.searchWord(word, index+1, node.next[ord(word[index]) - ord('a')])
 
 # Your WordDictionary object will be instantiated and called as such:
 # obj = WordDictionary()
