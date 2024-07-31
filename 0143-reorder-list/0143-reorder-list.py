@@ -8,11 +8,11 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-
+        
         dummy = ListNode(-1)
-        dummy.next = head
-        slow = dummy
-        fast = head        
+        dummy.next = head   
+        fast = head
+        slow = head
 
         while fast and fast.next:
             fast = fast.next.next
@@ -28,13 +28,12 @@ class Solution:
             tail = current
             current = temp
 
-        l1 = dummy.next
-        l2 = tail
+        l1, l2 = dummy.next, tail 
 
         while l1 and l2:
             temp = l1.next
             l1.next = l2
             l1 = l1.next
-            l2 = temp 
-        
-        return head.next
+            l2 = temp
+
+        return dummy.next
