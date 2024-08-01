@@ -8,9 +8,7 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-        
-        dummy = ListNode(-1)
-        dummy.next = head   
+
         fast = head
         slow = head
 
@@ -24,16 +22,16 @@ class Solution:
 
         while current:
             temp = current.next
-            current.next = tail 
+            current.next = tail
             tail = current
             current = temp
 
-        l1, l2 = dummy.next, tail 
+        l1 = head
+        l2 = tail 
 
         while l1 and l2:
             temp = l1.next
             l1.next = l2
             l1 = l1.next
             l2 = temp
-
-        return dummy.next
+        
