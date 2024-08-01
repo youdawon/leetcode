@@ -1,15 +1,15 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-
+        
         res = []
-
+        n = len(nums)
         nums.sort()
 
-        for i in range(len(nums)):
-            left = i + 1
-            right = len(nums)-1
+        for i in range(n):
+            left = i+1
+            right = n-1
 
-            if i > 0 and nums[i] == nums[i-1]:
+            if i > 0 and nums[i-1] == nums[i]:
                 continue
 
             while left < right:
@@ -20,7 +20,7 @@ class Solution:
                 else:
                     res.append([nums[i], nums[left], nums[right]])
                     left += 1
-                    while nums[left-1] == nums[left] and left < right:
+                    while left < right and nums[left-1] == nums[left]:
                         left += 1
         
         return res
