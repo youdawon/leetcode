@@ -388,6 +388,7 @@
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/youdawon/leetcode/tree/master/0048-rotate-image) |
+| [0062-unique-paths](https://github.com/youdawon/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0070-climbing-stairs) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/youdawon/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0268-missing-number](https://github.com/youdawon/leetcode/tree/master/0268-missing-number) |
@@ -399,6 +400,7 @@
 | [0005-longest-palindromic-substring](https://github.com/youdawon/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0053-maximum-subarray](https://github.com/youdawon/leetcode/tree/master/0053-maximum-subarray) |
 | [0055-jump-game](https://github.com/youdawon/leetcode/tree/master/0055-jump-game) |
+| [0062-unique-paths](https://github.com/youdawon/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/youdawon/leetcode/tree/master/0070-climbing-stairs) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/youdawon/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/youdawon/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
@@ -737,4 +739,8 @@
 |  |
 | ------- |
 | [0084-largest-rectangle-in-histogram](https://github.com/youdawon/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
+## Combinatorics
+|  |
+| ------- |
+| [0062-unique-paths](https://github.com/youdawon/leetcode/tree/master/0062-unique-paths) |
 <!---LeetCode Topics End-->
