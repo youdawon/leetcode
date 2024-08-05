@@ -6,9 +6,9 @@ class Solution:
         
         maxValue, currMax, currMin = nums[0], nums[0], nums[0]
         for i in range(1, len(nums)):
-            tempMin = min(currMin*nums[i], currMax*nums[i], nums[i])
-            tempMax = max(currMin*nums[i], currMax*nums[i], nums[i])   
-            currMin, currMax = tempMin, tempMax         
+            tempMin = currMin
+            currMin = min(tempMin*nums[i], currMax*nums[i], nums[i])
+            currMax = max(tempMin*nums[i], currMax*nums[i], nums[i])   
             maxValue = max(maxValue, currMax)
 
         return maxValue
