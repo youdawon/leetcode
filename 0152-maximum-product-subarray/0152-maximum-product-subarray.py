@@ -1,5 +1,8 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
+
+        # Time : O(N)
+        # Space : O(1)
         
         maxValue, currMax, currMin = nums[0], nums[0], nums[0]
         for i in range(1, len(nums)):
