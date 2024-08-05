@@ -1,26 +1,32 @@
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         
-        p_set, a_set = set(), set()
+        p_visited, a_visited = set(), set()
         m, n = len(heights), len(heights[0])
-        
-        directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+        directions = [[0, 1],[0, -1],[-1, 0],[1, 0]]
 
-        def getWaterFlow(i, j, visited):
+        def dfs(i, j, visited):
             visited.add((i, j))
+
             for r, c in directions:
-                row, col = i + r, j + c
-                if row < 0 or col < 0 or row >= m or col >= n or heights[row][col] < heights[i][j] or ((row, col)) in visited:
+                row, col = i+r, j+c
+                if row < 0 or col < 0 or row >= m or col >= n or (row, col) in visited or heights[row][col] < heights[i][j]:
                     continue
-                getWaterFlow(row, col, visited)
+                dfs(row, col, visited)
 
         for i in range(m):
-            getWaterFlow(i, 0, p_set)
-            getWaterFlow(i, n-1, a_set)
+            dfs(i, 0, p_visited)
+            dfs(i, n-1, a_visited)
 
         for j in range(n):
-            getWaterFlow(0, j, p_set)
-            getWaterFlow(m-1, j, a_set)
+            dfs(0, j, p_visited)
+            dfs(m-1, j, a_visited)
 
+        res = []
 
-        return list(p_set & a_set)
+        for i in range(m):
+            for j in range(n):
+                if (i, j) in p_visited and (i, j) in a_visited:
+                    res.append([i, j])    
+        
+        return res
