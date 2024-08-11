@@ -1,21 +1,11 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
+        
+        prev,curr = 0,nums[0]
 
-        dp = [-1]*len(nums)
+        for i in range(1, len(nums)):
+            temp = curr
+            curr = max(curr, prev+nums[i])
+            prev = temp
 
-        def recursion(n):
-            
-            if n < 0:
-                return 0
-
-            if dp[n] != -1:
-                return dp[n]
-
-            dp[n] = max(recursion(n-1), recursion(n-2) + nums[n])
-
-            return dp[n]
-
-        n = len(nums)-1
-
-        return recursion(n)
-
+        return curr
