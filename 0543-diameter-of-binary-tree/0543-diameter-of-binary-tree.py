@@ -14,9 +14,12 @@ class Solution:
             if root is None:
                 return 0
 
-            self.height = max(self.height, dfs(root.left) + dfs(root.right))
+            leftLength = dfs(root.left)
+            rightLength = dfs(root.right)
+
+            self.height = max(self.height, leftLength+rightLength)
             
-            return max(dfs(root.left), dfs(root.right)) + 1  
+            return max(leftLength, rightLength) + 1  
 
         dfs(root)
 
