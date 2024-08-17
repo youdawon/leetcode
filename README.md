@@ -613,6 +613,7 @@
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0417-pacific-atlantic-water-flow](https://github.com/youdawon/leetcode/tree/master/0417-pacific-atlantic-water-flow) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
+| [0543-diameter-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/youdawon/leetcode/tree/master/0572-subtree-of-another-tree) |
 ## Graph
 |  |
@@ -638,6 +639,7 @@
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/youdawon/leetcode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
+| [0543-diameter-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/youdawon/leetcode/tree/master/0572-subtree-of-another-tree) |
 ## Binary Tree
 |  |
@@ -658,6 +660,7 @@
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/youdawon/leetcode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
+| [0543-diameter-of-binary-tree](https://github.com/youdawon/leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/youdawon/leetcode/tree/master/0572-subtree-of-another-tree) |
 ## String Matching
 |  |
