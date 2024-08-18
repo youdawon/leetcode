@@ -2,28 +2,33 @@ class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         
         graph = [ [] for _ in range(numCourses)]
-        indegree = [ 0 for _ in range(numCourses)]
+        visited = [ 0 for _ in range(numCourses)]
 
         for end, start in prerequisites:
             graph[start].append(end)
-            indegree[end] += 1
 
-        q = deque()
+        
+        for num in range(numCourses):
+            if not self.dfs(graph, visited, num):
+                return False
+        
+        return True
 
-        for i in range(len(indegree)):
-            if indegree[i] == 0:
-                q.append(i)
+    
+    def dfs(self, graph, visited, num):
 
-        vertex_count = 0
+        if visited[num] == -1:
+            return False
+        
+        if visited[num] == 1:
+            return True
 
-        while q:
-            i = q.popleft()
-            vertex_count += 1
+        visited[num] = -1
 
-            for neighbor in graph[i]:
-                indegree[neighbor] -= 1
+        for neighbor in graph[num]:
+            if not self.dfs(graph, visited, neighbor):
+                return False
 
-                if indegree[neighbor] == 0:
-                    q.append(neighbor)
+        visited[num] = 1        
 
-        return False if vertex_count != numCourses else True
+        return True
