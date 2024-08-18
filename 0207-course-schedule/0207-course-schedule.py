@@ -1,35 +1,29 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-
-        ## Time Complexity : O(V+E)
-        ## Space Compelxity : O(V+E)
-
+        
+        graph = [ [] for _ in range(numCourses)]
         indegree = [ 0 for _ in range(numCourses)]
-        courses = [ [] for _ in range(numCourses)]
 
-        for j, i in prerequisites:
-            indegree[j] += 1
-            courses[i].append(j)
+        for end, start in prerequisites:
+            graph[start].append(end)
+            indegree[end] += 1
 
         q = deque()
 
-        for num in range(numCourses):
-            if indegree[num] == 0:
-                q.append(num)
+        for i in range(len(indegree)):
+            if indegree[i] == 0:
+                q.append(i)
 
-        count = 0
+        vertex_count = 0
 
         while q:
-            preCourse = q.popleft()
-            count += 1
+            i = q.popleft()
+            vertex_count += 1
 
-            for currCourse in courses[preCourse]:
-                indegree[currCourse] -= 1
+            for neighbor in graph[i]:
+                indegree[neighbor] -= 1
 
-                if indegree[currCourse] == 0:
-                    q.append(currCourse)
+                if indegree[neighbor] == 0:
+                    q.append(neighbor)
 
-        if numCourses == count:
-            return True
-        else: 
-            return False
+        return False if vertex_count != numCourses else True
