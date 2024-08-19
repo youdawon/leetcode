@@ -3,18 +3,17 @@ class Solution:
 
         if len(s) != len(t):
             return False
-
-        #Space Complexity : O(1)
-        #Time Complexity : O(s+t), O(N)
-
-        arr = [0]*26
         
+        letters = {}
+
         for c in s:
-            arr[ord(c)-ord('a')] += 1
+            letters[c] = letters.get(c, 0) + 1
 
         for c in t:
-            if arr[ord(c)-ord('a')] <= 0:
+            if c not in letters:
                 return False
-            arr[ord(c)-ord('a')] -= 1
+            letters[c] -= 1
+            if letters[c] == 0:
+                del letters[c]
 
         return True
