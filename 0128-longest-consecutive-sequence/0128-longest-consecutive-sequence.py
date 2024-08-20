@@ -5,37 +5,36 @@ class Node:
         self.size = 1
 
 class UnionFind:
-    def findParent(self, node):
-        if node != node.parent:
-            return self.findParent(node.parent)
-        return node.parent
+    def find(self, node1):
+        if node1 == node1.parent:
+            return node1
+        return self.find(node1.parent)
 
     def union(self, node1, node2):
-        parent1 = self.findParent(node1)
-        parent2 = self.findParent(node2)
+        parent1 = self.find(node1)
+        parent2 = self.find(node2)
 
         if parent1 != parent2:
             parent2.parent = parent1
             parent1.size += parent2.size
-        
         return parent1.size
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
 
-        maxLength = 0
-        nodes = {}
+        hashmap = {}
         uf = UnionFind()
+        maxSize, size = 0, 0
 
-        for i in range(len(nums)):
-            if nums[i] not in nodes:
-                node = Node(nums[i])
-                nodes[nums[i]] = node
-                currLength = 1
-                if nums[i]-1 in nodes:
-                    currLength = uf.union(nodes[nums[i]-1], nodes[nums[i]])
-                if nums[i]+1 in nodes:
-                    currLength = uf.union(nodes[nums[i]], nodes[nums[i]+1])
-                maxLength = max(maxLength, currLength)
+        for num in nums:
+            if num not in hashmap:
+                hashmap[num] = Node(num)
+                size = 1
+                if num-1 in hashmap:
+                    size = uf.union(hashmap[num-1], hashmap[num])
+                if num+1 in hashmap:
+                    size = uf.union(hashmap[num], hashmap[num+1])
 
-        return maxLength
+            maxSize = max(maxSize, size)
+
+        return maxSize
