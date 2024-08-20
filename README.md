@@ -371,6 +371,7 @@
 | [0347-top-k-frequent-elements](https://github.com/youdawon/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
+| [0535-encode-and-decode-tinyurl](https://github.com/youdawon/leetcode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0621-task-scheduler](https://github.com/youdawon/leetcode/tree/master/0621-task-scheduler) |
 | [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
 ## Matrix
@@ -460,6 +461,7 @@
 | [0424-longest-repeating-character-replacement](https://github.com/youdawon/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/youdawon/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
+| [0535-encode-and-decode-tinyurl](https://github.com/youdawon/leetcode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0647-palindromic-substrings](https://github.com/youdawon/leetcode/tree/master/0647-palindromic-substrings) |
 | [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
 ## Sliding Window
@@ -673,6 +675,7 @@
 ## Hash Function
 |  |
 | ------- |
+| [0535-encode-and-decode-tinyurl](https://github.com/youdawon/leetcode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0572-subtree-of-another-tree](https://github.com/youdawon/leetcode/tree/master/0572-subtree-of-another-tree) |
 ## Binary Search Tree
 |  |
@@ -691,6 +694,7 @@
 | [0295-find-median-from-data-stream](https://github.com/youdawon/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/youdawon/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0449-serialize-and-deserialize-bst](https://github.com/youdawon/leetcode/tree/master/0449-serialize-and-deserialize-bst) |
+| [0535-encode-and-decode-tinyurl](https://github.com/youdawon/leetcode/tree/master/0535-encode-and-decode-tinyurl) |
 | [1023-time-based-key-value-store](https://github.com/youdawon/leetcode/tree/master/1023-time-based-key-value-store) |
 ## Trie
 |  |
