@@ -3,17 +3,15 @@ class Solution:
 
         if not s:
             return 0
-
-        maxLength = -inf
-        arr = [-1] * 128
         
+        max_length = float("-inf")
+        chars = {}
+
         left = 0
         for right in range(len(s)):
-            while arr[ord(s[right])] >= left:
-                left = left + 1
+            while s[right] in chars and left <= chars[s[right]]:
+                left += 1
+            max_length = max(max_length, right-left+1)
+            chars[s[right]] = right            
 
-            maxLength = max(maxLength, right-left+1)
-
-            arr[ord(s[right])] = right
-
-        return maxLength
+        return max_length
