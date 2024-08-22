@@ -1,57 +1,47 @@
-class TreeNode {
-    
+class Node {
     char value;
     boolean isEndOfWord = false;
-    TreeNode[] nextNodes = new TreeNode[26];
+    Node[] next = new Node[26];
 
-    public TreeNode(){
-    }
-
-
-    public TreeNode(char value){
+    public Node(char value){        
         this.value = value;
-    }    
+    }
 }
-
 class Trie {
 
-    TreeNode head;
+    Node root;
 
     public Trie() {
-        this.head = new TreeNode();
+        root = new Node('a');
     }
     
     public void insert(String word) {
-
-        TreeNode current = this.head;
-
+        Node current = root;
         for(int i=0; i<word.length(); i++){
-            if(current.nextNodes[word.charAt(i) - 'a'] == null){
-                current.nextNodes[word.charAt(i) - 'a'] = new TreeNode(word.charAt(i));
+            if(current.next[word.charAt(i) - 'a'] == null){
+               current.next[word.charAt(i) - 'a'] = new Node(word.charAt(i)); 
             }
-            current = current.nextNodes[word.charAt(i) - 'a'];
+            current = current.next[word.charAt(i) - 'a'];            
         }
         current.isEndOfWord = true;
     }
     
     public boolean search(String word) {
-        TreeNode current = this.head;
-
+        Node current = root;
         for(int i=0; i<word.length(); i++){
-            if(current.nextNodes[word.charAt(i) - 'a'] == null) return false;
-            current = current.nextNodes[word.charAt(i) - 'a'];
+            if(current.next[word.charAt(i) - 'a'] == null) return false;
+            current = current.next[word.charAt(i) - 'a'];
         }
-        return current.isEndOfWord;
+        return current.isEndOfWord;        
     }
     
     public boolean startsWith(String prefix) {
-        TreeNode current = this.head;
-
+        Node current = root;
         for(int i=0; i<prefix.length(); i++){
-            if(current.nextNodes[prefix.charAt(i) - 'a'] == null) return false;
-            current = current.nextNodes[prefix.charAt(i) - 'a'];
+            if(current.next[prefix.charAt(i) - 'a'] == null) return false;
+            current = current.next[prefix.charAt(i) - 'a'];
         }
-        return true;
+        return true;                
     }
 }
 
