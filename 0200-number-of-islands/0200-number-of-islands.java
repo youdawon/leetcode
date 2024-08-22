@@ -1,30 +1,30 @@
 class Solution {
     public int numIslands(char[][] grid) {
-        
+
+        int m = grid.length;
+        int n = grid[0].length;
         int count = 0;
-        
-        for(int i=0; i<grid.length; i++){
-            for(int j=0; j<grid[i].length; j++){
-                if(grid[i][j] == '1'){         
-                    findIslands(grid, i, j);
+
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if(grid[i][j] == '1'){
+                    changeToLand(grid, i, j, m, n);
                     count++;
                 }
             }
-        }
-        
-        return count;
+        }       
+
+        return count; 
     }
-    
-    public void findIslands(char[][] grid, int i, int j){
-        
-        if(i >= grid.length || i < 0 || j >= grid[0].length || j < 0 || grid[i][j] == '0')
-            return;
-        
+
+    public void changeToLand(char[][] grid, int i, int j, int m, int n){
+        if(i < 0 || i >= m || j < 0 || j >= n || grid[i][j] == '0') return;
+
         grid[i][j] = '0';
-        findIslands(grid, i-1, j);
-        findIslands(grid, i+1, j);
-        findIslands(grid, i, j-1);
-        findIslands(grid, i, j+1);        
-        
+
+        changeToLand(grid, i+1, j, m, n);
+        changeToLand(grid, i-1, j, m, n);        
+        changeToLand(grid, i, j+1, m, n);
+        changeToLand(grid, i, j-1, m, n);                
     }
 }
