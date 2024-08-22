@@ -14,23 +14,18 @@
  * }
  */
 class Solution {
-    public boolean isValidBST(TreeNode root) {
-        
-        
-        return isChildValid(root, null, null);
+    public boolean isValidBST(TreeNode root) {        
+        return isValid(root, null, null);        
     }
 
-    public boolean isChildValid(TreeNode root, TreeNode minNode, TreeNode maxNode){
+    public boolean isValid(TreeNode root, TreeNode minNode, TreeNode maxNode){
 
-        if(root == null)
-            return true;
-        
-        if(minNode != null && minNode.val >= root.val)
-            return false;
-        
-        if(maxNode != null && maxNode.val <= root.val)
-            return false;
-        
-        return isChildValid(root.left, minNode, root) && isChildValid(root.right, root, maxNode);
+        if(root == null) return true;
+
+        if(minNode != null && root.val <= minNode.val) return false;
+        if(maxNode != null && root.val >= maxNode.val) return false;
+
+        return isValid(root.left, minNode, root) && isValid(root.right, root, maxNode);
     }
+
 }
