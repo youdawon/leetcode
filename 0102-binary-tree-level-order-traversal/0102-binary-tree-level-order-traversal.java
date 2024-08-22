@@ -16,24 +16,26 @@
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
 
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
 
-        dfs(res, root, 0);
+        levelOrder(result, root, 0);
 
-        return res;
-        
+        return result;        
     }
 
-    public void dfs(List<List<Integer>> res, TreeNode root, int level){
+    public void levelOrder(List<List<Integer>> result, TreeNode root, int level) {
 
-        if(root == null) return;
-
-        if(res.size() == level){
-            res.add(new ArrayList<Integer>());
+        if(root == null){
+            return;
         }
-        res.get(level).add(root.val);
 
-        dfs(res, root.left, level+1);
-        dfs(res, root.right, level+1);        
+        if(result.size() == level){
+            result.add(new ArrayList<>());
+        }
+        result.get(level).add(root.val);      
+
+        levelOrder(result, root.left, level+1);
+        levelOrder(result, root.right, level+1);
+
     }
 }
