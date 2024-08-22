@@ -17,19 +17,22 @@ class Solution {
     public int kthSmallest(TreeNode root, int k) {
 
         TreeNode current = root;
-        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
 
-        while(current != null || stack != null){
+        while(current != null || !stack.isEmpty()){
             while(current != null){
                 stack.push(current);
                 current = current.left;
             }
-
-            k--;
             TreeNode currNode = stack.pop();
-            if(k == 0) return currNode.val;
+            k--;
+            if(k==0) return currNode.val;
 
-            if(currNode.right != null) current = currNode.right;
-        }             
+            if(currNode.right != null){
+                current = currNode.right;
+            }
+        }
+
+        return 0;        
     }
 }
