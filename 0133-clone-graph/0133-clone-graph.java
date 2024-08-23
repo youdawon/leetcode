@@ -20,28 +20,22 @@ class Node {
 
 class Solution {
 
-    Map<Node, Node> visited = new HashMap<>();        
+    Map<Integer, Node> map = new HashMap<>(); 
 
     public Node cloneGraph(Node node) {
-
-        if(node == null){
-            return null;
+        if (node == null) {
+            return node;
         }
-
-        copyGraph(node);
-
-        return visited.get(node);
-    }
-
-    public Node copyGraph(Node node){
-        Node newNode = new Node(node.val);
-        visited.put(node, newNode);
-        for(Node neighbor : node.neighbors){
-            if(!visited.containsKey(neighbor)){
-                visited.put(neighbor, copyGraph(neighbor));
-            }
-            newNode.neighbors.add(visited.get(neighbor));
+        if (map.containsKey(node.val)) {
+            return map.get(node.val);
         }
-        return newNode;
+        Node copy = new Node(node.val);
+        map.put(node.val, copy);
+        List<Node> neighbours = new ArrayList<Node>();
+        for(Node neighbour: node.neighbors) {
+            neighbours.add(cloneGraph(neighbour));
+        }
+        copy.neighbors = neighbours;
+        return copy;
     }
 }
