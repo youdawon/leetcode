@@ -1,44 +1,43 @@
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
 
-        List<List<Integer>> graph = new ArrayList<List<Integer>>();
-        int[] visited = new int[numCourses];
-        Arrays.fill(visited, -1);
+        List<List<Integer>> graph = new ArrayList<>();
+        int[] indegree = new int[numCourses];
         
         for(int i=0; i<numCourses; i++){
             graph.add(new ArrayList<Integer>());
         }
 
-        for(int i=0; i<prerequisites.length; i++){
-            int preCourse = prerequisites[i][1];
-            int postCourse = prerequisites[i][0];            
-            graph.get(preCourse).add(postCourse);
+        for(int[] prereq : prerequisites){
+            graph.get(prereq[1]).add(prereq[0]);
+            indegree[prereq[0]]++;
         }
 
-        for(int num=0; num<numCourses; num++){
-            if(!dfs(graph, visited, num)){
-                return false;
+        Queue<Integer> queue = new LinkedList<>();
+
+        for(int i=0; i<indegree.length; i++){
+            if(indegree[i] == 0){
+                queue.offer(i);
             }
         }
-        return true;
-    }
 
-    public boolean dfs(List<List<Integer>> graph, int[] visited, int num){
+        int totCount = 0;
 
-        if(visited[num] == 1)
-            return true;
+        while(!queue.isEmpty()){
+            int currNum = queue.poll();
+            totCount++;            
+            for(int neighbor : graph.get(currNum)){
+                indegree[neighbor]--;
 
-        if(visited[num] == 0)
-            return false;
-
-        visited[num] = 0;
-
-        for(int i=0; i<graph.get(num).size(); i++){
-            int neighbor = graph.get(num).get(i);
-            if(!dfs(graph, visited, neighbor)) return false;
+                if(indegree[neighbor] == 0){
+                    queue.offer(neighbor);
+                }
+            }
         }
 
-        visited[num] = 1;        
+        if(numCourses != totCount){
+            return false;
+        }
 
         return true;
     }
