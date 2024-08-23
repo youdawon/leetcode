@@ -25,23 +25,22 @@ class Solution {
             return null;
         }
         
-        Map<Node, Node> nodeMap = new HashMap<>();        
-        Queue<Node> q = new LinkedList<>();
-        nodeMap.put(node, new Node(node.val));
-        q.add(node);
+        Map<Node, Node> visited = new HashMap<>();        
+        Queue<Node> queue = new LinkedList<>();
+        visited.put(node, new Node(node.val));
+        queue.add(node);
 
-        while(!q.isEmpty()){
-            Node currNode = q.poll();
-            Node newNode = nodeMap.get(currNode);
+        while(!queue.isEmpty()){
+            Node currNode = queue.poll();
+            Node newNode = visited.get(currNode);
             for(Node neighbor : currNode.neighbors){
-                if(!nodeMap.containsKey(neighbor)){
-                    nodeMap.put(neighbor, new Node(neighbor.val));
-                    q.offer(neighbor);
+                if(!visited.containsKey(neighbor)){
+                    visited.put(neighbor, new Node(neighbor.val));
+                    queue.offer(neighbor);
                 }
-                newNode.neighbors.add(nodeMap.get(neighbor));
+                newNode.neighbors.add(visited.get(neighbor));
             }
-            nodeMap.put(currNode, newNode);            
         }
-        return nodeMap.get(node);
+        return visited.get(node);
     }
 }
