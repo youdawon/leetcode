@@ -28,6 +28,10 @@ class Solution {
             return null;
         }
 
+        if(visited.containsKey(node)){
+            return visited.get(node);
+        }
+        
         Node newNode = new Node(node.val);
         visited.put(node, newNode);
         for(Node neighbor : node.neighbors){
