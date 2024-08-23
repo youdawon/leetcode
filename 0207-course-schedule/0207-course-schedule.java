@@ -1,42 +1,45 @@
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
 
-        List<ArrayList> adj = new ArrayList<ArrayList>();
-        int[] indegree = new int[numCourses];
-
-        for (int i=0; i<numCourses; i++){
-            adj.add(new ArrayList<Integer>());
-        }
-
-        for (int[] pre : prerequisites){
-            int i = pre[1];
-            int j = pre[0];
-
-            indegree[j]++;
-            adj.get(i).add(j);
-        }
-
-        Queue<Integer> q = new LinkedList<>();
-        int count = 0;
-
+        List<List<Integer>> graph = new ArrayList<List<Integer>>();
+        int[] visited = new int[numCourses];
+        Arrays.fill(visited, -1);
+        
         for(int i=0; i<numCourses; i++){
-            if (indegree[i] == 0) q.offer(i);
+            graph.add(new ArrayList<Integer>());
         }
 
-        while (!q.isEmpty()){
-            int num = q.poll();
-            count++;
+        for(int i=0; i<prerequisites.length; i++){
+            int preCourse = prerequisites[i][1];
+            int postCourse = prerequisites[i][0];            
+            graph.get(preCourse).add(postCourse);
+        }
 
-            List<Integer> vertices = adj.get(num);
-            for(int vertex : vertices){
-                indegree[vertex]--;
-
-                if (indegree[vertex] == 0) q.offer(vertex);
+        for(int num=0; num<numCourses; num++){
+            if(!dfs(graph, visited, num)){
+                return false;
             }
         }
+        return true;
+    }
 
-        if (numCourses == count) return true;
+    public boolean dfs(List<List<Integer>> graph, int[] visited, int num){
 
-        return false;
+        if(visited[num] == 1)
+            return true;
+
+        if(visited[num] == 0)
+            return false;
+
+        visited[num] = 0;
+
+        for(int i=0; i<graph.get(num).size(); i++){
+            int neighbor = graph.get(num).get(i);
+            if(!dfs(graph, visited, neighbor)) return false;
+        }
+
+        visited[num] = 1;        
+
+        return true;
     }
 }
