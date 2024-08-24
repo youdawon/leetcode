@@ -1,16 +1,26 @@
 class Solution {
-        
+
+    int[] stairs;
+
     public int climbStairs(int n) {
-        
-        int[] arr = new int[n+1];
-        
-        arr[0] = 1;
-        arr[1] = 1;
-        
-        for(int i=2; i<=n; i++){
-            arr[i] = arr[i-1] + arr[i-2];
-        }
-        
-        return arr[n];
-    }    
+
+        this.stairs = new int[n+1];
+        Arrays.fill(this.stairs, -1);
+
+        return recursive(n);
+    }
+
+    public int recursive(int n){
+        if(n <= 2)
+            this.stairs[n] = n;
+
+        if(this.stairs[n] != -1)
+            return this.stairs[n];
+
+        this.stairs[n] = recursive(n-1) + recursive(n-2);
+
+        return this.stairs[n];
+    }
 }
+
+//n=1, n = 2
