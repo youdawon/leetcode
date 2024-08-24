@@ -1,20 +1,23 @@
 class Solution {
     public int rob(int[] nums) {
-        
-        int[] dp = new int[nums.length+1];
-        Arrays.fill(dp, -1);
 
-        return recursion(dp, nums.length-1, nums);
-    }
+        int n = nums.length;
+        int[] robbedMoney = new int[nums.length];
+        robbedMoney[0] = nums[0];
 
-    public int recursion(int[] dp, int n, int[] nums){
+        for(int i=1; i<n; i++){
+            if(i<2){
+                robbedMoney[i] = Math.max(robbedMoney[i-1], nums[i]);                
+            }else{
+                robbedMoney[i] = Math.max(robbedMoney[i-1], robbedMoney[i-2]+nums[i]);
+            }
+        }
 
-        if(n < 0) return 0;
-
-        if(dp[n] != -1) return dp[n];
-
-        dp[n] = Math.max(recursion(dp, n-1, nums), recursion(dp, n-2, nums) + nums[n]);
-
-        return dp[n];
+        return robbedMoney[n-1];
     }
 }
+
+//nums = [2,7,9,3,1]
+/**
+ 2,7,11,10,12
+ */
