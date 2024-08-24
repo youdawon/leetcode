@@ -2,22 +2,20 @@ class Solution {
     public int rob(int[] nums) {
 
         int n = nums.length;
-        int[] robbedMoney = new int[nums.length];
-        robbedMoney[0] = nums[0];
 
-        for(int i=1; i<n; i++){
-            if(i<2){
-                robbedMoney[i] = Math.max(robbedMoney[i-1], nums[i]);                
-            }else{
-                robbedMoney[i] = Math.max(robbedMoney[i-1], robbedMoney[i-2]+nums[i]);
-            }
+        if(n == 1){
+            return nums[0];
         }
 
-        return robbedMoney[n-1];
+        int prev = 0;
+        int curr = nums[0];
+
+        for(int i=1; i<n; i++){
+            int temp = curr;
+            curr = Math.max(curr, prev+nums[i]);
+            prev = temp;
+        }
+
+        return curr;
     }
 }
-
-//nums = [2,7,9,3,1]
-/**
- 2,7,11,10,12
- */
