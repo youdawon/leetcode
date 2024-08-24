@@ -11,11 +11,11 @@ class Solution {
         
         for(int i=2; i<n+1; i++){
             if(s.charAt(i-1) - '0' >= 1 && s.charAt(i-1) - '0' <= 9){
-                dp[i]++;
+                dp[i] += dp[i-1];
             }
-            int num = Integer.parseInt(s.substring(i-2, i));
-            if(s.charAt(i-2) - '0' != 0 && num >= 10 && num <= 26){        
-                dp[i] = dp[i] + dp[i-1];
+            int twoDigit = Integer.parseInt(s.substring(i-2, i));
+            if(twoDigit >= 10 && twoDigit <= 26){        
+                dp[i] += dp[i-2];
             }
         }
 
