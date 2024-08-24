@@ -1,28 +1,26 @@
 class Solution {
-    
-    /**
-    * Time Complexity : O(n)
-    * Space Complexit : O(n)
-    **/
-    
     public boolean isAnagram(String s, String t) {
-        
-        if(s.length() != t.length())
+
+        if(s.length() != t.length()) 
             return false;
-        
-        int[] arr = new int[26];
-        
-        for(char c : s.toCharArray()){ 
-            arr[c-'a']++; 
+
+        Map<Character, Integer> hashmap = new HashMap<>();
+
+        for(char c : s.toCharArray()){
+            hashmap.put(c, hashmap.getOrDefault(c, 0)+1);
         }
-        
+
         for(char c : t.toCharArray()){
-            if(arr[c-'a'] == 0)
+            if(!hashmap.containsKey(c))
                 return false;
-            
-            arr[c-'a']--; 
-        }
-        
-        return true;
+            int count = hashmap.get(c)-1;
+            if(count == 0){
+                hashmap.remove(c);
+                continue;
+            }
+            hashmap.put(c, count);
+        }        
+
+        return true;        
     }
 }
