@@ -5,7 +5,7 @@ class Solution {
         PriorityQueue<Map.Entry<Integer, Integer>> maxHeap = new PriorityQueue<>((a, b) -> b.getValue()-a.getValue());
 
         for(int num : nums){
-            hashMap.put(num, hashMap.getOrDefault(num, 0)+1);
+            hashMap.put(num, hashMap.getOrDefault(num, 0) + 1);
         }
 
         for(Map.Entry<Integer, Integer> entry : hashMap.entrySet()){
