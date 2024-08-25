@@ -26,13 +26,11 @@ class Solution {
             }
 
             if(list1.val <= list2.val){
-                ListNode temp = list1.next;
                 current.next = list1;
-                list1 = temp;
+                list1 = list1.next;
             } else {
-                ListNode temp = list2.next;
                 current.next = list2;
-                list2 = temp;
+                list2 = list2.next;
             }
             current = current.next;
         }
