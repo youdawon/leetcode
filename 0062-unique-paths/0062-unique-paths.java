@@ -12,7 +12,6 @@ class Solution {
                 }
             }
         }
-        
         return paths[m-1][n-1];
     }
 }
