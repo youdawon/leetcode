@@ -1,22 +1,17 @@
 class Solution {
     public int maxSubArray(int[] nums) {
+        int prevSum = nums[0];
+        int maxSum = nums[0];
 
-        //Time Complexity : O(N)
-        //Space Complexity : O(1)
+        for(int i = 1; i < nums.length; i++){
+            prevSum = Math.max(prevSum + nums[i], nums[i]);
+            maxSum = Math.max(maxSum, prevSum);
 
-        int currSum = 0;
-        int maxSum = Integer.MIN_VALUE;
-
-        for (int num : nums){
-            currSum += num;
-
-            maxSum = Math.max(maxSum, currSum);
-
-            if(currSum < 0){
-                currSum = 0;
+            if(prevSum < 0){
+                prevSum = 0;
             }
         }
 
-        return maxSum;
+        return maxSum;        
     }
 }
