@@ -3,18 +3,19 @@ import java.util.Iterator;
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         
-        Map<String, List<String>> hashmap = new HashMap<>();
+        List<List<String>> result = new ArrayList<>();
+        Map<String, List<String>> map = new HashMap<>();
 
         for(String str : strs){
-            char[] cArr = str.toCharArray();
-            Arrays.sort(cArr);
-            String sortedValue = new String(cArr); 
-            if(!hashmap.containsKey(sortedValue)){
-                hashmap.put(sortedValue, new ArrayList<>());
+            char[] charArr = str.toCharArray();
+            Arrays.sort(charArr);
+            String sortedStr = new String(charArr);
+            if(!map.containsKey(sortedStr)){
+                map.put(sortedStr, new ArrayList<>());
             }
-            hashmap.get(sortedValue).add(str);
+            map.get(sortedStr).add(str);
         }
 
-        return new ArrayList<>(hashmap.values());
+        return new ArrayList<>(map.values());
     }
 }
