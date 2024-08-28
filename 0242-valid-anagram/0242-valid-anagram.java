@@ -4,20 +4,17 @@ class Solution {
         if(s.length() != t.length())
             return false;
 
-        Map<Character, Integer> chars = new HashMap<>();
+        char[] charArr = new char[26];
 
         for(char c : s.toCharArray()){
-            chars.put(c, chars.getOrDefault(c, 0) + 1);
+            charArr[c - 'a']++;
         }
 
         for(char c : t.toCharArray()){
-            if(!chars.containsKey(c)){
+            if(charArr[c-'a'] == 0){
                 return false;
             }
-            chars.put(c, chars.get(c)-1);
-            if(chars.get(c) == 0){
-                chars.remove(c);
-            }
+            charArr[c-'a']--;
         }        
         return true;
     }
