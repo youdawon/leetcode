@@ -6,7 +6,7 @@ class Solution {
         int prev = 1;
         for(int i = 0; i < nums.length; i++){
             result[i] = prev;
-            prev *= nums[i];
+            prev = nums[i] * prev;
         }
 
         prev = 1;
