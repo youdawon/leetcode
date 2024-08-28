@@ -4,8 +4,9 @@ class Solution {
         Map<Integer, Integer> remainders = new HashMap<>();
 
         for(int i = 0; i < nums.length; i++){
-            if(remainders.containsKey(target - nums[i])){
-                return new int[]{i, remainders.get(target - nums[i])};
+            int remainder = target - nums[i];
+            if(remainders.containsKey(remainder)){
+                return new int[]{i, remainders.get(remainder)};
             }
             remainders.put(nums[i], i);
         }
