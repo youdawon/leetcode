@@ -1,56 +1,56 @@
-class UnionFind{
+class UnionFind {
     int[] parent;
     int[] size;
 
-    public UnionFind(int n){
-        this.parent = new int[n];
-        this.size = new int[n];        
+    public UnionFind(int[] nums){
+        this.parent = new int[nums.length];
+        this.size = new int[nums.length];
 
-        for(int i=0; i<n; i++){
+        for(int i=0; i < nums.length; i++){
             this.parent[i] = i;
             this.size[i] = 1;
         }
     }
 
-    public int find(int index){
-        if(parent[index] != index)
-            parent[index] = find(parent[index]);
-        return parent[index];
+    public int find(int num){
+        if(this.parent[num] != num){
+            this.parent[num] = find(this.parent[num]);
+        }
+        return this.parent[num];
     }
 
-    public int union(int index1, int index2){
-        int parent1 = find(index1);
-        int parent2 = find(index2);
+    public int union(int num1, int num2){
+        int parent1 = find(num1);
+        int parent2 = find(num2);
 
         if(parent1 != parent2){
-            parent[parent2] = parent1;
-            size[parent1] += size[parent2];
+            this.parent[parent2] = parent1;
+            this.size[parent1] += this.size[parent2];
         }
-
-        return this.size[parent1];
+        return size[parent1];
     }
-
 }
+
 class Solution {
     public int longestConsecutive(int[] nums) {
 
-        int n = nums.length;
-        UnionFind uf = new UnionFind(n);        
         int maxLength = 0;
-        Map<Integer, Integer> hashMap = new HashMap<>();
+        UnionFind uf = new UnionFind(nums);
 
-        for(int i = 0; i < n; i++){
-            int length = 0;
-            if(!hashMap.containsKey(nums[i])){
-                hashMap.put(nums[i], i);
-                length = 1;
-                if(hashMap.containsKey(nums[i]-1)){        
-                    length = uf.union(hashMap.get(nums[i]-1), i);
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int i=0; i<nums.length; i++){
+            if(!map.containsKey(nums[i])){
+                 int currLength = 0;               
+                map.put(nums[i], i);
+                currLength = uf.size[i];
+                if(map.containsKey(nums[i]-1)){
+                    currLength = uf.union(map.get(nums[i]-1), i);
                 }
-                if(hashMap.containsKey(nums[i]+1)){        
-                    length = uf.union(i, hashMap.get(nums[i]+1));
+                if(map.containsKey(nums[i]+1)){
+                    currLength = uf.union(i, map.get(nums[i]+1));
                 }            
-                maxLength = Math.max(maxLength, length);
+                maxLength = Math.max(maxLength, currLength);
             }
         }
 
