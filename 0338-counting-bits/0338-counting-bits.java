@@ -1,18 +1,20 @@
 class Solution {
     public int[] countBits(int n) {
 
-        int[] countArr = new int[n+1];
+        int[] dp = new int[n+1];
+        int offset = 1;
 
-        for(int i=0; i<=n; i++){
-            int num = i;
-            while(num != 0){
-                if((num & 1) == 1){
-                    countArr[i]++;
-                }
-                num = num >> 1;
+        for(int i=1; i<=n; i++){
+            if(offset * 2 == i){
+                offset = offset  * 2;               
+                dp[i] = 1;
+            } else {
+                System.out.println(i);                
+                System.out.println(offset);
+                dp[i] = dp[i-offset] + 1;
             }
         }
 
-        return countArr;
+        return dp;
     }
 }
