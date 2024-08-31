@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        
+
         ListNode tail = null;
         ListNode current = head;
 
