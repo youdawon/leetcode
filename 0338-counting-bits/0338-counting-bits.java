@@ -1,16 +1,18 @@
 class Solution {
     public int[] countBits(int n) {
 
-        int[] dp = new int[n+1];
-        int offset = 1;
+        int[] countArr = new int[n+1];
 
-        for(int num=1; num<=n; num++){
-            if(offset * 2 == num){
-                offset = offset * 2;
+        for(int i=0; i<=n; i++){
+            int num = i;
+            while(num != 0){
+                if((num & 1) == 1){
+                    countArr[i]++;
+                }
+                num = num >> 1;
             }
-            dp[num] = dp[num-offset]+1;
         }
 
-        return dp;
+        return countArr;
     }
 }
