@@ -7,14 +7,9 @@ class Solution {
         for(int i=1; i<=n; i++){
             if(offset * 2 == i){
                 offset = offset  * 2;               
-                dp[i] = 1;
-            } else {
-                System.out.println(i);                
-                System.out.println(offset);
-                dp[i] = dp[i-offset] + 1;
             }
+            dp[i] = dp[i-offset] + 1;
         }
-
         return dp;
     }
 }
