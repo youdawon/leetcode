@@ -3,29 +3,29 @@ class Solution {
 
         List<List<Integer>> graph = new ArrayList<>();
         int[] indegree = new int[numCourses];
-        
+
         for(int i=0; i<numCourses; i++){
             graph.add(new ArrayList<Integer>());
         }
 
-        for(int[] prereq : prerequisites){
-            graph.get(prereq[1]).add(prereq[0]);
-            indegree[prereq[0]]++;
+        for(int[] preq : prerequisites){
+            graph.get(preq[1]).add(preq[0]);
+            indegree[preq[0]]++;
         }
 
         Queue<Integer> queue = new LinkedList<>();
-
-        for(int i=0; i<indegree.length; i++){
+        for(int i=0; i<numCourses; i++){
             if(indegree[i] == 0){
                 queue.offer(i);
             }
         }
 
-        int totCount = 0;
+        int availableCount = 0;
 
         while(!queue.isEmpty()){
             int currNum = queue.poll();
-            totCount++;            
+            availableCount++;
+
             for(int neighbor : graph.get(currNum)){
                 indegree[neighbor]--;
 
@@ -33,12 +33,9 @@ class Solution {
                     queue.offer(neighbor);
                 }
             }
+
         }
 
-        if(numCourses != totCount){
-            return false;
-        }
-
-        return true;
+        return availableCount == numCourses;
     }
 }
