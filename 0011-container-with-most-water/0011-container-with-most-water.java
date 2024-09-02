@@ -8,7 +8,7 @@ class Solution {
 
         while(left < right){
             currHeight = Math.min(height[left], height[right]);
-            maxAmount = Math.max(maxAmount, (right-left) * currHeight);
+            maxAmount = Math.max(maxAmount, currHeight * (right-left));
 
             if(height[left] > height[right]){
                 right--;
