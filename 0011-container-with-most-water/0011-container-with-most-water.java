@@ -4,9 +4,10 @@ class Solution {
         int left = 0;
         int right = height.length - 1;
         int maxAmount = 0;
+        int currHeight = 0;
 
         while(left < right){
-            int currHeight = Math.min(height[left], height[right]);
+            currHeight = Math.min(height[left], height[right]);
             maxAmount = Math.max(maxAmount, (right-left) * currHeight);
 
             if(height[left] > height[right]){
