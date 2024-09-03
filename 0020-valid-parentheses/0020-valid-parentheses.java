@@ -11,11 +11,7 @@ class Solution {
             } else if (c == '{'){
                 stack.push('}');                
             } else {
-                if(stack.isEmpty()){
-                    return false;
-                }
-                char value = stack.pop();
-                if(c != value && c != value && c != value){
+                if(stack.isEmpty() || stack.pop() != c){
                     return false;
                 }
             }
