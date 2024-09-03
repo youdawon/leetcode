@@ -31,9 +31,7 @@ class Solution {
         int count = 0;
 
         while(left >= 0 && right < sLength && s.charAt(left) == s.charAt(right)){
-            if(s.charAt(left) == s.charAt(right)){
-                count++;
-            }
+            count++;
             left--;
             right++;
         }
