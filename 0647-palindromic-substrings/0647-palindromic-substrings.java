@@ -1,28 +1,33 @@
 class Solution {
-
-    int totalCount = 0;
-    String s;
-    int n;
-
     public int countSubstrings(String s) {
 
-        this.s = s;
-        this.n = s.length();
+        int count = 0;
+        int sLength = s.length();
 
-        for(int i = 0; i < n; i++){
-            getStringsCount(i, i+1);
-            getStringsCount(i, i);            
+        for(int i = 0; i < sLength; i++){
+            int left = i;
+            int right = i + 1;
+
+            while(left >= 0 && right < sLength && s.charAt(left) == s.charAt(right)){
+                count++;
+                left--;
+                right++;
+            }
         }
-        
-        return this.totalCount;
-    }
 
-    public void getStringsCount(int left, int right){
-        
-        while(left >= 0 && right < this.n && this.s.charAt(left) == this.s.charAt(right)){
-            this.totalCount++;
-            left--;
-            right++;
+        for(int i = 0 ; i < sLength; i++){
+            int left = i;
+            int right = i;
+
+            while(left >= 0 && right < sLength && s.charAt(left) == s.charAt(right)){
+                if(s.charAt(left) == s.charAt(right)){
+                    count++;
+                }
+                left--;
+                right++;
+            }
         }        
+
+        return count;        
     }
 }
