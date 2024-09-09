@@ -2,15 +2,18 @@ class Solution {
     public boolean canJump(int[] nums) {
 
         int remainder = 0;
-        
-        for(int num : nums){
+
+        for(int i=0; i<nums.length; i++){
             if(remainder < 0){
                 return false;
             }
-            remainder = Math.max(remainder, num);
+
+            if(remainder < nums[i]){
+                remainder = nums[i];
+            }
             remainder--;
         }
 
-        return true;
+        return true;        
     }
 }
