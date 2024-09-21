@@ -760,4 +760,8 @@
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/youdawon/leetcode/tree/master/0062-unique-paths) |
+## Database
+|  |
+| ------- |
+| [1415-students-and-examinations](https://github.com/youdawon/leetcode/tree/master/1415-students-and-examinations) |
 <!---LeetCode Topics End-->
