@@ -763,5 +763,6 @@
 ## Database
 |  |
 | ------- |
+| [0596-classes-more-than-5-students](https://github.com/youdawon/leetcode/tree/master/0596-classes-more-than-5-students) |
 | [1415-students-and-examinations](https://github.com/youdawon/leetcode/tree/master/1415-students-and-examinations) |
 <!---LeetCode Topics End-->
