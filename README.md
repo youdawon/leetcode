@@ -766,4 +766,5 @@
 | [0596-classes-more-than-5-students](https://github.com/youdawon/leetcode/tree/master/0596-classes-more-than-5-students) |
 | [1415-students-and-examinations](https://github.com/youdawon/leetcode/tree/master/1415-students-and-examinations) |
 | [1877-find-followers-count](https://github.com/youdawon/leetcode/tree/master/1877-find-followers-count) |
+| [1882-the-number-of-employees-which-report-to-each-employee](https://github.com/youdawon/leetcode/tree/master/1882-the-number-of-employees-which-report-to-each-employee) |
 <!---LeetCode Topics End-->
