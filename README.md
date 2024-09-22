@@ -763,6 +763,7 @@
 ## Database
 |  |
 | ------- |
+| [0176-second-highest-salary](https://github.com/youdawon/leetcode/tree/master/0176-second-highest-salary) |
 | [0184-department-highest-salary](https://github.com/youdawon/leetcode/tree/master/0184-department-highest-salary) |
 | [0596-classes-more-than-5-students](https://github.com/youdawon/leetcode/tree/master/0596-classes-more-than-5-students) |
 | [0602-friend-requests-ii-who-has-the-most-friends](https://github.com/youdawon/leetcode/tree/master/0602-friend-requests-ii-who-has-the-most-friends) |
