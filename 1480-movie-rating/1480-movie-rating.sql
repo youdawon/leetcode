@@ -1,22 +1,21 @@
 # Write your MySQL query statement below
-
 (
-    SELECT  
+    SELECT 
         u.name AS results
     FROM MovieRating mr
     JOIN Users u ON mr.user_id = u.user_id
-    GROUP BY u.user_id
-    ORDER BY count(movie_id) DESC, u.name ASC 
+    GROUP BY mr.user_id
+    ORDER BY COUNT(mr.user_id) DESC, u.name ASC
     LIMIT 1
 )
 UNION ALL
 (
     SELECT 
-        title AS results
+        m.title AS results
     FROM MovieRating mr
     JOIN Movies m ON mr.movie_id = m.movie_id
-    WHERE created_at between '2020-02-01' AND '2020-02-29'
+    WHERE created_at BETWEEN '2020-02-01' AND '2020-02-29'
     GROUP BY mr.movie_id
-    ORDER BY AVG(rating) DESC, title ASC
+    ORDER BY AVG(rating) DESC, m.title ASC
     LIMIT 1
 );
