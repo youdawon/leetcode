@@ -767,6 +767,7 @@
 | [0184-department-highest-salary](https://github.com/youdawon/leetcode/tree/master/0184-department-highest-salary) |
 | [0596-classes-more-than-5-students](https://github.com/youdawon/leetcode/tree/master/0596-classes-more-than-5-students) |
 | [0602-friend-requests-ii-who-has-the-most-friends](https://github.com/youdawon/leetcode/tree/master/0602-friend-requests-ii-who-has-the-most-friends) |
+| [0607-sales-person](https://github.com/youdawon/leetcode/tree/master/0607-sales-person) |
 | [1135-customers-who-bought-all-products](https://github.com/youdawon/leetcode/tree/master/1135-customers-who-bought-all-products) |
 | [1182-game-play-analysis-iv](https://github.com/youdawon/leetcode/tree/master/1182-game-play-analysis-iv) |
 | [1292-immediate-food-delivery-ii](https://github.com/youdawon/leetcode/tree/master/1292-immediate-food-delivery-ii) |
