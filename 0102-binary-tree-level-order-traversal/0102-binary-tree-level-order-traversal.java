@@ -16,14 +16,14 @@
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
 
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<List<Integer>> result = new ArrayList<>();
 
-        levelOrder(result, root, 0);
+        createTreeOrder(root, 0, result);
 
-        return result;        
+        return result;
     }
 
-    public void levelOrder(List<List<Integer>> result, TreeNode root, int level) {
+    private void createTreeOrder(TreeNode root, int level, List<List<Integer>> result){
 
         if(root == null){
             return;
@@ -32,10 +32,10 @@ class Solution {
         if(result.size() == level){
             result.add(new ArrayList<>());
         }
-        result.get(level).add(root.val);      
 
-        levelOrder(result, root.left, level+1);
-        levelOrder(result, root.right, level+1);
+        result.get(level).add(root.val);
+        createTreeOrder(root.left, level+1, result);
+        createTreeOrder(root.right, level+1, result);        
 
     }
 }
