@@ -1,12 +1,13 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        arr = {}
 
-        left = 0
-        right = len(nums)-1
-        numMap = collections.defaultdict(int)
-
-        for i in range(len(nums)):
+        for i in range(0, len(nums)):
             remainder = target - nums[i]
-            if remainder in numMap:
-                return [i, numMap[remainder]]
-            numMap[nums[i]] = i
+            if remainder in arr:
+                return [arr[remainder], i]
+
+            arr[nums[i]] = i            
+
+        return []
