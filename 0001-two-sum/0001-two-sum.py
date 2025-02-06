@@ -1,13 +1,10 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        
-        arr = {}
 
-        for i in range(0, len(nums)):
+        num_dicts = {}
+
+        for i in range(len(nums)):
             remainder = target - nums[i]
-            if remainder in arr:
-                return [arr[remainder], i]
-
-            arr[nums[i]] = i            
-
-        return []
+            if remainder in num_dicts:
+                return [i, num_dicts[remainder]]
+            num_dicts[nums[i]] = i
