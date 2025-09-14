@@ -1,10 +1,11 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 
-        groups = {}
+        hash_map = {}
 
-        for word in strs:
-            sorted_word = ''.join(sorted(word))
-            groups[sorted_word] = groups.get(sorted_word, [])+[word]
-            
-        return groups.values()
+        for s in strs:            
+            sorted_word = ''.join(sorted(s))
+
+            hash_map[sorted_word] = hash_map.get(sorted_word, []) + [s]
+
+        return list(hash_map.values())
